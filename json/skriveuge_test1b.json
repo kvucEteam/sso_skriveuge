@@ -1,0 +1,28 @@
+{
+	"slideData": [
+		{
+			"day_no": 1,
+			"carouselData": {
+				"slides": [
+					{
+						"type": "card",
+						"card": "<div class='skriveuge_slide'><div class='skriveuge_item'><div class='imgContainer'><div class='cviOverlay'>&nbsp;</div><img class='img-responsive' src='img/sso_emne.png'></div><div class='objText'><h3>Lorem ipsum dolor sit amet</h3><p>Lorem ipsum</p><span class='btn_ghost btn_ghost_noStyle btn btn-default'>Lorem ipsum</span><div class='Clear'></div></div></div><div class='skriveuge_item'><div class='imgContainer'><div class='cviOverlay'>&nbsp;</div><img class='img-responsive' src='img/sso_emne.png'></div><div class='objText'><h3>Lorem ipsum dolor sit amet</h3><p>Lorem ipsum</p><span class='btn_ghost btn_ghost_noStyle btn btn-default'>Lorem ipsum</span><div class='Clear'></div></div></div><div class='skriveuge_item'><div class='imgContainer'><div class='cviOverlay'>&nbsp;</div><img class='img-responsive' src='img/sso_emne.png'></div><div class='objText'><h3>Lorem ipsum dolor sit amet</h3><p>Lorem ipsum</p><span class='btn_ghost btn_ghost_noStyle btn btn-default'>Lorem ipsum</span><div class='Clear'></div></div></div></div>"
+					}, {
+						"type": "card",
+						"card": "<div class='skriveuge_slide'><div class='skriveuge_item'><div class='imgContainer'><div class='cviOverlay'>&nbsp;</div><img class='img-responsive' src='img/sso_emne.png'></div><div class='objText'><h3>Lorem ipsum dolor sit amet</h3><p>Lorem ipsum</p><span class='btn_ghost btn_ghost_noStyle btn btn-default'>Lorem ipsum</span><div class='Clear'></div></div></div></div>"
+					}
+				]
+			}
+		}, {
+			"day_no": 2,
+			"carouselData": {
+				"slides": [
+					{
+						"type": "card",
+						"card": "<div class='skriveuge_slide'><div class='skriveuge_item'><div class='imgContainer'><div class='cviOverlay'>&nbsp;</div><img class='img-responsive' src='img/sso_emne.png'></div><div class='objText'><h3>Lorem ipsum dolor sit amet</h3><p>Lorem ipsum</p><span class='btn_ghost btn_ghost_noStyle btn btn-default'>Lorem ipsum</span><div class='Clear'></div></div></div><div class='skriveuge_item'><div class='imgContainer'><div class='cviOverlay'>&nbsp;</div><img class='img-responsive' src='img/sso_emne.png'></div><div class='objText'><h3>Lorem ipsum dolor sit amet</h3><p>Lorem ipsum</p><span class='btn_ghost btn_ghost_noStyle btn btn-default'>Lorem ipsum</span><div class='Clear'></div></div></div><div class='skriveuge_item'><div class='imgContainer'><div class='cviOverlay'>&nbsp;</div><img class='img-responsive' src='img/sso_emne.png'></div><div class='objText'><h3>Lorem ipsum dolor sit amet</h3><p>Lorem ipsum</p><span class='btn_ghost btn_ghost_noStyle btn btn-default'>Lorem ipsum</span><div class='Clear'></div></div></div></div>"
+					}
+				]
+			}
+		}
+	]
+}

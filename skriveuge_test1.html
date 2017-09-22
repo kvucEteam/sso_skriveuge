@@ -8,25 +8,24 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../library/css/styles.css" type="text/css" />
-    <link rel="stylesheet" href="skriveuge.css" type="text/css" />
+    <link rel="stylesheet" href="skriveuge_test1.css" type="text/css" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 </head>
 
 <body>
     <div class="container-fluid">
-<!--         
-        <h1>skriveuge</h1>
- -->
-        <div id="dummyObj_container">
-<!-- 
-            <img id="dummyObj" class="XXX_img-responsive" src="img/sso_skriveuge.png">
-  -->           
-            <img id="dummyObj" class="img-responsive" src="img/7dage_gantt_mockup_tall03.png">
+        
+        <div id="interface">
+
         </div>
+
     </div>
     <script src="../library/vendor_scripts.js"></script>
     <script src="../library/custom_scripts.js"></script>
-    <script src="skriveuge.js"></script>
+    <script src="skriveuge_test1.js"></script>
+    <script type="text/javascript"> 
+        getAjaxData("GET", "json/skriveuge_test1.json", false, "json");
+    </script>
     <script type="text/javascript">
     $(document).ready(function() {
         one_line_footer();
