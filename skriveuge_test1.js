@@ -56,16 +56,21 @@ function makeSkriveugeSlide(dayIndex, cardIndex_start, cardIndex_end) {
 	HTML += '<div class="skriveuge_slide">';
 
 		var contentLength = day[dayIndex].content.length;
-		var itemsPrSlide = day[dayIndex].itemsPrSlide;
+		// var itemsPrSlide = day[dayIndex].itemsPrSlide;  	// COMMENTED OUT 25/9-2017
+		var itemsPrSlide = jsonData.itemsPrSlide_global;	// ADDED 25/9-2017
 
-		cardIndex_end = (cardIndex_end < contentLength)? cardIndex_end : contentLength;
+		// cardIndex_end = (cardIndex_end < contentLength)? cardIndex_end : contentLength;  // COMMENTED OUT 25/9-2017
+		cardIndex_end = (cardIndex_end < contentLength)? cardIndex_end : contentLength;		// ADDED 25/9-2017
 		console.log('makeSkriveugeSlide - cardIndex_start: ' + cardIndex_start + ', cardIndex_end: ' + cardIndex_end + ', contentLength: ' + contentLength + ', itemsPrSlide: ' + itemsPrSlide);
 
-		for (var c = cardIndex_start; c < cardIndex_end; c++) {
+		var countMem = 0;
+
+		// for (var c = cardIndex_start; c < cardIndex_end; c++) {	// COMMENTED OUT 25/9-2017
+		for (var c = 0; c < cardIndex_end-cardIndex_start; c++) {		// ADDED 25/9-2017
 		
-			console.log('makeSkriveugeSlide - day['+dayIndex+'].content['+c+']: ' + JSON.stringify(day[dayIndex].content[c]));
+			console.log('makeSkriveugeSlide - day['+dayIndex+'].content['+String(c+cardIndex_start)+']: ' + JSON.stringify(day[dayIndex].content[c+cardIndex_start]));
 			// HTML += '<div class="skriveuge_item col-xs-12">';
-				var cObj = day[dayIndex].content[c];
+				var cObj = day[dayIndex].content[c+cardIndex_start];
 
 				switch(cObj.category) {
 				    case 'card':
@@ -93,10 +98,14 @@ function makeSkriveugeSlide(dayIndex, cardIndex_start, cardIndex_end) {
 				        // alert('ERROR');
 				}
 			// HTML += '</div>';
+
+			countMem = c;
 		}
 
-		if (((contentLength - itemsPrSlide) < cardIndex_end) && (cardIndex_end%itemsPrSlide!==0)){
-			for (var i = 0; i <= contentLength - itemsPrSlide; i++) {
+		if (((contentLength - itemsPrSlide) < cardIndex_end) && (cardIndex_end%itemsPrSlide!==0)){ // COMMENTED OUT 25/9-2017
+		// if ((cardIndex_end%itemsPrSlide!==0)){ // ADDED 25/9-2017
+			// for (var i = 0; i < contentLength - itemsPrSlide; i++) {	// COMMENTED OUT 25/9-2017
+			for (var i = 0; i <= itemsPrSlide - 2 - countMem; i++) {	// ADDED 25/9-2017
 				HTML += '<div class="skriveuge_item skriveuge_item_dummy"></div>';  // &nbsp;
 			};
 		}
@@ -362,11 +371,11 @@ function makeSlideData() {
 	var TjsonData = {slideData: []};
 	var itemsPrSlide;
 	for (var n in jsonData.day) {
-		if ((jsonData.day[n].hasOwnProperty('itemsPrSlide')) && (jsonData.day[n].itemsPrSlide!==null)) {
-			console.log('makeSlideData - A0');
-			itemsPrSlide = jsonData.day[n].itemsPrSlide;
-		} else {
-			console.log('makeSlideData - A1');
+		// if ((jsonData.day[n].hasOwnProperty('itemsPrSlide')) && (jsonData.day[n].itemsPrSlide!==null)) {   // COMMENTED OUT 25/9-2017
+		// 	console.log('makeSlideData - A0');
+		// 	itemsPrSlide = jsonData.day[n].itemsPrSlide;
+		// } else {
+		// 	console.log('makeSlideData - A1');
 			if ((jsonData.hasOwnProperty('itemsPrSlide_global')) && (jsonData.itemsPrSlide_global!==null)) {
 				console.log('makeSlideData - A2');
 				itemsPrSlide = jsonData.itemsPrSlide_global;
@@ -374,7 +383,7 @@ function makeSlideData() {
 				console.log('makeSlideData - A3');
 				itemsPrSlide = null;
 			}
-		}
+		// }
 		console.log('makeSlideData - itemsPrSlide: ' + itemsPrSlide);
 
 		if (itemsPrSlide!==null) {
@@ -386,10 +395,10 @@ function makeSlideData() {
 			for (var i = 0; i < numOfRuns; i++) {
 				console.log('makeSlideData - cardIndex_start: ' + cardIndex_start + ', cardIndex_end: ' + String(cardIndex_start+itemsPrSlide));
 				var HTML = makeSkriveugeSlide(n, cardIndex_start, cardIndex_start+itemsPrSlide);
-				console.log('makeSlideData - HTML: ' + HTML);
+				// console.log('makeSlideData - HTML: ' + HTML);
 				cardIndex_start += itemsPrSlide;
 				slides.push({"type": "card", "card": HTML});
-				console.log('makeSlideData - slides: ' + JSON.stringify(slides));
+				// console.log('makeSlideData - slides: ' + JSON.stringify(slides));
 			};
 			TjsonData.slideData.push({"day_no": jsonData.day[n].day_no, "carouselData": {"slides": slides}})
 		}
@@ -463,8 +472,66 @@ function makeSlideData() {
 // });
 
 
+// $( document ).on('click', ".carousel-control .glyphicon-chevron-right", function(event){
+$( document ).on('click', ".right.carousel-control", function(event){
+	var carouselPageIndex = $(this).closest('.carouselPage').index();
+	console.log('CLICK glyphicon-chevron-right - carouselPageIndex: ' + carouselPageIndex);
+
+	var numOfSlides = TjsonData.slideData[carouselPageIndex].carouselData.slides.length;
+	console.log('CLICK glyphicon-chevron-right - numOfSlides: ' + numOfSlides);
+
+	var pObj = $(this).closest('.carouselPage');
+	var activeIndex = $('.active', pObj).index();
+	console.log('CLICK glyphicon-chevron-right - activeIndex 1: ' + activeIndex);
+
+	if (activeIndex == numOfSlides-1) {
+		$('.right.carousel-control', pObj).hide();
+	} else {
+		$('.right.carousel-control', pObj).show();
+	}
+	$('.left.carousel-control', pObj).show();
+});
+
+
+// $( document ).on('click', ".carousel-control .glyphicon-chevron-left", function(event){
+$( document ).on('click', ".left.carousel-control", function(event){
+	var carouselPageIndex = $(this).closest('.carouselPage').index();
+	console.log('CLICK glyphicon-chevron-left - carouselPageIndex: ' + carouselPageIndex);
+
+	var numOfSlides = TjsonData.slideData[carouselPageIndex].carouselData.slides.length;
+	console.log('CLICK glyphicon-chevron-left - numOfSlides: ' + numOfSlides);
+
+	var pObj = $(this).closest('.carouselPage');
+	var activeIndex = $('.active', pObj).index();
+	console.log('CLICK glyphicon-chevron-left - activeIndex 1: ' + activeIndex);
+
+	if (activeIndex == 0) {
+		$('.left.carousel-control', pObj).hide();
+	} else {
+		$('.left.carousel-control', pObj).show();
+	}
+	$('.right.carousel-control', pObj).show();
+});
+
+
 function addOrRemoveCarouselControles() {
 
+	$('.left.carousel-control').hide();
+
+	$('.carouselPage').each(function( index, element ) {
+		var numOfSlides = $('.item', element).length;
+		console.log('addOrRemoveCarouselControles - numOfSlides: ' + numOfSlides);
+
+		if (numOfSlides == 1) {
+			$('.right.carousel-control', element).hide();
+		}
+	});
+
+	// for (var n in TjsonData.slideData) {
+	// 	if (TjsonData.slideData[n].carouselData.slides.length == 1) {
+	// 		$('.right.carousel-control').hide();
+	// 	}
+	// };
 }
 
 
@@ -476,7 +543,8 @@ function scale_skriveuge_item() {
 	var w_item = $('.skriveuge_item').width();
 	var m_left_item = parseInt($('.skriveuge_item').css('margin-left').replace('px', ''));
 	var m_right_item = parseInt($('.skriveuge_item').css('margin-right').replace('px', ''));
-	var numOfItems = $('.skriveuge_slide:eq(0) .skriveuge_item').length;  // <----- IMPORTANT: THIS IS NOT GENERAL!
+	// var numOfItems = $('.skriveuge_slide:eq(0) .skriveuge_item').length;  // <----- IMPORTANT: THIS IS NOT GENERAL!
+	var numOfItems = jsonData.itemsPrSlide_global;
 	console.log('scale_skriveuge_item - w: ' + w + ', w_item: ' + w_item + ', m_left_item: ' + m_left_item + ', m_right_item: ' + m_right_item + ', numOfItems: ' + numOfItems);
 
 	var w_item_new = Math.floor(w/numOfItems) - m_left_item - m_right_item - 2;
@@ -484,6 +552,23 @@ function scale_skriveuge_item() {
 
 	$('.skriveuge_item').width(w_item_new);
 }
+
+
+$( document ).on('mouseenter', '.objLink', function(){
+	console.log('mouseover - CALLED');
+
+	$('.cviOverlay', this).fadeIn( "fast", function() {});
+
+	$('.btn_ghost', this).switchClass( "btn_ghost_noStyle", "vuc-primary", 300, "easeInOutQuad" );
+});
+
+$( document ).on('mouseleave', '.objLink', function(){
+	console.log('mouseout - CALLED');
+	
+	$('.cviOverlay', this).fadeOut( "fast", function() {});
+
+	$('.btn_ghost', this).switchClass( "vuc-primary", "btn_ghost_noStyle", 300, "easeInOutQuad" );
+});
 
 
 
@@ -501,6 +586,7 @@ $(document).ready(function() {
 	// $('#interface').append(makeInterface());
 
 	$('#interface').append(initCarouselObjs(TjsonData));
+	addOrRemoveCarouselControles();
 
 	scale_skriveuge_item();
 });

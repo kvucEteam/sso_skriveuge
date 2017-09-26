@@ -8,7 +8,7 @@
 }
 
 .skriveuge_item, .skriveuge_item_dummy{
-	max-width: 350px;
+	/*max-width: 350px;*/
 	width: 370px;
 	height: 100%;
 	/*max-width: 31.5%;*/
@@ -16,6 +16,13 @@
 	display: inline-block;
 	margin: 5px;
 	border: 1px solid #ccc;
+}
+
+.skriveuge_item {
+/*
+	box-shadow: 6px 6px 30px #888888;
+    border-radius: 6px;
+ */   
 }
 
 .skriveuge_item_dummy{
@@ -79,3 +86,16 @@
 .carousel-indicators{
 	display: none;
 }
+
+.carousel {
+	background-color: #f8f8f6;
+}
+
+.carousel{
+	padding-bottom: 10px;
+}
+
+
+
+
+/*****************************/
