@@ -600,11 +600,38 @@ $( document ).on('mouseleave', '.objLink', function(){
 
 $( document ).on('click', '.skriveuge_item', function(){
 	if ($('.btn', this).length) {
-		var index_slider = $(this).closest('.carouselPage').index();
+		console.log('click - A0');
+		var numOfSlides = jsonData.itemsPrSlide_global;
+		var index_day = $(this).closest('.carouselPage').index();
 		var index_slide = $(this).closest('.item').index();
 		var index_card = $(this).closest('.skriveuge_item').index();
-		var json_index = 0;
-		UserMsgBox('body', 'TEST');
+		var json_index = numOfSlides*index_slide + index_card; 
+		console.log('click - index_day: ' + index_day + ', index_slide: ' + index_slide + ', index_card: ' + index_card + ', json_index: ' + json_index);
+
+		var cardObj = jsonData.day[index_day].content[json_index];
+		console.log('click - cardObj: ' + JSON.stringify(cardObj));
+
+		if (cardObj.hasOwnProperty('userMsgBox_data')) {
+			console.log('click - A1');
+			var displayMode = cardObj.userMsgBox_data.displayMode;
+			var HTML = '';
+
+			switch (displayMode) {
+	            case "html":
+	            	console.log('click - A2');
+	                HTML += cardObj.userMsgBox_data.html;
+	                break;
+	            case "text":
+	            	console.log('click - A3');
+	                HTML += cardObj.userMsgBox_data.text;
+	                break;
+	            default:
+	            	console.log('click - A4');
+	                alert('Invalid "type"');
+			}
+
+			UserMsgBox('body', HTML);
+		}
 	}
 });
 

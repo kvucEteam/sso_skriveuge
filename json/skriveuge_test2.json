@@ -16,6 +16,10 @@
                         "header": "Lorem ipsum dolor sit amet",
                         "btnText": "Lorem ipsum",
                         "text": "Lorem ipsum"
+                    },
+                    "userMsgBox_data": {
+                        "displayMode": "html",
+                        "html": "<h1>Dette er en test!</h1>"
                     }
                 }
             ]

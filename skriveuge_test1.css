@@ -105,15 +105,16 @@
 	font-size: 12em;
 	color: #CCC;
 	position: absolute;
-	left: 25px;
+	left: 5px;
 	z-index: 1;
 }
 
 .weekDay{
-	font-size: 6em;
+	font-size: 4em;
 	position: absolute; 
 	z-index: 2;
-	top: 75px;
+	top: 95px;
+	color: #444;
 }
 
 .carousel-inner{
@@ -121,7 +122,7 @@
     display: inline-block;
     /*margin-left: 15%;*/
     float: right;
-    width: 82%;    /* <----- IMPORTANT AJUSTMENT PERAMETER*/
+    width: 88%;    /* <----- IMPORTANT AJUSTMENT PERAMETER*/
 }
 
 .active {
