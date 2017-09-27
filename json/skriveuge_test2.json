@@ -1,0 +1,430 @@
+{
+    "header": "Skriveugen",
+    "explanation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non ex a arcu euismod scelerisque. Cras ullamcorper sed tortor vitae auctor. Suspendisse potenti. Vestibulum tempor sit amet nisl ut egestas. Morbi at varius erat, ut condimentum arcu. Maecenas eu enim augue.",
+    "instruktion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non ex a arcu euismod scelerisque. Cras ullamcorper sed tortor vitae auctor. Suspendisse potenti. Vestibulum tempor sit amet nisl ut egestas. Morbi at varius erat, ut condimentum arcu. Maecenas eu enim augue.",
+    "itemsPrSlide_global" : 4,
+    "day": [
+        {
+            "day_no": 1,
+            "itemsPrSlide": 3, "NOTE1": "I TLYs design er der ikke behov for itemsPrSlide",
+            "content": [
+                {
+                    "category": "card",
+                    "card": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/sso_emne.png",
+                        "header": "Lorem ipsum dolor sit amet",
+                        "btnText": "Lorem ipsum",
+                        "text": "Lorem ipsum"
+                    },
+                    "userMsgBox_data": {
+                        "displayMode": "html",
+                        "html": "<h1>Dette er en test!</h1>"
+                    }
+                }
+            ]
+        },
+        {
+            "day_no": 2,
+            "itemsPrSlide": 3, "NOTE1": "I TLYs design er der ikke behov for itemsPrSlide",
+            "content": [
+                {
+                    "category": "card",
+                    "card": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/sso_emne.png",
+                        "header": "Lorem ipsum dolor sit amet",
+                        "btnText": "Lorem ipsum",
+                        "text": "Lorem ipsum"
+                    }
+                },
+                {
+                    "category": "card",
+                    "card": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/sso_emne.png",
+                        "header": "Lorem ipsum dolor sit amet",
+                        "btnText": "Lorem ipsum",
+                        "text": "Lorem ipsum"
+                    }
+                }
+            ]
+        },
+        {
+            "day_no": 3,
+            "itemsPrSlide": 3, "NOTE1": "I TLYs design er der ikke behov for itemsPrSlide",
+            "content": [
+                {
+                    "category": "card",
+                    "card": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/sso_emne.png",
+                        "header": "Lorem ipsum dolor sit amet",
+                        "btnText": "Lorem ipsum",
+                        "text": "Lorem ipsum"
+                    }
+                },
+                {
+                    "category": "card",
+                    "card": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/sso_emne.png",
+                        "header": "Lorem ipsum dolor sit amet",
+                        "btnText": "Lorem ipsum",
+                        "text": "Lorem ipsum"
+                    }
+                },
+                {
+                    "category": "card",
+                    "card": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/sso_emne.png",
+                        "header": "Lorem ipsum dolor sit amet",
+                        "btnText": "Lorem ipsum",
+                        "text": "Lorem ipsum"
+                    }
+                }
+            ]
+        },
+        {
+            "day_no": 4,
+            "itemsPrSlide": 3, "NOTE1": "I TLYs design er der ikke behov for itemsPrSlide",
+            "content": [
+                {
+                    "category": "card",
+                    "card": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/sso_emne.png",
+                        "header": "Lorem ipsum dolor sit amet",
+                        "btnText": "Lorem ipsum",
+                        "text": "Lorem ipsum"
+                    }
+                },
+                {
+                    "category": "card",
+                    "card": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/sso_emne.png",
+                        "header": "Lorem ipsum dolor sit amet",
+                        "btnText": "Lorem ipsum",
+                        "text": "Lorem ipsum"
+                    }
+                },
+                {
+                    "category": "card",
+                    "card": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/sso_emne.png",
+                        "header": "Lorem ipsum dolor sit amet",
+                        "btnText": "Lorem ipsum",
+                        "text": "Lorem ipsum"
+                    }
+                },
+                {
+                    "category": "card",
+                    "card": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/sso_emne.png",
+                        "header": "Lorem ipsum dolor sit amet",
+                        "btnText": "Lorem ipsum",
+                        "text": "Lorem ipsum"
+                    }
+                }
+            ]
+        },
+        {
+            "day_no": 5,
+            "itemsPrSlide": 3, "NOTE1": "I TLYs design er der ikke behov for itemsPrSlide",
+            "content": [
+                {
+                    "category": "card",
+                    "card": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/sso_emne.png",
+                        "header": "Lorem ipsum dolor sit amet",
+                        "btnText": "Lorem ipsum",
+                        "text": "Lorem ipsum"
+                    }
+                },
+                {
+                    "category": "card",
+                    "card": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/sso_emne.png",
+                        "header": "Lorem ipsum dolor sit amet",
+                        "btnText": "Lorem ipsum",
+                        "text": "Lorem ipsum"
+                    }
+                },
+                {
+                    "category": "card",
+                    "card": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/sso_emne.png",
+                        "header": "Lorem ipsum dolor sit amet",
+                        "btnText": "Lorem ipsum",
+                        "text": "Lorem ipsum"
+                    }
+                },
+                {
+                    "category": "card",
+                    "card": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/sso_emne.png",
+                        "header": "Lorem ipsum dolor sit amet",
+                        "btnText": "Lorem ipsum",
+                        "text": "Lorem ipsum"
+                    }
+                },
+                {
+                    "category": "card",
+                    "card": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/sso_emne.png",
+                        "header": "Lorem ipsum dolor sit amet",
+                        "btnText": "Lorem ipsum",
+                        "text": "Lorem ipsum"
+                    }
+                }
+            ]
+        },
+        {
+            "day_no": 6,
+            "itemsPrSlide": 3, "NOTE1": "I TLYs design er der ikke behov for itemsPrSlide",
+            "content": [
+                {
+                    "category": "card",
+                    "card": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/sso_emne.png",
+                        "header": "Lorem ipsum dolor sit amet",
+                        "btnText": "Lorem ipsum",
+                        "text": "Lorem ipsum"
+                    }
+                },
+                {
+                    "category": "card",
+                    "card": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/sso_emne.png",
+                        "header": "Lorem ipsum dolor sit amet",
+                        "btnText": "Lorem ipsum",
+                        "text": "Lorem ipsum"
+                    }
+                },
+                {
+                    "category": "card",
+                    "card": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/sso_emne.png",
+                        "header": "Lorem ipsum dolor sit amet",
+                        "btnText": "Lorem ipsum",
+                        "text": "Lorem ipsum"
+                    }
+                },
+                {
+                    "category": "card",
+                    "card": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/sso_emne.png",
+                        "header": "Lorem ipsum dolor sit amet",
+                        "btnText": "Lorem ipsum",
+                        "text": "Lorem ipsum"
+                    }
+                },
+                {
+                    "category": "card",
+                    "card": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/sso_emne.png",
+                        "header": "Lorem ipsum dolor sit amet",
+                        "btnText": "Lorem ipsum",
+                        "text": "Lorem ipsum"
+                    }
+                },
+                {
+                    "category": "card",
+                    "card": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/sso_emne.png",
+                        "header": "Lorem ipsum dolor sit amet",
+                        "btnText": "Lorem ipsum",
+                        "text": "Lorem ipsum"
+                    }
+                }
+            ]
+        },
+        {
+            "day_no": 7,
+            "itemsPrSlide": 3, "NOTE1": "I TLYs design er der ikke behov for itemsPrSlide",
+            "content": [
+                {
+                    "category": "card",
+                    "card": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/sso_emne.png",
+                        "header": "Lorem ipsum dolor sit amet",
+                        "btnText": "Lorem ipsum",
+                        "text": "Lorem ipsum"
+                    }
+                },
+                {
+                    "category": "card",
+                    "card": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/sso_emne.png",
+                        "header": "Lorem ipsum dolor sit amet",
+                        "btnText": "Lorem ipsum",
+                        "text": "Lorem ipsum"
+                    }
+                },
+                {
+                    "category": "card",
+                    "card": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/sso_emne.png",
+                        "header": "Lorem ipsum dolor sit amet",
+                        "btnText": "Lorem ipsum",
+                        "text": "Lorem ipsum"
+                    }
+                },
+                {
+                    "category": "card",
+                    "card": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/sso_emne.png",
+                        "header": "Lorem ipsum dolor sit amet",
+                        "btnText": "Lorem ipsum",
+                        "text": "Lorem ipsum"
+                    }
+                },
+                {
+                    "category": "card",
+                    "card": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/sso_emne.png",
+                        "header": "Lorem ipsum dolor sit amet",
+                        "btnText": "Lorem ipsum",
+                        "text": "Lorem ipsum"
+                    }
+                },
+                {
+                    "category": "card",
+                    "card": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/sso_emne.png",
+                        "header": "Lorem ipsum dolor sit amet",
+                        "btnText": "Lorem ipsum",
+                        "text": "Lorem ipsum"
+                    }
+                },
+                {
+                    "category": "card",
+                    "card": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/sso_emne.png",
+                        "header": "Lorem ipsum dolor sit amet",
+                        "btnText": "Lorem ipsum",
+                        "text": "Lorem ipsum"
+                    }
+                }
+            ]
+        },
+        {
+            "day_no": 8,
+            "itemsPrSlide": 3, "NOTE1": "I TLYs design er der ikke behov for itemsPrSlide",
+            "content": [
+                {
+                    "category": "card",
+                    "card": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/sso_emne.png",
+                        "header": "Lorem ipsum dolor sit amet",
+                        "btnText": "Lorem ipsum",
+                        "text": "Lorem ipsum"
+                    }
+                },
+                {
+                    "category": "card",
+                    "card": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/sso_emne.png",
+                        "header": "Lorem ipsum dolor sit amet",
+                        "btnText": "Lorem ipsum",
+                        "text": "Lorem ipsum"
+                    }
+                },
+                {
+                    "category": "card",
+                    "card": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/sso_emne.png",
+                        "header": "Lorem ipsum dolor sit amet",
+                        "btnText": "Lorem ipsum",
+                        "text": "Lorem ipsum"
+                    }
+                },
+                {
+                    "category": "card",
+                    "card": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/sso_emne.png",
+                        "header": "Lorem ipsum dolor sit amet",
+                        "btnText": "Lorem ipsum",
+                        "text": "Lorem ipsum"
+                    }
+                },
+                {
+                    "category": "card",
+                    "card": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/sso_emne.png",
+                        "header": "Lorem ipsum dolor sit amet",
+                        "btnText": "Lorem ipsum",
+                        "text": "Lorem ipsum"
+                    }
+                },
+                {
+                    "category": "card",
+                    "card": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/sso_emne.png",
+                        "header": "Lorem ipsum dolor sit amet",
+                        "btnText": "Lorem ipsum",
+                        "text": "Lorem ipsum"
+                    }
+                },
+                {
+                    "category": "card",
+                    "card": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/sso_emne.png",
+                        "header": "Lorem ipsum dolor sit amet",
+                        "btnText": "Lorem ipsum",
+                        "text": "Lorem ipsum"
+                    }
+                },
+                {
+                    "category": "card",
+                    "card": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/sso_emne.png",
+                        "header": "Lorem ipsum dolor sit amet",
+                        "btnText": "Lorem ipsum",
+                        "text": "Lorem ipsum"
+                    }
+                },
+                {
+                    "category": "card",
+                    "card": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/sso_emne.png",
+                        "header": "Lorem ipsum dolor sit amet",
+                        "btnText": "Lorem ipsum",
+                        "text": "Lorem ipsum"
+                    }
+                }
+            ]
+        }
+    ]  
+}

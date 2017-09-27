@@ -8,14 +8,21 @@
 }
 
 .skriveuge_item, .skriveuge_item_dummy{
-	max-width: 350px;
+	/*max-width: 350px;*/
 	width: 370px;
 	height: 100%;
 	/*max-width: 31.5%;*/
 	/*width: 31.5%;*/
 	display: inline-block;
-	margin: 5px;
+	margin: 10px;
 	border: 1px solid #ccc;
+}
+
+.skriveuge_item {
+
+	/*box-shadow: 6px 6px 30px #888888;*/
+    /*border-radius: 6px;*/
+
 }
 
 .skriveuge_item_dummy{
@@ -79,3 +86,56 @@
 .carousel-indicators{
 	display: none;
 }
+
+.carousel {
+	background-color: #f8f8f6;
+}
+
+.carousel{
+	padding-bottom: 10px;
+}
+
+.weekNameAndNumber {
+	display: inline-block;
+	width: 15%;
+	position: absolute;
+}
+
+.weekNumber{
+	font-size: 12em;
+	color: #CCC;
+	position: absolute;
+	left: 5px;
+	z-index: 1;
+}
+
+.weekDay{
+	font-size: 4em;
+	position: absolute; 
+	z-index: 2;
+	top: 95px;
+	color: #444;
+}
+
+.carousel-inner{
+	width: initial;
+    display: inline-block;
+    /*margin-left: 15%;*/
+    float: right;
+    width: 88%;    /* <----- IMPORTANT AJUSTMENT PERAMETER*/
+}
+
+.active {
+	/*display: inline-block !important;*/
+}
+
+
+.carousel-control.left {
+	left: 16%;
+}
+
+.carousel .carousel-control.right {
+	right: -15px;
+}
+
+/*****************************/

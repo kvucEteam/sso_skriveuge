@@ -50,22 +50,34 @@ function makeInterface() {
 function makeSkriveugeSlide(dayIndex, cardIndex_start, cardIndex_end) {
 	console.log('\nmakeSkriveugeSlide - CALLED');
 
+	// var weekLookup = ['FRE','LØR','SØN','MAN','TIR','ONS','TOR','FRE'];
+
 	var day = jsonData.day;
 	var HTML = '';
 	
 	HTML += '<div class="skriveuge_slide">';
 
-		var contentLength = day[dayIndex].content.length;
-		var itemsPrSlide = day[dayIndex].itemsPrSlide;
+		// HTML += '<div class="weekNameAndNumber">';
+		// 	HTML += '<div class="weekNumber">'+String(parseInt(dayIndex)+1)+'</div>';
+		// 	HTML += '<div class="weekDay">'+weekLookup[dayIndex]+'</div>';
+		// HTML += '</div>';
 
-		cardIndex_end = (cardIndex_end < contentLength)? cardIndex_end : contentLength;
+		var contentLength = day[dayIndex].content.length;
+		// var itemsPrSlide = day[dayIndex].itemsPrSlide;  	// COMMENTED OUT 25/9-2017
+		var itemsPrSlide = jsonData.itemsPrSlide_global;	// ADDED 25/9-2017
+
+		// cardIndex_end = (cardIndex_end < contentLength)? cardIndex_end : contentLength;  // COMMENTED OUT 25/9-2017
+		cardIndex_end = (cardIndex_end < contentLength)? cardIndex_end : contentLength;		// ADDED 25/9-2017
 		console.log('makeSkriveugeSlide - cardIndex_start: ' + cardIndex_start + ', cardIndex_end: ' + cardIndex_end + ', contentLength: ' + contentLength + ', itemsPrSlide: ' + itemsPrSlide);
 
-		for (var c = cardIndex_start; c < cardIndex_end; c++) {
+		var countMem = 0;
+
+		// for (var c = cardIndex_start; c < cardIndex_end; c++) {	// COMMENTED OUT 25/9-2017
+		for (var c = 0; c < cardIndex_end-cardIndex_start; c++) {		// ADDED 25/9-2017
 		
-			console.log('makeSkriveugeSlide - day['+dayIndex+'].content['+c+']: ' + JSON.stringify(day[dayIndex].content[c]));
+			console.log('makeSkriveugeSlide - day['+dayIndex+'].content['+String(c+cardIndex_start)+']: ' + JSON.stringify(day[dayIndex].content[c+cardIndex_start]));
 			// HTML += '<div class="skriveuge_item col-xs-12">';
-				var cObj = day[dayIndex].content[c];
+				var cObj = day[dayIndex].content[c+cardIndex_start];
 
 				switch(cObj.category) {
 				    case 'card':
@@ -93,10 +105,14 @@ function makeSkriveugeSlide(dayIndex, cardIndex_start, cardIndex_end) {
 				        // alert('ERROR');
 				}
 			// HTML += '</div>';
+
+			countMem = c;
 		}
 
-		if (((contentLength - itemsPrSlide) < cardIndex_end) && (cardIndex_end%itemsPrSlide!==0)){
-			for (var i = 0; i <= contentLength - itemsPrSlide; i++) {
+		if (((contentLength - itemsPrSlide) < cardIndex_end) && (cardIndex_end%itemsPrSlide!==0)){ // COMMENTED OUT 25/9-2017
+		// if ((cardIndex_end%itemsPrSlide!==0)){ // ADDED 25/9-2017
+			// for (var i = 0; i < contentLength - itemsPrSlide; i++) {	// COMMENTED OUT 25/9-2017
+			for (var i = 0; i <= itemsPrSlide - 2 - countMem; i++) {	// ADDED 25/9-2017
 				HTML += '<div class="skriveuge_item skriveuge_item_dummy"></div>';  // &nbsp;
 			};
 		}
@@ -362,11 +378,11 @@ function makeSlideData() {
 	var TjsonData = {slideData: []};
 	var itemsPrSlide;
 	for (var n in jsonData.day) {
-		if ((jsonData.day[n].hasOwnProperty('itemsPrSlide')) && (jsonData.day[n].itemsPrSlide!==null)) {
-			console.log('makeSlideData - A0');
-			itemsPrSlide = jsonData.day[n].itemsPrSlide;
-		} else {
-			console.log('makeSlideData - A1');
+		// if ((jsonData.day[n].hasOwnProperty('itemsPrSlide')) && (jsonData.day[n].itemsPrSlide!==null)) {   // COMMENTED OUT 25/9-2017
+		// 	console.log('makeSlideData - A0');
+		// 	itemsPrSlide = jsonData.day[n].itemsPrSlide;
+		// } else {
+		// 	console.log('makeSlideData - A1');
 			if ((jsonData.hasOwnProperty('itemsPrSlide_global')) && (jsonData.itemsPrSlide_global!==null)) {
 				console.log('makeSlideData - A2');
 				itemsPrSlide = jsonData.itemsPrSlide_global;
@@ -374,7 +390,7 @@ function makeSlideData() {
 				console.log('makeSlideData - A3');
 				itemsPrSlide = null;
 			}
-		}
+		// }
 		console.log('makeSlideData - itemsPrSlide: ' + itemsPrSlide);
 
 		if (itemsPrSlide!==null) {
@@ -386,10 +402,10 @@ function makeSlideData() {
 			for (var i = 0; i < numOfRuns; i++) {
 				console.log('makeSlideData - cardIndex_start: ' + cardIndex_start + ', cardIndex_end: ' + String(cardIndex_start+itemsPrSlide));
 				var HTML = makeSkriveugeSlide(n, cardIndex_start, cardIndex_start+itemsPrSlide);
-				console.log('makeSlideData - HTML: ' + HTML);
+				// console.log('makeSlideData - HTML: ' + HTML);
 				cardIndex_start += itemsPrSlide;
 				slides.push({"type": "card", "card": HTML});
-				console.log('makeSlideData - slides: ' + JSON.stringify(slides));
+				// console.log('makeSlideData - slides: ' + JSON.stringify(slides));
 			};
 			TjsonData.slideData.push({"day_no": jsonData.day[n].day_no, "carouselData": {"slides": slides}})
 		}
@@ -463,8 +479,82 @@ function makeSlideData() {
 // });
 
 
+// $( document ).on('click', ".carousel-control .glyphicon-chevron-right", function(event){
+$( document ).on('click', ".right.carousel-control", function(event){
+	var carouselPageIndex = $(this).closest('.carouselPage').index();
+	console.log('CLICK glyphicon-chevron-right - carouselPageIndex: ' + carouselPageIndex);
+
+	var numOfSlides = TjsonData.slideData[carouselPageIndex].carouselData.slides.length;
+	console.log('CLICK glyphicon-chevron-right - numOfSlides: ' + numOfSlides);
+
+	var pObj = $(this).closest('.carouselPage');
+	var activeIndex = $('.active', pObj).index();
+	console.log('CLICK glyphicon-chevron-right - activeIndex 1: ' + activeIndex);
+
+	if (activeIndex == numOfSlides-1) {
+		$('.right.carousel-control', pObj).hide();
+	} else {
+		$('.right.carousel-control', pObj).show();
+	}
+	$('.left.carousel-control', pObj).show();
+});
+
+
+// $( document ).on('click', ".carousel-control .glyphicon-chevron-left", function(event){
+$( document ).on('click', ".left.carousel-control", function(event){
+	var carouselPageIndex = $(this).closest('.carouselPage').index();
+	console.log('CLICK glyphicon-chevron-left - carouselPageIndex: ' + carouselPageIndex);
+
+	var numOfSlides = TjsonData.slideData[carouselPageIndex].carouselData.slides.length;
+	console.log('CLICK glyphicon-chevron-left - numOfSlides: ' + numOfSlides);
+
+	var pObj = $(this).closest('.carouselPage');
+	var activeIndex = $('.active', pObj).index();
+	console.log('CLICK glyphicon-chevron-left - activeIndex 1: ' + activeIndex);
+
+	if (activeIndex == 0) {
+		$('.left.carousel-control', pObj).hide();
+	} else {
+		$('.left.carousel-control', pObj).show();
+	}
+	$('.right.carousel-control', pObj).show();
+});
+
+
 function addOrRemoveCarouselControles() {
 
+	$('.left.carousel-control').hide();
+
+	$('.carouselPage').each(function( index, element ) {
+		var numOfSlides = $('.item', element).length;
+		console.log('addOrRemoveCarouselControles - numOfSlides: ' + numOfSlides);
+
+		if (numOfSlides == 1) {
+			$('.right.carousel-control', element).hide();
+		}
+	});
+
+	// for (var n in TjsonData.slideData) {
+	// 	if (TjsonData.slideData[n].carouselData.slides.length == 1) {
+	// 		$('.right.carousel-control').hide();
+	// 	}
+	// };
+}
+
+
+function insertWeekdayAndWeekNum() {
+
+	var weekLookup = ['FRE','LØR','SØN','MAN','TIR','ONS','TOR','FRE'];
+
+	$('.carousel').each(function( index, element ) {
+		var HTML = '';
+		HTML += '<span class="weekNameAndNumber">';
+			HTML += '<span class="weekDay">'+weekLookup[index]+'</span>';
+			HTML += '<span class="weekNumber">'+String(parseInt(index)+1)+'</span>';
+		HTML += '</span>';
+
+		$(element).prepend(HTML); 
+	});
 }
 
 
@@ -472,18 +562,78 @@ function addOrRemoveCarouselControles() {
 // Scaling is needed because if the width of ".skriveuge_item" is set in percent, the bootstrap slide animation breaks if only 
 // one ".skriveuge_item" and two ".skriveuge_item_dummy" cards are present in the last ".skriveuge_slide".
 function scale_skriveuge_item() {
-	var w = $('.skriveuge_slide').width();
+	// var w = $('.skriveuge_slide').width();  // carousel-inner
+	var w = $('.carousel-inner').width();  // active
+	var w_weekNum = $('.weekNameAndNumber').outerWidth();
 	var w_item = $('.skriveuge_item').width();
+	// var w_item = $('.skriveuge_item').outerWidth();
 	var m_left_item = parseInt($('.skriveuge_item').css('margin-left').replace('px', ''));
 	var m_right_item = parseInt($('.skriveuge_item').css('margin-right').replace('px', ''));
-	var numOfItems = $('.skriveuge_slide:eq(0) .skriveuge_item').length;  // <----- IMPORTANT: THIS IS NOT GENERAL!
+	// var numOfItems = $('.skriveuge_slide:eq(0) .skriveuge_item').length;  // <----- IMPORTANT: THIS IS NOT GENERAL!
+	var numOfItems = jsonData.itemsPrSlide_global;
 	console.log('scale_skriveuge_item - w: ' + w + ', w_item: ' + w_item + ', m_left_item: ' + m_left_item + ', m_right_item: ' + m_right_item + ', numOfItems: ' + numOfItems);
 
-	var w_item_new = Math.floor(w/numOfItems) - m_left_item - m_right_item - 2;
+	var w_item_new = Math.floor(w/numOfItems) - m_left_item - m_right_item - 2;				// COMMENTED 26/9-2017
+	// var w_item_new = Math.floor((w - w_weekNum)/numOfItems) - m_left_item - m_right_item - 15;  // ADDED 26/9-2017  <-------- ERROR with weekNameAndNumber!!
 	console.log('scale_skriveuge_item - w_item_new: ' + w_item_new);
 
 	$('.skriveuge_item').width(w_item_new);
 }
+
+
+$( document ).on('mouseenter', '.objLink', function(){
+	console.log('mouseover - CALLED');
+
+	$('.cviOverlay', this).fadeIn( "fast", function() {});
+
+	$('.btn_ghost', this).switchClass( "btn_ghost_noStyle", "vuc-primary", 300, "easeInOutQuad" );
+});
+
+$( document ).on('mouseleave', '.objLink', function(){
+	console.log('mouseout - CALLED');
+	
+	$('.cviOverlay', this).fadeOut( "fast", function() {});
+
+	$('.btn_ghost', this).switchClass( "vuc-primary", "btn_ghost_noStyle", 300, "easeInOutQuad" );
+});
+
+
+$( document ).on('click', '.skriveuge_item', function(){
+	if ($('.btn', this).length) {
+		console.log('click - A0');
+		var numOfSlides = jsonData.itemsPrSlide_global;
+		var index_day = $(this).closest('.carouselPage').index();
+		var index_slide = $(this).closest('.item').index();
+		var index_card = $(this).closest('.skriveuge_item').index();
+		var json_index = numOfSlides*index_slide + index_card; 
+		console.log('click - index_day: ' + index_day + ', index_slide: ' + index_slide + ', index_card: ' + index_card + ', json_index: ' + json_index);
+
+		var cardObj = jsonData.day[index_day].content[json_index];
+		console.log('click - cardObj: ' + JSON.stringify(cardObj));
+
+		if (cardObj.hasOwnProperty('userMsgBox_data')) {
+			console.log('click - A1');
+			var displayMode = cardObj.userMsgBox_data.displayMode;
+			var HTML = '';
+
+			switch (displayMode) {
+	            case "html":
+	            	console.log('click - A2');
+	                HTML += cardObj.userMsgBox_data.html;
+	                break;
+	            case "text":
+	            	console.log('click - A3');
+	                HTML += cardObj.userMsgBox_data.text;
+	                break;
+	            default:
+	            	console.log('click - A4');
+	                alert('Invalid "type"');
+			}
+
+			UserMsgBox('body', HTML);
+		}
+	}
+});
 
 
 
@@ -501,6 +651,8 @@ $(document).ready(function() {
 	// $('#interface').append(makeInterface());
 
 	$('#interface').append(initCarouselObjs(TjsonData));
+	insertWeekdayAndWeekNum();
+	addOrRemoveCarouselControles();
 
 	scale_skriveuge_item();
 });
