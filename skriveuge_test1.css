@@ -14,15 +14,15 @@
 	/*max-width: 31.5%;*/
 	/*width: 31.5%;*/
 	display: inline-block;
-	margin: 5px;
+	margin: 10px;
 	border: 1px solid #ccc;
 }
 
 .skriveuge_item {
-/*
-	box-shadow: 6px 6px 30px #888888;
-    border-radius: 6px;
- */   
+
+	/*box-shadow: 6px 6px 30px #888888;*/
+    /*border-radius: 6px;*/
+
 }
 
 .skriveuge_item_dummy{
@@ -95,7 +95,46 @@
 	padding-bottom: 10px;
 }
 
+.weekNameAndNumber {
+	display: inline-block;
+	width: 15%;
+	position: absolute;
+}
+
+.weekNumber{
+	font-size: 12em;
+	color: #CCC;
+	position: absolute;
+	left: 25px;
+	z-index: 1;
+}
+
+.weekDay{
+	font-size: 6em;
+	position: absolute; 
+	z-index: 2;
+	top: 75px;
+}
+
+.carousel-inner{
+	width: initial;
+    display: inline-block;
+    /*margin-left: 15%;*/
+    float: right;
+    width: 82%;    /* <----- IMPORTANT AJUSTMENT PERAMETER*/
+}
+
+.active {
+	/*display: inline-block !important;*/
+}
 
 
+.carousel-control.left {
+	left: 16%;
+}
+
+.carousel .carousel-control.right {
+	right: -15px;
+}
 
 /*****************************/

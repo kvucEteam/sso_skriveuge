@@ -50,10 +50,17 @@ function makeInterface() {
 function makeSkriveugeSlide(dayIndex, cardIndex_start, cardIndex_end) {
 	console.log('\nmakeSkriveugeSlide - CALLED');
 
+	// var weekLookup = ['FRE','LØR','SØN','MAN','TIR','ONS','TOR','FRE'];
+
 	var day = jsonData.day;
 	var HTML = '';
 	
 	HTML += '<div class="skriveuge_slide">';
+
+		// HTML += '<div class="weekNameAndNumber">';
+		// 	HTML += '<div class="weekNumber">'+String(parseInt(dayIndex)+1)+'</div>';
+		// 	HTML += '<div class="weekDay">'+weekLookup[dayIndex]+'</div>';
+		// HTML += '</div>';
 
 		var contentLength = day[dayIndex].content.length;
 		// var itemsPrSlide = day[dayIndex].itemsPrSlide;  	// COMMENTED OUT 25/9-2017
@@ -535,19 +542,39 @@ function addOrRemoveCarouselControles() {
 }
 
 
+function insertWeekdayAndWeekNum() {
+
+	var weekLookup = ['FRE','LØR','SØN','MAN','TIR','ONS','TOR','FRE'];
+
+	$('.carousel').each(function( index, element ) {
+		var HTML = '';
+		HTML += '<span class="weekNameAndNumber">';
+			HTML += '<span class="weekDay">'+weekLookup[index]+'</span>';
+			HTML += '<span class="weekNumber">'+String(parseInt(index)+1)+'</span>';
+		HTML += '</span>';
+
+		$(element).prepend(HTML); 
+	});
+}
+
+
 // IMPORTANT:
 // Scaling is needed because if the width of ".skriveuge_item" is set in percent, the bootstrap slide animation breaks if only 
 // one ".skriveuge_item" and two ".skriveuge_item_dummy" cards are present in the last ".skriveuge_slide".
 function scale_skriveuge_item() {
-	var w = $('.skriveuge_slide').width();
+	// var w = $('.skriveuge_slide').width();  // carousel-inner
+	var w = $('.carousel-inner').width();  // active
+	var w_weekNum = $('.weekNameAndNumber').outerWidth();
 	var w_item = $('.skriveuge_item').width();
+	// var w_item = $('.skriveuge_item').outerWidth();
 	var m_left_item = parseInt($('.skriveuge_item').css('margin-left').replace('px', ''));
 	var m_right_item = parseInt($('.skriveuge_item').css('margin-right').replace('px', ''));
 	// var numOfItems = $('.skriveuge_slide:eq(0) .skriveuge_item').length;  // <----- IMPORTANT: THIS IS NOT GENERAL!
 	var numOfItems = jsonData.itemsPrSlide_global;
 	console.log('scale_skriveuge_item - w: ' + w + ', w_item: ' + w_item + ', m_left_item: ' + m_left_item + ', m_right_item: ' + m_right_item + ', numOfItems: ' + numOfItems);
 
-	var w_item_new = Math.floor(w/numOfItems) - m_left_item - m_right_item - 2;
+	var w_item_new = Math.floor(w/numOfItems) - m_left_item - m_right_item - 2;				// COMMENTED 26/9-2017
+	// var w_item_new = Math.floor((w - w_weekNum)/numOfItems) - m_left_item - m_right_item - 15;  // ADDED 26/9-2017  <-------- ERROR with weekNameAndNumber!!
 	console.log('scale_skriveuge_item - w_item_new: ' + w_item_new);
 
 	$('.skriveuge_item').width(w_item_new);
@@ -571,6 +598,17 @@ $( document ).on('mouseleave', '.objLink', function(){
 });
 
 
+$( document ).on('click', '.skriveuge_item', function(){
+	if ($('.btn', this).length) {
+		var index_slider = $(this).closest('.carouselPage').index();
+		var index_slide = $(this).closest('.item').index();
+		var index_card = $(this).closest('.skriveuge_item').index();
+		var json_index = 0;
+		UserMsgBox('body', 'TEST');
+	}
+});
+
+
 
 $(window).resize(function() {
 	scale_skriveuge_item();
@@ -586,6 +624,7 @@ $(document).ready(function() {
 	// $('#interface').append(makeInterface());
 
 	$('#interface').append(initCarouselObjs(TjsonData));
+	insertWeekdayAndWeekNum();
 	addOrRemoveCarouselControles();
 
 	scale_skriveuge_item();
