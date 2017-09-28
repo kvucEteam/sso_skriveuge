@@ -104,6 +104,10 @@ function makeSkriveugeSlide(dayIndex, cardIndex_start, cardIndex_end) {
 				    	console.log('makeSkriveugeSlide - A3');
 				    	HTML += makeDagensOpgaver(cObj.dagensOpgaver);
 				        break;
+				    case 'dagensMaal':
+				    	console.log('makeSkriveugeSlide - A3');
+				    	HTML += makeDagensMaal(cObj.dagensMaal);
+				        break;
 				    case 'faq':
 				    	console.log('makeSkriveugeSlide - A4');
 				        HTML += makeFaq(cObj.faq);
@@ -243,6 +247,28 @@ function makeDagensOpgaver(cObj) {
 			// 	}
 			// 	HTML += '</ul>';
 			// }
+			HTML += '<div class="Clear"></div>';
+		HTML += '</div>';
+	HTML += '</div>';
+
+	return HTML;
+}
+
+
+function makeDagensMaal(cObj) {
+	console.log('\nmakeDagensMaal - CALLED - cObj: ' + JSON.stringify(cObj));
+
+	var HTML = '';
+	HTML += '<div '+((cObj.hasOwnProperty('attr'))?generateAttrStr(cObj.attr):'')+'>';
+		HTML += '<div class="imgContainer">';
+			HTML += (cObj.hasOwnProperty('imgSrc')?'<div class="cviOverlay">&nbsp;</div><img class="img-responsive" src="'+cObj.imgSrc+'">':'');
+		HTML += '</div>';
+		HTML += '<div class="objText">';
+			HTML += ((cObj.hasOwnProperty('header'))?'<h4>'+cObj.header+'</h4>':'');
+			HTML += ((cObj.hasOwnProperty('text'))?'<p>'+cObj.text+'</p>':'');
+			
+			HTML += ((cObj.hasOwnProperty('btnText'))?'<span class="btn_ghost btn_ghost_noStyle btn btn-default">'+cObj.btnText+'</span>':'');
+			
 			HTML += '<div class="Clear"></div>';
 		HTML += '</div>';
 	HTML += '</div>';

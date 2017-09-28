@@ -80,7 +80,7 @@
                         "displayMode": "html",
                         "html": "html('#hurtigskrivning', '#UserMsgBox_text')"
                     }
-                }
+                },
                 {
                     "category": "checklist",
                     "checklist": {
@@ -94,7 +94,7 @@
                         "displayMode": "html",
                         "html": "html('#citater', '#UserMsgBox_text')"
                     }
-                },
+                }
             ]
         },
         {
@@ -207,7 +207,7 @@
                         "displayMode": "html",
                         "html": "html('#arbejdsMilloe', '#UserMsgBox_text')"
                     }
-                }
+                },
                 {
                     "category": "checklist",
                     "checklist": {
@@ -221,7 +221,7 @@
                         "displayMode": "html",
                         "html": "html('#citater', '#UserMsgBox_text')"
                     }
-                },
+                }
             ]
         },
         {
@@ -285,7 +285,7 @@
                         "btnText": "Lorem ipsum",
                         "text": "Lorem ipsum"
                     }
-                }
+                },
                 {
                     "category": "checklist",
                     "checklist": {
@@ -299,7 +299,7 @@
                         "displayMode": "html",
                         "html": "html('#citater', '#UserMsgBox_text')"
                     }
-                },
+                }
             ]
         },
         {
@@ -364,7 +364,7 @@
                         "btnText": "Lorem ipsum",
                         "text": "Lorem ipsum"
                     }
-                }
+                },
                 {
                     "category": "checklist",
                     "checklist": {
@@ -378,7 +378,7 @@
                         "displayMode": "html",
                         "html": "html('#citater', '#UserMsgBox_text')"
                     }
-                },
+                }
             ]
         },
         {
@@ -452,7 +452,7 @@
                         "btnText": "Lorem ipsum",
                         "text": "Lorem ipsum"
                     }
-                }
+                },
                 {
                     "category": "checklist",
                     "checklist": {
@@ -466,7 +466,7 @@
                         "displayMode": "html",
                         "html": "html('#citater', '#UserMsgBox_text')"
                     }
-                },
+                }
             ]
         },
         {
@@ -564,7 +564,7 @@
                         "displayMode": "html",
                         "html": "html('#citater', '#UserMsgBox_text')"
                     }
-                },
+                }
             ]
         },
         {
@@ -599,7 +599,7 @@
                         "btnText": "Lorem ipsum",
                         "text": "Lorem ipsum"
                     }
-                },
+                }
                
                 
             ]
