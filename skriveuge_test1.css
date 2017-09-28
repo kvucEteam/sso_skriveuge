@@ -10,6 +10,7 @@
 }
 
 .skriveuge_slide {
+	display: flex;
 
 }
 
@@ -147,7 +148,7 @@
 .audioInline{
 	/*position: relative;
 	top: 45px;*/
-	height: 100%;  /* <----- Dette virker ikke - spørg ATO! */
+	height: 85%;  /* <----- Dette virker ikke - spørg ATO! */
 }
 
 /**********************************************************************
