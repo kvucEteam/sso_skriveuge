@@ -1,50 +1,58 @@
 
-function makeInterface() {
-	console.log('\nmakeInterface - CALLED');
+// function makeInterface() {
+// 	console.log('\nmakeInterface - CALLED');
 
-	var day = jsonData.day;
-	var HTML = '';
-	HTML += '<div id="skriveuge">';
-	for (var d in day) {
-		console.log('makeInterface - day['+d+']: ' + day[d]);
-		HTML += '<div class="skriveuge_dag row">';
-			for (var c in day[d].content) {
-				console.log('makeInterface - day['+d+'].content['+c+']: ' + JSON.stringify(day[d].content[c]));
-				// HTML += '<div class="skriveuge_item col-xs-12">';
-					var cObj = day[d].content[c];
+// 	var day = jsonData.day;
+// 	var HTML = '';
+// 	HTML += '<div id="skriveuge">';
+// 	for (var d in day) {
+// 		console.log('makeInterface - day['+d+']: ' + day[d]);
+// 		HTML += '<div class="skriveuge_dag row">';
+// 			for (var c in day[d].content) {
+// 				console.log('makeInterface - day['+d+'].content['+c+']: ' + JSON.stringify(day[d].content[c]));
+// 				// HTML += '<div class="skriveuge_item col-xs-12">';
+// 					var cObj = day[d].content[c];
 
-					switch(cObj.category) {
-					    case 'card':
-					    	console.log('makeInterface - A1');
-					        HTML += makeCard(cObj.card);
-					        break;
-					    case 'checklist':
-					    	console.log('makeInterface - A2');
-					    	HTML += makeChecklist(cObj.checklist);
-					        break;
-					    case 'faq':
-					    	console.log('makeInterface - A3');
-					        HTML += makeFaq(cObj.faq);
-					        break;
-					    case 'formalia':
-					    	console.log('makeInterface - A4');
-					    	HTML += makeFormalia(cObj.formalia);
-					        break;
-					    case 'video':
-					    	console.log('makeInterface - A5');
-					        HTML += makeVideo(cObj.video);
-					        break;
-					    default:
-					    	console.log('makeInterface - A6');
-					        // alert('ERROR');
-					}
-				// HTML += '</div>';
-			}
-		HTML += '</div>';
-	}
-	HTML += '</div>';
-	return HTML;
-}
+// 					switch(cObj.category) {
+// 						case 'card':
+// 					    	console.log('makeInterface - A1');
+// 					        HTML += makeAudio(cObj.card);
+// 					        break;
+// 					    case 'card':
+// 					    	console.log('makeInterface - A1');
+// 					        HTML += makeCard(cObj.card);
+// 					        break;
+// 					    case 'checklist':
+// 					    	console.log('makeInterface - A2');
+// 					    	HTML += makeChecklist(cObj.checklist);
+// 					        break;
+// 					    case 'dagensOpgaver':
+// 					    	console.log('makeInterface - A2');
+// 					    	HTML += makeChecklist(cObj.dagensOpgaver);
+// 					        break;
+// 					    case 'faq':
+// 					    	console.log('makeInterface - A3');
+// 					        HTML += makeFaq(cObj.faq);
+// 					        break;
+// 					    case 'formalia':
+// 					    	console.log('makeInterface - A4');
+// 					    	HTML += makeFormalia(cObj.formalia);
+// 					        break;
+// 					    case 'video':
+// 					    	console.log('makeInterface - A5');
+// 					        HTML += makeVideo(cObj.video);
+// 					        break;
+// 					    default:
+// 					    	console.log('makeInterface - A6');
+// 					        // alert('ERROR');
+// 					}
+// 				// HTML += '</div>';
+// 			}
+// 		HTML += '</div>';
+// 	}
+// 	HTML += '</div>';
+// 	return HTML;
+// }
 
 
 function makeSkriveugeSlide(dayIndex, cardIndex_start, cardIndex_end) {
@@ -80,6 +88,10 @@ function makeSkriveugeSlide(dayIndex, cardIndex_start, cardIndex_end) {
 				var cObj = day[dayIndex].content[c+cardIndex_start];
 
 				switch(cObj.category) {
+					case 'audio':
+				    	console.log('makeSkriveugeSlide - A0');
+				        HTML += makeAudio(cObj.audio);
+				        break;
 				    case 'card':
 				    	console.log('makeSkriveugeSlide - A1');
 				        HTML += makeCard(cObj.card);
@@ -88,20 +100,28 @@ function makeSkriveugeSlide(dayIndex, cardIndex_start, cardIndex_end) {
 				    	console.log('makeSkriveugeSlide - A2');
 				    	HTML += makeChecklist(cObj.checklist);
 				        break;
-				    case 'faq':
+				    case 'dagensOpgaver':
 				    	console.log('makeSkriveugeSlide - A3');
+				    	HTML += makeDagensOpgaver(cObj.dagensOpgaver);
+				        break;
+				    case 'faq':
+				    	console.log('makeSkriveugeSlide - A4');
 				        HTML += makeFaq(cObj.faq);
 				        break;
 				    case 'formalia':
-				    	console.log('makeSkriveugeSlide - A4');
+				    	console.log('makeSkriveugeSlide - A5');
 				    	HTML += makeFormalia(cObj.formalia);
 				        break;
-				    case 'video':
+				    case 'gaaet_i_staa':
 				    	console.log('makeSkriveugeSlide - A5');
+				    	HTML += makeNoProgress(cObj.gaaet_i_staa);
+				        break;
+				    case 'video':
+				    	console.log('makeSkriveugeSlide - A6');
 				        HTML += makeVideo(cObj.video);
 				        break;
 				    default:
-				    	console.log('makeSkriveugeSlide - A6');
+				    	console.log('makeSkriveugeSlide - A7');
 				        // alert('ERROR');
 				}
 			// HTML += '</div>';
@@ -149,7 +169,7 @@ function makeCard(cObj) {
 			HTML += (cObj.hasOwnProperty('imgSrc')?'<div class="cviOverlay">&nbsp;</div><img class="img-responsive" src="'+cObj.imgSrc+'">':'');
 		HTML += '</div>';
 		HTML += '<div class="objText">';
-			HTML += ((cObj.hasOwnProperty('header'))?'<h3>'+cObj.header+'</h3>':'');
+			HTML += ((cObj.hasOwnProperty('header'))?'<h4>'+cObj.header+'</h4>':'');
 			HTML += ((cObj.hasOwnProperty('text'))?'<p>'+cObj.text+'</p>':'');
 			HTML += ((cObj.hasOwnProperty('btnText'))?'<span class="btn_ghost btn_ghost_noStyle btn btn-default">'+cObj.btnText+'</span>':'');
 			HTML += '<div class="Clear"></div>';
@@ -157,6 +177,126 @@ function makeCard(cObj) {
 	HTML += '</div>';
 
 	return HTML;
+}
+
+
+function makeAudio(cObj) {
+	console.log('\nmakeAudio - CALLED - cObj: ' + JSON.stringify(cObj));
+
+	var HTML = '';
+	HTML += '<div '+((cObj.hasOwnProperty('attr'))?generateAttrStr(cObj.attr):'')+'>';
+		HTML += '<div class="imgContainer">';
+			HTML += (cObj.hasOwnProperty('imgSrc')?'<div class="cviOverlay">&nbsp;</div><img class="img-responsive" src="'+cObj.imgSrc+'">':'');
+		HTML += '</div>';
+		HTML += '<div class="objText">';
+			HTML += ((cObj.hasOwnProperty('header'))?'<h4>'+cObj.header+'</h4>':'');
+			HTML += ((cObj.hasOwnProperty('text'))?'<p>'+cObj.text+'</p>':'');
+			HTML += ((cObj.hasOwnProperty('audioSrc'))?returnAudioMarkup_sso(cObj.audioSrc):'');
+			HTML += '<div class="Clear"></div>';
+		HTML += '</div>';
+	HTML += '</div>';
+
+	return HTML;
+}
+
+
+function makeChecklist(cObj) {
+	console.log('\nmakeChecklist - CALLED - cObj: ' + JSON.stringify(cObj));
+
+	var HTML = '';
+	HTML += '<div '+((cObj.hasOwnProperty('attr'))?generateAttrStr(cObj.attr):'')+'>';
+		HTML += '<div class="imgContainer">';
+			HTML += (cObj.hasOwnProperty('imgSrc')?'<div class="cviOverlay">&nbsp;</div><img class="img-responsive" src="'+cObj.imgSrc+'">':'');
+		HTML += '</div>';
+		HTML += '<div class="objText">';
+			HTML += ((cObj.hasOwnProperty('header'))?'<h4>'+cObj.header+'</h4>':'');
+			HTML += ((cObj.hasOwnProperty('text'))?'<p>'+cObj.text+'</p>':'');
+			HTML += ((cObj.hasOwnProperty('btnText'))?'<span class="btn_ghost btn_ghost_noStyle btn btn-default">'+cObj.btnText+'</span>':'');
+			HTML += '<div class="Clear"></div>'; 
+		HTML += '</div>';
+	HTML += '</div>';
+
+	return HTML; 
+}
+
+
+function makeDagensOpgaver(cObj) {
+	console.log('\nmakeDagensOpgaver - CALLED - cObj: ' + JSON.stringify(cObj));
+
+	var HTML = '';
+	HTML += '<div '+((cObj.hasOwnProperty('attr'))?generateAttrStr(cObj.attr):'')+'>';
+		HTML += '<div class="imgContainer">';
+			HTML += (cObj.hasOwnProperty('imgSrc')?'<div class="cviOverlay">&nbsp;</div><img class="img-responsive" src="'+cObj.imgSrc+'">':'');
+		HTML += '</div>';
+		HTML += '<div class="objText">';
+			HTML += ((cObj.hasOwnProperty('header'))?'<h4>'+cObj.header+'</h4>':'');
+			HTML += ((cObj.hasOwnProperty('text'))?'<p>'+cObj.text+'</p>':'');
+			
+			HTML += ((cObj.hasOwnProperty('btnText'))?'<span class="btn_ghost btn_ghost_noStyle btn btn-default">'+cObj.btnText+'</span>':'');
+			
+			// HTML += ((cObj.hasOwnProperty('btn'))?'<span class="btn_ghost btn_ghost_noStyle btn btn-default"'+((cObj.btn.hasOwnProperty('jsonRef'))?' data-btnRef="'+cObj.btn.jsonRef+'"':'')+'>'+((cObj.btn.hasOwnProperty('btnText'))?cObj.btn.btnText:'')+'</span>':'');
+			
+			// if (cObj.hasOwnProperty('list')) {
+			// 	HTML += '<ul class="dagensOpgaver_list">';
+			// 	for (var n in cObj.list) {
+			// 		HTML += '<li>'+cObj.list[n]+'</li>';
+			// 	}
+			// 	HTML += '</ul>';
+			// }
+			HTML += '<div class="Clear"></div>';
+		HTML += '</div>';
+	HTML += '</div>';
+
+	return HTML;
+}
+
+
+function makeNoProgress(cObj) {
+	console.log('\nmakeNoProgress - CALLED - cObj: ' + JSON.stringify(cObj));
+
+	var HTML = '';
+	HTML += '<div '+((cObj.hasOwnProperty('attr'))?generateAttrStr(cObj.attr):'')+'>';
+		HTML += '<div class="imgContainer">';
+			HTML += (cObj.hasOwnProperty('imgSrc')?'<div class="cviOverlay">&nbsp;</div><img class="img-responsive" src="'+cObj.imgSrc+'">':'');
+		HTML += '</div>';
+		HTML += '<div class="objText">';
+			HTML += ((cObj.hasOwnProperty('header'))?'<h4>'+cObj.header+'</h4>':'');
+			HTML += ((cObj.hasOwnProperty('text'))?'<p>'+cObj.text+'</p>':'');
+			
+			HTML += ((cObj.hasOwnProperty('btnText'))?'<span class="btn_ghost btn_ghost_noStyle btn btn-default">'+cObj.btnText+'</span>':'');
+			
+			HTML += '<div class="Clear"></div>';
+		HTML += '</div>';
+	HTML += '</div>';
+
+	return HTML;
+}
+
+
+function makeVideo(cObj) {
+	console.log('\nmakeDagensOpgaver - CALLED - cObj: ' + JSON.stringify(cObj));
+
+	var HTML = '';
+	HTML += '<div '+((cObj.hasOwnProperty('attr'))?generateAttrStr(cObj.attr):'')+'>';
+		HTML += '<div class="imgContainer">';
+			// HTML += (cObj.hasOwnProperty('imgSrc')?'<div class="cviOverlay">&nbsp;</div><img class="img-responsive" src="'+cObj.imgSrc+'">':'');
+			HTML += ((cObj.hasOwnProperty('videoSrc'))?makeVideoPlayThumbnail((cObj.hasOwnProperty('thumbnail')?cObj.thumbnail:''), cObj.videoSrc):'');
+		HTML += '</div>';
+		HTML += '<div class="objText">';
+			HTML += ((cObj.hasOwnProperty('header'))?'<h4>'+cObj.header+'</h4>':'');
+			HTML += ((cObj.hasOwnProperty('text'))?'<p>'+cObj.text+'</p>':'');
+			
+			HTML += '<div class="Clear"></div>';
+		HTML += '</div>';
+	HTML += '</div>';
+
+	return HTML;
+}
+
+
+function makeVideoPlayThumbnail(thumbnail, videoSrc){
+	console.log('makeVideoPlayThumbnail - thumbnail: ' + thumbnail + ', videoSrc: ' + videoSrc);
+	return '<div class="videoPlayThumbnail" role="button" data-videoSrc="'+videoSrc+'">'+((thumbnail.length>0)?'<img class="img-responsive" src="'+thumbnail+'">':'')+'</div>';  // ((thumbnail.length>0)?thumbnail:'')
 }
 
 
@@ -557,6 +697,108 @@ function insertWeekdayAndWeekNum() {
 	});
 }
 
+// ========================================================================================================================
+// 													AUDIO FRA KS 
+// ========================================================================================================================
+// $('#audioPlayerContainer').html(returnAudioMarkup(stepNo));
+
+function returnAudioMarkup(stepNo){
+	// $('#audioPlayer').hide();
+	var audio = jsonData.steps[stepNo].audioFiles;
+	var audioSrc;
+	for (var n in audio){
+		if (audio[n].type == 'mpeg'){  // We only use mpeg files - this makes the array of objects in jsonData.steps[stepNo].audioFiles obsolete.
+			audioSrc = audio[n].name;
+			break;
+		}
+	} 
+	console.log("returnAudioMarkup - audioSrc: " + audioSrc);
+	var HTML = '';
+	HTML += '<div>';
+	HTML += 	'<audio src="'+audioSrc+'" id="audioPlayer" controls="controls" autoplay="autoplay">';
+    // HTML += 	'<source src="" type=""/>';
+    HTML += 		'Your browser does not support the audio element';
+    HTML += 	'</audio>';
+    HTML += '</div>';
+    return HTML;
+}
+
+function returnAudioMarkup_sso(audioSrc){
+	// $('#audioPlayer').hide();
+	// var audio = jsonData.steps[stepNo].audioFiles;
+	// var audioSrc;
+	// for (var n in audio){
+	// 	if (audio[n].type == 'mpeg'){  // We only use mpeg files - this makes the array of objects in jsonData.steps[stepNo].audioFiles obsolete.
+	// 		audioSrc = audio[n].name;
+	// 		break;
+	// 	}
+	// } 
+
+	var numOfSlides = jsonData.itemsPrSlide_global;
+	var index_day = String($(this).closest('.carouselPage').index());
+	var index_slide = String($(this).closest('.item').index());
+	var index_card = String($(this).closest('.skriveuge_item').index());
+	
+	console.log("returnAudioMarkup - audioSrc: " + audioSrc);
+	var HTML = '';
+	HTML += '<div>';
+	// HTML += 	'<audio src="'+audioSrc+'" id="audioPlayer" controls="controls" autoplay="autoplay">';
+	HTML += 	'<audio src="'+audioSrc+'" id="audioPlayer_'+index_day+'_'+index_slide+'_'+index_card+'" controls="controls" autoplay="autoplay" style="width: 100%">';
+    // HTML += 	'<source src="" type=""/>';
+    HTML += 		'Your browser does not support the audio element';
+    HTML += 	'</audio>';
+    HTML += '</div>';
+    return HTML;
+}
+
+function setJsAudioEventLitsner2(){
+	if (typeof(autoPlayNew) === 'undefined'){
+		window.autoPlayNew = true;
+		console.log("setJsAudioEventLitsner2 - autoPlay - SET");
+
+		// autoPlayNew = (isiniFrame())? false : true;  // COMMENTED OUT 27/9-2017
+		autoPlayNew = false;							  // ADDED 27/9-2017
+	}
+
+	// alert('setJsAudioEventLitsner2 - autoPlayNew: ' + autoPlayNew);
+	console.log('setJsAudioEventLitsner2 - isiniFrame - autoPlayNew: ' + autoPlayNew);
+
+	// var audioObj = document.getElementById("audioPlayer");  // COMMENTED OUT 27/9-2017
+
+	window.audioObj = $('audio')[0];
+
+	$('audio').each(function( index, element ) {
+		audioObj = element;
+		if (autoPlayNew){
+			console.log("setJsAudioEventLitsner2 - NO EVENT - PLAY");
+			audioObj.play();
+		} else {
+			console.log("setJsAudioEventLitsner2 - NO EVENT - PAUSE");
+			audioObj.pause(); 
+		}
+	});
+
+	$( document ).on('click', 'audio', function(){
+		window.audioObj = $(this)[0];
+	});
+	
+
+    audioObj.onpause = function() {
+    	console.log("setJsAudioEventLitsner2 - PAUSE");
+    	if (!audioObj.ended){
+    		autoPlayNew = false; 
+    	}
+    	
+    }
+    audioObj.onplay = function() {
+    	console.log("setJsAudioEventLitsner2 - PLAY");
+    	autoPlayNew = true;
+    	
+    }
+}
+
+// ========================================================================================================================
+
 
 // IMPORTANT:
 // Scaling is needed because if the width of ".skriveuge_item" is set in percent, the bootstrap slide animation breaks if only 
@@ -619,11 +861,11 @@ $( document ).on('click', '.skriveuge_item', function(){
 			switch (displayMode) {
 	            case "html":
 	            	console.log('click - A2');
-	                HTML += cardObj.userMsgBox_data.html;
+	                HTML += '<div id="UserMsgBox_text">'+cardObj.userMsgBox_data.html+'</div>';
 	                break;
 	            case "text":
 	            	console.log('click - A3');
-	                HTML += cardObj.userMsgBox_data.text;
+	                HTML += '<div id="UserMsgBox_text">'+cardObj.userMsgBox_data.text+'</div>';
 	                break;
 	            default:
 	            	console.log('click - A4');
@@ -631,14 +873,234 @@ $( document ).on('click', '.skriveuge_item', function(){
 			}
 
 			UserMsgBox('body', HTML);
+
+			html(cardObj.userMsgBox_data);
 		}
 	}
 });
 
 
 
+function UserMsgBox_video(src) {
+
+    var HTML = '<div class="video embed-responsive embed-responsive-16by9 col-xs-12 col-md-12"><iframe class="embed-responsive-item" src="'+src+'?iv_load_policy=3&amp;modestbranding=1&amp;showinfo=0&amp;autohide=1&amp;rel=0" allowfullscreen="1" frameborder="0"></iframe></div>';
+    UserMsgBox_xclick('body', HTML);
+
+    $('.MsgBox_bgr').addClass('MsgBox_bgr_video');
+    $('#UserMsgBox').attr('id', 'UserMsgBox_video');
+    // $('.CloseClass').addClass('glyphicon-remove-circle').removeClass('glyphicon-remove');
+
+    // $('.CloseClass').html('<span class="CloseClass_inner right glyphicon glyphicon-remove"></span>');  // TEST to see if it is possible to place a inner glyphicon-remove inside another...
+
+    // $('MsgBox_bgr_video').hide().fadeIn();
+}
+
+// =====================================================================================================
+// 		This function is a copy of the "html" method from writeProcessClass.js in danA_skriveproces
+// =====================================================================================================
+// This method fetches markup (BUT INTENDED FOR TEXT PRIMERALY) from the DOM by use of a source-selector, and inserts it into the target fields by use of a target-selector.
+//
+// ARGUMENTS:
+// ==========
+// 		"html(sourceSelector, targetSelector)" or "html('sourceSelector', 'targetSelector')"
+//
+// EXAMPLE OF USE: 
+// ===============
+// 		To use this method, one writes e.g. "html(#step3_instruction, .instruction)" in the JSON-file
+function html(json){
+	console.log('\nhtml - CALLED');
+	// var stepObj = jsonData.step[this.api.currentStepNo];
+
+	var stepObjStr = JSON.stringify(json);
+	console.log('html - stepObjStr: ' + stepObjStr);
+
+	var pos_start = stepObjStr.indexOf('html(');
+
+	var count = 0;
+
+	while ((pos_start!==-1) && (count < 25)) {
+		console.log('html - A0');
+
+		console.log('html - count: ' + count);
+
+		var pos_end = stepObjStr.indexOf(')"', pos_start);
+
+		if (pos_end!==-1) {
+			console.log('html - A1');
+
+			var argArr = stepObjStr.substring(pos_start+6, pos_end).replace(/\'/g, '').split(',');
+			console.log('html - argArr: ' + JSON.stringify(argArr));
+
+			if (argArr.length == 2) {
+				console.log('html - A2');
+
+				var source = argArr[0].trim();
+				var target = argArr[1].trim();
+				console.log('html - source: "' + source + '", target: "' + target + '"');
+				
+				$(target).html($(source).html());
+				// $(source).before('<h4 class="step_clipborad_header">'+source+'</h4>');
+				
+			} else {
+				console.log('html - A3');
+
+				alert('FEJL FRA: "html('+stepObjStr.substring(pos_start+6, pos_end)+')", som ikke rummer det rigtige antal selectors, som skal være 2.');
+			}
+		}
+
+		pos_start = stepObjStr.indexOf('html(', pos_end); 
+		console.log('html - pos_start: ' + pos_start);
+
+		++count;
+	}
+}
+
+
+
+
+
+function scaleAndPosition_sliderContainer() {
+
+	window.scrollHeight = $('body').height();
+	window.windowHeight = $(window).height();
+	console.log('document.ready - scrollHeight: ' + scrollHeight + ', windowHeight: ' + windowHeight + ', windowHeight/scrollHeight: ' + windowHeight/scrollHeight);
+
+
+	$('#sliderContainer').width($('#outerContainer').width());
+
+	window.sliderContainerWidth = $('#sliderContainer').width();
+
+	var height = $('#sliderContainer').height();
+	var off = $('#outerContainer').offset();
+	console.log('scaleAndPosition_sliderContainer - height: ' + height + ', off: ' + JSON.stringify(off));
+
+	$('#sliderContainer').css({top: off.top - height});
+
+	$('#slider').height(height);
+
+	// $('#slider').width($('#sliderContainer').width()*windowHeight/(scrollHeight));
+	// $('#slider').height(height);
+}
+
+
+//==========================================================================================
+//										SLIDER
+//==========================================================================================
+
+
+scrollCallback = function() {
+	console.log('scrollCallback - CALLED');
+
+	window.bodyPos = $(window).scrollTop();
+
+	var posPercent = (bodyPos + 0)/scrollHeight;
+	console.log('onScroll - bodyPos: ' + bodyPos + ', scrollHeight: ' + scrollHeight + ', posPercent: ' + posPercent);
+
+	$('.slider').css({left: posPercent*sliderContainerWidth});
+}
+
+
+// Denne event-litsner virker men "document" og "window" som samme referance kan der måske opstå problemer med i nogle browsere...
+$( document ).on('scroll', window, scrollCallback);
+
+
+$( document ).on('mousedown', '#slider', function(){
+	console.log('mousedown - CALLED');
+	// $( document ).off('scroll', window, scrollCallback);
+	$(this).addClass('slider_off').removeClass('slider'); 
+});
+
+$( document ).on('mouseup', 'body', function(){  // <---  IMPORTANT: "body" is nessary because the user may click on "#slider" and loose the cursor position ontop of the "#slider" as they drag - when mouseup performed, the cursor will no longer be ontop of the "#slider", and therefore the event "mouseup" will not work
+	console.log('mouseup - CALLED');
+	// $( document ).on('scroll', window, scrollCallback);
+	$('#slider').addClass('slider').removeClass('slider_off');
+});
+
+
+$( "#slider" ).draggable({ 
+	containment: "#sliderContainer", 
+	// scroll: false,
+	start: function(event, ui) {
+        console.log('slider - START - CALLED');
+    },
+	drag: function(event, ui) {
+        console.log('slider - DRAG - CALLED');
+
+        var pos = $(this).position();
+        var off = $(this).offset();
+
+        console.log('slider - DRAG - pos: ' + JSON.stringify(pos) + ', offset: ' + JSON.stringify(off));
+
+        var widthPercent = pos.left/($(this).parent().width() - $(this).width());
+        console.log('slider - widthPercent: ' + widthPercent);
+
+        widthPercent = widthPercent*(scrollHeight - windowHeight);
+        // $( "body" ).scrollTop( widthPercent);
+        $( window ).scrollTop( widthPercent);
+
+        // $('#sliderContainer').css({top: widthPercent});
+
+    },
+    stop: function(event, ui) {
+        console.log('slider - STOP - CALLED');
+    }
+});
+
+
+$( document ).on('click', ".weekNum_number", function(event){
+	console.log('click - CALLED - SCROLL');
+	var scrollTo = $(this).attr('data-scrollTo');
+	console.log('click - SCROLL - scrollTo: ' + scrollTo + ', offset().top: ' + $("#"+scrollTo).offset().top + ', height()/2: ' + $("#"+scrollTo).height()/2);
+	// var pos = Math.round($("#"+scrollTo).offset().top - $("#"+scrollTo).height()/2);
+	// var pos = Math.round($("#"+scrollTo).offset().top + $("#"+scrollTo).outerWidth( true )/2);
+	var ajust = {
+		'carouselId_0': -200, 
+		'carouselId_1': -200, 
+		'carouselId_2': -200, 
+		'carouselId_3': -200, 
+		'carouselId_4': -200, 
+		'carouselId_5': -200, 
+		'carouselId_6': -200, 
+		'carouselId_7': -200
+	}
+	// var pos = Math.round($("#"+scrollTo).offset().top + 0);
+	var pos = Math.round($("#"+scrollTo).offset().top + ajust[scrollTo]);
+	// $('#outerContainer').append('<div style="background-color:#F00; width: 20px; height: 20px; position: absolute; top:'+pos+'px;"></div>');
+	$('html, body').animate({  // See: https://stackoverflow.com/questions/6677035/jquery-scroll-to-element
+        scrollTop: pos
+    }, 1000);
+});
+
+
+//==========================================================================================
+//							OBJECT EVENT-LITSNERS
+//==========================================================================================
+
+
+
+
+$( document ).on('click', '.videoPlayBtn', function(){
+	console.log('videoPlayBtn - CLICK - CALLED');
+	var videoSrc = $(this).attr('data-videoSrc');
+
+	// UserMsgBox_video('https://www.youtube.com/embed/-Go7min716I');
+	UserMsgBox_video( videoSrc );
+});
+
+
+$( document ).on('click', '.videoPlayThumbnail', function(){
+	console.log('videoPlayThumbnail - CLICK - CALLED');
+	var videoSrc = $(this).attr('data-videoSrc');
+
+	// UserMsgBox_video('https://www.youtube.com/embed/-Go7min716I');
+	UserMsgBox_video( videoSrc );
+});
+
+
+
 $(window).resize(function() {
 	scale_skriveuge_item();
+	scaleAndPosition_sliderContainer();
 });
 
 
@@ -655,4 +1117,7 @@ $(document).ready(function() {
 	addOrRemoveCarouselControles();
 
 	scale_skriveuge_item();
+	setJsAudioEventLitsner2();
+
+	scaleAndPosition_sliderContainer();
 });
