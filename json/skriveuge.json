@@ -14,7 +14,8 @@
                         "attr": {"class": "skriveuge_item objLink videoLink"},
                         "thumbnail": "img/cards_video1.png",
                         "videoSrc": "https://www.youtube.com/embed/WmYhbS401lY",
-                        "header": "Kom godt i gang med din SSO"
+                        "header": "Kom godt i gang med din SSO",
+                        "note til BTN": "Se introduktionen"
                     }
                 },
                  {
@@ -23,7 +24,7 @@
                         "attr": {"class": "skriveuge_item objLink dagensMaal"},
                         "imgSrc": "img/cards_maal.png",
                         "header": "Dagens mål",
-                        "text": "Her mangler noget tekst"
+                        "text": "0,5 – 1 side"
                     }
                 },
                 {
@@ -107,7 +108,7 @@
                         "attr": {"class": "skriveuge_item objLink dagensMaal"},
                         "imgSrc": "img/cards_maal.png",
                         "header": "Dagens mål",
-                        "text": "Her mangler noget tekst"
+                        "text": "1-2 sider"
                     }
                 },
                 {
@@ -164,7 +165,7 @@
                         "attr": {"class": "skriveuge_item objLink dagensMaal"},
                         "imgSrc": "img/cards_maal.png",
                         "header": "Dagens mål",
-                        "text": "Her mangler noget tekst"
+                        "text": "1,5-2 sider"
                     }
                 },
                 {
@@ -243,7 +244,7 @@
                         "attr": {"class": "skriveuge_item objLink dagensMaal"},
                         "imgSrc": "img/cards_maal.png",
                         "header": "Dagens mål",
-                        "text": "Her mangler noget tekst"
+                        "text": "2-2,5 sider"
                     }
                 },
                 {
@@ -312,7 +313,7 @@
                         "attr": {"class": "skriveuge_item objLink dagensMaal"},
                         "imgSrc": "img/cards_maal.png",
                         "header": "Dagens mål",
-                        "text": "Her mangler noget tekst"
+                        "text": "2-2,5 sider"
                     }
                 },
                 {
@@ -391,7 +392,7 @@
                         "attr": {"class": "skriveuge_item objLink dagensMaal"},
                         "imgSrc": "img/cards_maal.png",
                         "header": "Dagens mål",
-                        "text": "Her mangler noget tekst"
+                        "text": "2-2,5 sider"
                     }
                 },{
                     "category": "card",
@@ -488,7 +489,7 @@
                         "attr": {"class": "skriveuge_item objLink dagensMaal"},
                         "imgSrc": "img/cards_maal.png",
                         "header": "Dagens mål",
-                        "text": "Her mangler noget tekst"
+                        "text": "2-2,5 sider og korrektur"
                     }
                 },
                 {
@@ -577,7 +578,7 @@
                         "attr": {"class": "skriveuge_item objLink dagensMaal"},
                         "imgSrc": "img/cards_maal.png",
                         "header": "Dagens mål",
-                        "text": "Her mangler noget tekst"
+                        "text": "At aflevere din SSO"
                     }
                 },
                 {
