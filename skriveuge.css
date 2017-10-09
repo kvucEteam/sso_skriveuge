@@ -216,7 +216,7 @@
 }
 
 .weekNum_number {
-	font-size: 6em;
+	/*font-size: 6em;*/
 	color: #05a0a8;
 	width: 12%;
 	display: inline-block;
@@ -249,6 +249,7 @@
 
 .weekNum_number_action {
 	cursor: pointer;
+	font-size: 6em;
 }
 
 
@@ -328,8 +329,17 @@ audio {
 
 @media (min-width: 901px) and (max-width:1100px) {
 
+	.weekNum_number{
+    	font-size: 0.9em;
+    }
+
     .weekNameAndNumber {
     	font-size: 0.9em;
+    	
+    }
+
+    .weekDay {
+    	/*background-color: #F00;*/  /* <------- Visuel test af breakingpoints */
     }
 
 }
@@ -337,12 +347,17 @@ audio {
 
 @media (min-width: 701px) and (max-width:900px) {
 
+	.weekNum_number{
+    	font-size: 0.6em;
+    }
+
     .weekNameAndNumber {
     	font-size: 0.7em;
     }
 
     .weekDay {
     	top: 112px;
+    	/*background-color: #0F0;*/  /* <------- Visuel test af breakingpoints */
     }
 
     .weekNumber {
@@ -353,12 +368,18 @@ audio {
 
 @media (max-width: 700px) {
 
+	.weekNum_number{
+    	font-size: 0.5em;
+    	width: 11.5%;
+    }
+
     .weekNameAndNumber {
     	font-size: 0.5em;
     }
 
     .weekDay {
-    	top: 112px;
+    	top: 95px;
+    	/*background-color: #00F;*/  /* <------- Visuel test af breakingpoints */
     }
 
     .weekNumber {
