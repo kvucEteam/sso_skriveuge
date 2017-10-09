@@ -11,7 +11,7 @@
                 {
                     "category": "video",
                     "video": {
-                        "attr": {"class": "skriveuge_item objLink videoLink"},
+                        "attr": {"class": "skriveuge_item objLink videoLink"}, 
                         "thumbnail": "img/cards_video1.png",
                         "videoSrc": "https://www.youtube.com/embed/WmYhbS401lY",
                         "header": "Kom godt i gang med din SSO",
@@ -599,6 +599,20 @@
                         "header": "Lorem ipsum dolor sit amet",
                         "btnText": "Lorem ipsum",
                         "text": "Lorem ipsum"
+                    }
+                },
+                {
+                    "category": "checklist",
+                    "checklist": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/cards_tjek.png",
+                        "header": "TEST: Den korrekte fodnote/ litteraturhenvisning",
+                        "text": "Lorem ipsum - tekst fra samlet liste",
+                        "btnText": "Se tjeklisten"
+                    },
+                    "userMsgBox_data": {
+                        "displayMode": "html",
+                        "html": "html('#den_korrekte_fodnote_litteraturhenvisning', '#UserMsgBox_text')"
                     }
                 }
                
