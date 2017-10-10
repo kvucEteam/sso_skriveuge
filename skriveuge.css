@@ -57,6 +57,10 @@
 	text-decoration: none;
 }
 
+.objText ul{
+	margin-left: -20px;
+}
+
 
 .videoPlayThumbnail {
 	/*border-radius: 4px;

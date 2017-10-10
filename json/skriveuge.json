@@ -15,6 +15,7 @@
                         "thumbnail": "img/cards_video1.png",
                         "videoSrc": "https://www.youtube.com/embed/WmYhbS401lY",
                         "header": "Kom godt i gang med din SSO",
+                        "text": "Filmen giver en introduktion til hvad det er godt at have fokus på i de første dages arbejde.",
                         "note til BTN": "Se introduktionen"
                     }
                 },
@@ -41,8 +42,8 @@
                     "dagensOpgaver": {
                         "attr": {"class": "skriveuge_item objLink"},
                         "imgSrc": "img/cards_task.png",
-                        "header": "Organiser dine materialer",
-                        "text": "Så ved du, hvad du skal anvende til f.eks. redegørelse, analyse og diskussion."
+                        "header": "Organisér dine materialer",
+                        "text": "Opdel materialerne så du ved, hvilke du vil anvende til f.eks. redegørelse, analyse og diskussion."
                     }
                 },
                 {
@@ -110,6 +111,19 @@
                         "header": "Dagens mål: 1-2 sider",
                         "text": "Når dagen er slut, skulle du gerne have skrevet yderligere <b>1-2 sider</b>"
                     }
+                },{
+                    "category": "dagensOpgaver",
+                    "dagensOpgaver": {
+                        "attr": {"class": "skriveuge_item objLink"},
+                        "imgSrc": "img/cards_task.png",
+                        "header": "Strukturér din dag",
+                        "text": "Læg en plan og husk at holde pauser. Klik på knappen og se et forslag til hvordan du kan disponere dit arbejde.",
+                        "btnText": "Plan for arbejdsstruktur"
+                    },
+                    "userMsgBox_data": {
+                        "displayMode": "html",
+                        "html": "html('#dagsplan', '#UserMsgBox_text')"
+                    }
                 },
                 {
                     "category": "dagensOpgaver",
@@ -117,7 +131,7 @@
                         "attr": {"class": "skriveuge_item objLink"},
                         "imgSrc": "img/cards_task.png",
                         "header": "Skriv", 
-                        "text": "Arbejd videre med at skrive den første del af din besvarelse"
+                        "text": "Skriv den første del af din besvarelse færdig i store træk."
                     }
                 },
                 {
@@ -145,7 +159,7 @@
                         "attr": {"class": "skriveuge_item objLink"},
                         "imgSrc": "img/cards_tjek.png",
                         "header": "citater og litteratur- henvisninger",
-                        "text": "<ul><li>Jeg har lavet en aftale med en bekendt om at hjælpe mig</li><li>Jeg bruger korte citater </li><li> Jeg har litteraturhenvisninger i det jeg skriver</li></ul>",
+                        "text": "<ul><li>Jeg har lavet en aftale med en bekendt om at hjælpe mig</li><li>Jeg bruger korte citater </li><li> Jeg benytter litteraturhenvisninger</li></ul>",
                         "btnText": "Se hvordan"
                     },
                     "userMsgBox_data": {
@@ -164,8 +178,8 @@
                     "dagensMaal": {
                         "attr": {"class": "skriveuge_item objLink dagensMaal"},
                         "imgSrc": "img/cards_maal.png",
-                        "header": "Dagens mål",
-                        "text": "1,5-2 sider"
+                        "header": "Dagens mål: 1-2 sider",
+                        "text": "I dag er målet at skrive <b>1-2 sider</b>"
                     }
                 },
                 {
@@ -214,8 +228,8 @@
                     "checklist": {
                         "attr": {"class": "skriveuge_item objLink"},
                         "imgSrc": "img/cards_tjek.png",
-                        "header": "Til en start husker jeg at",
-                        "text": "Lorem ipsum - tekst fra samlet liste",
+                        "header": "Tjekliste",
+                        "text": "<ul><li>Benyt 2-3 litteraturhenvisninger pr. side</li><li>Husk at kommentere citater fagligt</li><li>Vær sikker på du besvarer din problemformulering</li></ul>",
                         "btnText": "Se tjeklisten"
                     },
                     "userMsgBox_data": {
@@ -235,7 +249,8 @@
                         "attr": {"class": "skriveuge_item objLink videoLink"},
                         "thumbnail": "img/cards_video2.png",
                         "videoSrc": "https://www.youtube.com/embed/WmYhbS401lY",
-                        "header": "Status på halvvejen"
+                        "header": "Status på halvvejen", 
+                        "text":"Er du hvor du skal være i opgaven? Få konkrete råd til den sidste del af arbejdet."
                     }
                 },
                 {
@@ -243,7 +258,7 @@
                     "dagensMaal": {
                         "attr": {"class": "skriveuge_item objLink dagensMaal"},
                         "imgSrc": "img/cards_maal.png",
-                        "header": "Dagens mål",
+                        "header": "Dagens mål: 2-2½ sider",
                         "text": "2-2,5 sider"
                     }
                 },
