@@ -314,10 +314,46 @@ audio {
 }
 
 
+/**********************************************************************
+						MOBILE VIEW
+/*********************************************************************/
 
+
+.skriveuge_item, .skriveuge_item_dummy{   
+	width: initial; 	/* <----- This makes the width of the cards to 800 px as the width of the pictures of the cards - works OK in non-mobilemode */
+}
+
+.mobile_dayContent {
+	display: inline-block;
+	/*margin-left: 15%;*/ 	/* <---------- VIGTIGT: Denne centrereing er ikke nødvendig i chrome mobil simulering! */
+}
+
+.mobile_weekNameAndNumber {
+	display: inline-block;
+	position: relative;
+	width: 20%;
+	text-align: center;
+	margin-left: 35%;
+}
+
+.mobile_weekNumber{
+	font-size: 12em;
+	color: #CCC;
+	position: relative;
+	left: 5px;
+	z-index: 1;
+}
+
+.mobile_weekDay{
+	font-size: 4em;
+	position: absolute; 
+	z-index: 2;
+	top: 95px;
+	color: #444;
+}
 
 /**********************************************************************
-					MEDIA QUERIES
+					MEDIA QUERIES - DESKTOP
 /*********************************************************************/
 
 @media (min-width: 1101px) and (max-width:1160px) {
@@ -386,4 +422,21 @@ audio {
     	top: 45px;
     }
    
+}
+
+/**********************************************************************
+					MEDIA QUERIES - MOBILE
+/*********************************************************************/ 
+
+@media (min-width: 800px) and (max-width:1160px) {
+
+	.mobile_dayContent {
+		margin-left: 5%; 	/* <---------- VIGTIGT: Denne centrereing er ikke nødvendig i chrome mobil simulering! */
+	}
+}
+
+@media (max-width: 799px) {
+	.mobile_dayContent {
+		margin-left: 0%; 	/* <---------- VIGTIGT: Denne centrereing er ikke nødvendig i chrome mobil simulering! */
+	}
 }

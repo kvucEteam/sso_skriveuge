@@ -43,47 +43,50 @@ function makeSkriveugeSlide(dayIndex, cardIndex_start, cardIndex_end) {
 			// HTML += '<div class="skriveuge_item col-xs-12">';
 				var cObj = day[dayIndex].content[c+cardIndex_start];
 
-				switch(cObj.category) {
-					case 'audio':
-				    	console.log('makeSkriveugeSlide - A0');
-				        HTML += makeAudio(cObj.audio);
-				        break;
-				    case 'card':
-				    	console.log('makeSkriveugeSlide - A1');
-				        HTML += makeCard(cObj.card);
-				        break;
-				    case 'checklist':
-				    	console.log('makeSkriveugeSlide - A2');
-				    	HTML += makeChecklist(cObj.checklist);
-				        break;
-				    case 'dagensOpgaver':
-				    	console.log('makeSkriveugeSlide - A3');
-				    	HTML += makeDagensOpgaver(cObj.dagensOpgaver);
-				        break;
-				    case 'dagensMaal':
-				    	console.log('makeSkriveugeSlide - A3');
-				    	HTML += makeDagensMaal(cObj.dagensMaal);
-				        break;
-				    case 'faq':
-				    	console.log('makeSkriveugeSlide - A4');
-				        HTML += makeFaq(cObj.faq);
-				        break;
-				    case 'formalia':
-				    	console.log('makeSkriveugeSlide - A5');
-				    	HTML += makeFormalia(cObj.formalia);
-				        break;
-				    case 'gaaet_i_staa':
-				    	console.log('makeSkriveugeSlide - A5');
-				    	HTML += makeNoProgress(cObj.gaaet_i_staa);
-				        break;
-				    case 'video':
-				    	console.log('makeSkriveugeSlide - A6');
-				        HTML += makeVideo(cObj.video);
-				        break;
-				    default:
-				    	console.log('makeSkriveugeSlide - A7');
-				        // alert('ERROR');
-				}
+				// switch(cObj.category) {
+				// 	case 'audio':
+				//     	console.log('makeSkriveugeSlide - A0');
+				//         HTML += makeAudio(cObj.audio);
+				//         break;
+				//     case 'card':
+				//     	console.log('makeSkriveugeSlide - A1');
+				//         HTML += makeCard(cObj.card);
+				//         break;
+				//     case 'checklist':
+				//     	console.log('makeSkriveugeSlide - A2');
+				//     	HTML += makeChecklist(cObj.checklist);
+				//         break;
+				//     case 'dagensOpgaver':
+				//     	console.log('makeSkriveugeSlide - A3');
+				//     	HTML += makeDagensOpgaver(cObj.dagensOpgaver);
+				//         break;
+				//     case 'dagensMaal':
+				//     	console.log('makeSkriveugeSlide - A3');
+				//     	HTML += makeDagensMaal(cObj.dagensMaal);
+				//         break;
+				//     case 'faq':
+				//     	console.log('makeSkriveugeSlide - A4');
+				//         HTML += makeFaq(cObj.faq);
+				//         break;
+				//     case 'formalia':
+				//     	console.log('makeSkriveugeSlide - A5');
+				//     	HTML += makeFormalia(cObj.formalia);
+				//         break;
+				//     case 'gaaet_i_staa':
+				//     	console.log('makeSkriveugeSlide - A5');
+				//     	HTML += makeNoProgress(cObj.gaaet_i_staa);
+				//         break;
+				//     case 'video':
+				//     	console.log('makeSkriveugeSlide - A6');
+				//         HTML += makeVideo(cObj.video);
+				//         break;
+				//     default:
+				//     	console.log('makeSkriveugeSlide - A7');
+				//         // alert('ERROR');
+				// }
+
+				HTML += category(cObj);
+
 			// HTML += '</div>';
 
 			countMem = c;
@@ -98,6 +101,78 @@ function makeSkriveugeSlide(dayIndex, cardIndex_start, cardIndex_end) {
 		}
 	HTML += '</div>';
 	
+	return HTML;
+}
+
+
+function category(cObj) {
+	var HTML = '';
+	switch(cObj.category) {
+		case 'audio':
+	    	console.log('makeSkriveugeSlide - A0');
+	        HTML += makeAudio(cObj.audio);
+	        break;
+	    case 'card':
+	    	console.log('makeSkriveugeSlide - A1');
+	        HTML += makeCard(cObj.card);
+	        break;
+	    case 'checklist':
+	    	console.log('makeSkriveugeSlide - A2');
+	    	HTML += makeChecklist(cObj.checklist);
+	        break;
+	    case 'dagensOpgaver':
+	    	console.log('makeSkriveugeSlide - A3');
+	    	HTML += makeDagensOpgaver(cObj.dagensOpgaver);
+	        break;
+	    case 'dagensMaal':
+	    	console.log('makeSkriveugeSlide - A3');
+	    	HTML += makeDagensMaal(cObj.dagensMaal);
+	        break;
+	    case 'faq':
+	    	console.log('makeSkriveugeSlide - A4');
+	        HTML += makeFaq(cObj.faq);
+	        break;
+	    case 'formalia':
+	    	console.log('makeSkriveugeSlide - A5');
+	    	HTML += makeFormalia(cObj.formalia);
+	        break;
+	    case 'gaaet_i_staa':
+	    	console.log('makeSkriveugeSlide - A5');
+	    	HTML += makeNoProgress(cObj.gaaet_i_staa);
+	        break;
+	    case 'video':
+	    	console.log('makeSkriveugeSlide - A6');
+	        HTML += makeVideo(cObj.video);
+	        break;
+	    default:
+	    	console.log('makeSkriveugeSlide - A7');
+	        // alert('ERROR');
+	}
+
+	return HTML;
+}
+
+
+function makeMobileTemplate() {  // Lavet d. 9/10-2017
+	
+	var weekLookup = ['FRE','LØR','SØN','MAN','TIR','ONS','TOR','FRE'];
+
+	var HTML = '';
+	for (var d in jsonData.day) {
+		HTML += '<div class="mobile_dayHeading">';
+			HTML += '<span class="mobile_weekNameAndNumber">';
+				HTML += '<span class="mobile_weekDay">'+weekLookup[jsonData.day[d].day_no-1]+'</span>';
+				HTML += '<span class="mobile_weekNumber">'+jsonData.day[d].day_no+'</span>';
+			HTML += '</span>';
+		HTML += '</div>';
+		HTML += '<div class="mobile_dayContent">';
+		for (var c in jsonData.day[d].content) {
+			var cObj = jsonData.day[d].content[c];
+			HTML += category(cObj);
+		}
+		HTML += '</div>';
+	}
+
 	return HTML;
 }
 
@@ -1268,13 +1343,19 @@ function scaleAndPosition_sliderContainer() {
 }
 
 
+
 //==========================================================================================
 //										SLIDER
 //==========================================================================================
 
 
+
 scrollCallback = function() {
 	console.log('scrollCallback - CALLED');
+
+	window.scrollHeight = $('body').height();
+	window.windowHeight = $(window).height();
+	window.sliderContainerWidth = $('#sliderContainer').width();
 
 	window.bodyPos = $(window).scrollTop();
 
@@ -1452,36 +1533,57 @@ $( document ).on('click', '.videoPlayThumbnail', function(){
 
 
 $(window).resize(function() {
-	scale_skriveuge_item();
-	scaleAndPosition_sliderContainer();
-	scaleVideo('16:9');
 
-	ajustNumOfCardsPrSlide();  
-	linearScaling(null);		// <--------  TEST d. 2/10-2017
+	if (detectmob()) {
 
-	// setSliderRowHeight();
+		scaleAndPosition_sliderContainer();
+
+	} else {
+		scale_skriveuge_item();
+		scaleAndPosition_sliderContainer();
+		scaleVideo('16:9');
+
+		ajustNumOfCardsPrSlide();  
+		linearScaling(null);		// <--------  TEST d. 2/10-2017
+
+		// setSliderRowHeight();
+	}	
 });
 
 
 $(document).ready(function() {
-	console.log('document.ready - jsonData: ' + JSON.stringify(jsonData));
 
-	window.TjsonData = makeSlideData();
-	console.log('document.ready - TjsonData: ' + JSON.stringify(TjsonData));
+	if (detectmob()) {
 
-	// $('#interface').append(makeInterface());
+		$('#interface').append(makeMobileTemplate());
 
-	$('#interface').append(initCarouselObjs(TjsonData));
-	insertWeekdayAndWeekNum();
-	addOrRemoveCarouselControles_2();
+		setJsAudioEventLitsner2();
+		scaleAndPosition_sliderContainer();
+		$('#sliderContainer').css({'top': '0px'});  // This ajusts the height on the "sliderContainer, set by scaleAndPosition_sliderContainer().
 
-	scale_skriveuge_item();
-	setJsAudioEventLitsner2();
+	} else {
 
-	scaleAndPosition_sliderContainer();
+		console.log('document.ready - jsonData: ' + JSON.stringify(jsonData));
 
-	ajustNumOfCardsPrSlide(); 	
-	linearScaling(null);       	// <--------  TEST d. 2/10-2017
+		window.TjsonData = makeSlideData();
+		console.log('document.ready - TjsonData: ' + JSON.stringify(TjsonData));
 
-	// setSliderRowHeight();
+		// $('#interface').append(makeInterface());
+
+		$('#interface').append(initCarouselObjs(TjsonData));
+		insertWeekdayAndWeekNum();
+		addOrRemoveCarouselControles_2();
+
+		scale_skriveuge_item();
+		setJsAudioEventLitsner2();
+
+		scaleAndPosition_sliderContainer();
+
+		ajustNumOfCardsPrSlide(); 	
+		linearScaling(null);       	// <--------  TEST d. 2/10-2017
+
+		// setSliderRowHeight();
+
+	}
+
 });
