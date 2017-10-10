@@ -2,637 +2,586 @@
     "header": "Skriveugen",
     "explanation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non ex a arcu euismod scelerisque. Cras ullamcorper sed tortor vitae auctor. Suspendisse potenti. Vestibulum tempor sit amet nisl ut egestas. Morbi at varius erat, ut condimentum arcu. Maecenas eu enim augue.",
     "instruktion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non ex a arcu euismod scelerisque. Cras ullamcorper sed tortor vitae auctor. Suspendisse potenti. Vestibulum tempor sit amet nisl ut egestas. Morbi at varius erat, ut condimentum arcu. Maecenas eu enim augue.",
-    "itemsPrSlide_global" : 4,
-    "day": [
-        {
-            "day_no": 1,
-            "itemsPrSlide": 3, "NOTE1": "I TLYs design er der ikke behov for itemsPrSlide",
-            "content": [
-                {
-                    "category": "video",
-                    "video": {
-                        "attr": {"class": "skriveuge_item objLink videoLink"}, 
-                        "thumbnail": "img/cards_video1.png",
-                        "videoSrc": "https://www.youtube.com/embed/WmYhbS401lY",
-                        "header": "Kom godt i gang med din SSO",
-                        "text": "Filmen giver en introduktion til hvad det er godt at have fokus på i de første dages arbejde.",
-                        "note til BTN": "Se introduktionen"
-                    }
-                },
-                 {
-                    "category": "dagensMaal",
-                    "dagensMaal": {
-                        "attr": {"class": "skriveuge_item objLink dagensMaal"},
-                        "imgSrc": "img/cards_maal.png",
-                        "header": "Dagens mål: 1 side",
-                        "text": "Du skal gerne have skrevet <b>1 side</b>"
-                    }
-                },
-                {
-                    "category": "dagensOpgaver",
-                    "dagensOpgaver": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_read.png",
-                        "header": "Læs og forstå opgaveformuleringen",
-                        "text": " Hvis der er noget du ikke forstår, så kontakt din vejleder."
-                    }
-                },
-                {
-                    "category": "dagensOpgaver",
-                    "dagensOpgaver": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_task.png",
-                        "header": "Organisér dine materialer",
-                        "text": "Opdel materialerne så du ved, hvilke du vil anvende til f.eks. redegørelse, analyse og diskussion."
-                    }
-                },
-                {
-                    "category": "dagensOpgaver",
-                    "dagensOpgaver": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_task.png",
-                        "header": "Noter din litteratur",
-                        "text": "Noter din litteratur ned alfabetisk i en litteraturliste",
-                        "btnText": "Læs om litteraturlisten"
-                    },
-                    "userMsgBox_data": {
-                        "displayMode": "html",
-                        "html": "html('#litteraturliste', '#UserMsgBox_text')"
-                    }
-                },
-                {
-                    "category": "dagensOpgaver",
-                    "dagensOpgaver": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_task.png",
-                        "header": "Skriv et udkast",
-                        "text": "Skrive et udkast til besvarelse af den første del af opgaveformuleringen"
-                    }
-                },
-                {
-                    "category": "gaaet_i_staa",
-                    "gaaet_i_staa": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_i_staa.png",
-                        "header": "Gået i stå?",
-                        "text": "Kom godt igang med hurtigskrivning!",
-                        "btnText": "Se hvordan"
-                    },
-                    "userMsgBox_data": {
-                        "displayMode": "html",
-                        "html": "html('#hurtigskrivning', '#UserMsgBox_text')"
-                    }
-                },
-                {
-                    "category": "checklist",
-                    "checklist": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_tjek.png",
-                        "header": "Dagens tjekliste",
-                        "text": "<ul><li>Jeg forstår min problemformulering</li><li>Jeg er igang med at besvare første del af problemformuleringen</li><li>Jeg har organiseret min litteratur og skrevet den ned</li><ul>"
-                        
-                    },
-                    "userMsgBox_data": {
-                        "displayMode": "html",
-                        "html": "<"
-                    }
+    "itemsPrSlide_global": 4,
+    "day": [{
+        "day_no": 1,
+        "itemsPrSlide": 3,
+        "NOTE1": "I TLYs design er der ikke behov for itemsPrSlide",
+        "content": [{
+            "category": "video",
+            "video": {
+                "attr": { "class": "skriveuge_item objLink videoLink" },
+                "thumbnail": "img/cards_video1.png",
+                "videoSrc": "https://www.youtube.com/embed/WmYhbS401lY",
+                "header": "Kom godt i gang med din SSO",
+                "text": "Filmen giver en introduktion til hvad det er godt at have fokus på i de første dages arbejde.",
+                "note til BTN": "Se introduktionen"
+            }
+        }, {
+            "category": "dagensMaal",
+            "dagensMaal": {
+                "attr": { "class": "skriveuge_item objLink dagensMaal" },
+                "imgSrc": "img/cards_maal.png",
+                "header": "Dagens mål: 1 side",
+                "text": "Du skal gerne have skrevet <b>1 side</b>"
+            }
+        }, {
+            "category": "dagensOpgaver",
+            "dagensOpgaver": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_read.png",
+                "header": "Læs og forstå opgaveformuleringen",
+                "text": " Hvis der er noget du ikke forstår, så kontakt din vejleder."
+            }
+        }, {
+            "category": "dagensOpgaver",
+            "dagensOpgaver": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_task.png",
+                "header": "Organisér dine materialer",
+                "text": "Opdel materialerne så du ved, hvilke du vil anvende til f.eks. redegørelse, analyse og diskussion."
+            }
+        }, {
+            "category": "dagensOpgaver",
+            "dagensOpgaver": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_task.png",
+                "header": "Noter din litteratur",
+                "text": "Noter din litteratur ned alfabetisk i en litteraturliste",
+                "btnText": "Læs om litteraturlisten"
+            },
+            "userMsgBox_data": {
+                "displayMode": "html",
+                "html": "html('#litteraturliste', '#UserMsgBox_text')"
+            }
+        }, {
+            "category": "dagensOpgaver",
+            "dagensOpgaver": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_task.png",
+                "header": "Skriv et udkast",
+                "text": "Skrive et udkast til besvarelse af den første del af opgaveformuleringen"
+            }
+        }, {
+            "category": "gaaet_i_staa",
+            "gaaet_i_staa": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_i_staa.png",
+                "header": "Gået i stå?",
+                "text": "Kom godt igang med hurtigskrivning!",
+                "btnText": "Se hvordan"
+            },
+            "userMsgBox_data": {
+                "displayMode": "html",
+                "html": "html('#hurtigskrivning', '#UserMsgBox_text')"
+            }
+        }, {
+            "category": "checklist",
+            "checklist": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_tjek.png",
+                "header": "Dagens tjekliste",
+                "text": "<ul><li>Jeg forstår min problemformulering</li><li>Jeg er igang med at besvare første del af problemformuleringen</li><li>Jeg har organiseret min litteratur og skrevet den ned</li><ul>"
+
+            },
+            "userMsgBox_data": {
+                "displayMode": "html",
+                "html": "<"
+            }
+        }]
+    }, {
+        "day_no": 2,
+        "itemsPrSlide": 3,
+        "NOTE1": "I TLYs design er der ikke behov for itemsPrSlide",
+        "content": [{
+            "category": "dagensMaal",
+            "dagensMaal": {
+                "attr": { "class": "skriveuge_item objLink dagensMaal" },
+                "imgSrc": "img/cards_maal.png",
+                "header": "Dagens mål: 1-2 sider",
+                "text": "Når dagen er slut, skulle du gerne have skrevet yderligere <b>1-2 sider</b>"
+            }
+        }, {
+            "category": "dagensOpgaver",
+            "dagensOpgaver": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_task.png",
+                "header": "Strukturér din dag",
+                "text": "Læg en plan og husk at holde pauser. Klik på knappen og se et forslag til hvordan du kan disponere dit arbejde.",
+                "btnText": "Plan for arbejdsstruktur"
+            },
+            "userMsgBox_data": {
+                "displayMode": "html",
+                "html": "html('#dagsplan', '#UserMsgBox_text')"
+            }
+        }, {
+            "category": "dagensOpgaver",
+            "dagensOpgaver": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_task.png",
+                "header": "Skriv",
+                "text": "Skriv den første del af din besvarelse færdig i store træk."
+            }
+        }, {
+            "category": "audio",
+            "audio": {
+                "attr": { "class": "skriveuge_item objLink audioInline" },
+                "imgSrc": "img/cards_i_staa_audio.png",
+                "header": "Gået i stå?",
+                "text": "Skab overblik og del opgaven op i mindre bidder",
+                "audioSrc": "mp3/part_1.mp3"
+            }
+        }, {
+            "category": "dagensOpgaver",
+            "dagensOpgaver": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_task.png",
+                "header": "Aftal korrektur",
+                "text": "Lav en aftale med en bekendt om at læse opgaven igennem dagen inden aflevering"
+            }
+        }, {
+            "category": "checklist",
+            "checklist": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_tjek.png",
+                "header": "citater og litteratur- henvisninger",
+                "text": "<ul><li>Jeg har lavet en aftale med en bekendt om at hjælpe mig</li><li>Jeg bruger korte citater </li><li> Jeg benytter litteraturhenvisninger</li></ul>",
+                "btnText": "Se hvordan"
+            },
+            "userMsgBox_data": {
+                "displayMode": "html",
+                "html": "html('#citater', '#UserMsgBox_text')"
+            }
+        }]
+    }, {
+        "day_no": 3,
+        "itemsPrSlide": 3,
+        "NOTE1": "I TLYs design er der ikke behov for itemsPrSlide",
+        "content": [{
+            "category": "dagensMaal",
+            "dagensMaal": {
+                "attr": { "class": "skriveuge_item objLink dagensMaal" },
+                "imgSrc": "img/cards_maal.png",
+                "header": "Dagens mål: 1-2 sider",
+                "text": "I dag er målet at skrive <b>1-2 sider</b>"
+            }
+        }, {
+            "category": "dagensOpgaver",
+            "dagensOpgaver": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_task.png",
+                "header": "Gennemgang af første del",
+                "text": "Genlæs og ret første del af min opgave"
+            }
+        }, {
+            "category": "dagensOpgaver",
+            "dagensOpgaver": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_task.png",
+                "header": "Overblik over næste del",
+                "text": "Dan et overblik over hvilke delafsnit/kapitler næste del af opgaveformuleringen skal besvares med"
+            }
+        }, {
+            "category": "dagensOpgaver",
+            "dagensOpgaver": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_task.png",
+                "header": "Hoveddelen",
+                "text": "Begynd at skrive på opgavens hoveddel (analyse)"
+            }
+        }, {
+            "category": "gaaet_i_staa",
+            "gaaet_i_staa": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_i_staa.png",
+                "header": "Gået i stå?",
+                "text": "Gør noget ved dit arbejdsmiljø",
+                "btnText": "Se hvordan"
+            },
+            "userMsgBox_data": {
+                "displayMode": "html",
+                "html": "html('#arbejdsMilloe', '#UserMsgBox_text')"
+            }
+        }, {
+            "category": "checklist",
+            "checklist": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_tjek.png",
+                "header": "Tjekliste",
+                "text": "<ul><li>Benyt 2-3 litteraturhenvisninger pr. side</li><li>Husk at kommentere citater fagligt</li><li>Vær sikker på du besvarer din opgaveformulering</li></ul>",
+                "btnText": "Se tjeklisten"
+            },
+            "userMsgBox_data": {
+                "displayMode": "html",
+                "html": "html('#citater', '#UserMsgBox_text')"
+            }
+        }]
+    }, {
+        "day_no": 4,
+        "itemsPrSlide": 3,
+        "NOTE1": "I TLYs design er der ikke behov for itemsPrSlide",
+        "content": [{
+            "category": "video",
+            "video": {
+                "attr": { "class": "skriveuge_item objLink videoLink" },
+                "thumbnail": "img/cards_video2.png",
+                "videoSrc": "https://www.youtube.com/embed/WmYhbS401lY",
+                "header": "Status på halvvejen",
+                "text": "Er du hvor du skal være i opgaven? Få konkrete råd til den sidste del af arbejdet."
+            }
+        }, {
+            "category": "dagensMaal",
+            "dagensMaal": {
+                "attr": { "class": "skriveuge_item objLink dagensMaal" },
+                "imgSrc": "img/cards_maal.png",
+                "header": "Dagens mål: 2-2½ side",
+                "text": "I løbet af i dag har du tilføjet <b>2-2½ side</b>"
+            }
+        }, {
+            "category": "dagensOpgaver",
+            "dagensOpgaver": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_task.png",
+                "header": "Hoveddelen",
+                "text": "Arbejd videre på opgavens hoveddel hvor du anvender fagets <b>begreber, metoder og teorier</b>."
+            }
+        }, {
+            "category": "audio",
+            "audio": {
+                "attr": { "class": "skriveuge_item objLink audioInline" },
+                "imgSrc": "img/cards_i_staa_audio.png",
+                "header": "Gået i stå?",
+                "text": "Hold pauser i stedet for at lave overspringshandlinger ",
+                "audioSrc": "mp3/part_2.mp3"
+            }
+        }, {
+            "category": "card",
+            "card": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_tjek.png",
+                "header": "Tjekliste",
+                "text": "<ul><li>Anvend fagets begreber, metoder og teori</li><li>Genlæs løbende det du skriver</li></ul>"
+            }
+        }, {
+            "category": "card",
+            "card": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_tjek.png",
+                "header": "Lorem ipsum dolor sit amet",
+                "btnText": "Lorem ipsum",
+                "text": "Lorem ipsum"
+            }
+        }, {
+            "category": "card",
+            "card": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_tjek.png",
+                "header": "Lorem ipsum dolor sit amet",
+                "btnText": "Lorem ipsum",
+                "text": "Lorem ipsum"
+            }
+        }, {
+            "category": "checklist",
+            "checklist": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_tjek.png",
+                "header": "Til en start husker jeg at",
+                "text": "Lorem ipsum - tekst fra samlet liste",
+                "btnText": "Se tjeklisten"
+            },
+            "userMsgBox_data": {
+                "displayMode": "html",
+                "html": "html('#citater', '#UserMsgBox_text')"
+            }
+        }]
+    }, {
+        "day_no": 5,
+        "itemsPrSlide": 3,
+        "NOTE1": "I TLYs design er der ikke behov for itemsPrSlide",
+        "content": [{
+            "category": "dagensMaal",
+            "dagensMaal": {
+                "attr": { "class": "skriveuge_item objLink dagensMaal" },
+                "imgSrc": "img/cards_maal.png",
+                "header": "Dagens mål: 2-2 1/2 sider",
+                "text": "I dag skal du skrive <b>2-2,5 sider</b>"
+            }
+        }, {
+            "category": "card",
+            "card": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_tjek.png",
+                "header": "Tjekliste",
+                "text": "<ul><li>Anvend fagets begreber, metoder og teori</li><li>Genlæs løbende det du skriver</li></ul>"
+            }
+        }, {
+            "category": "gaaet_i_staa",
+            "gaaet_i_staa": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_i_staa.png",
+                "header": "Gået i stå?",
+                "text": "Overvej hvor du arbejder bedst",
+                "btnText": "Se hvor"
+            },
+            "userMsgBox_data": {
+                "displayMode": "html",
+                "html": "html('#arbejdsMilloe', '#UserMsgBox_text')"
+            }
+        }, {
+            "category": "card",
+            "card": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_tjek.png",
+                "header": "Lorem ipsum dolor sit amet",
+                "btnText": "Lorem ipsum",
+                "text": "Lorem ipsum"
+            }
+        }, {
+            "category": "card",
+            "card": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_tjek.png",
+                "header": "Lorem ipsum dolor sit amet",
+                "btnText": "Lorem ipsum",
+                "text": "Lorem ipsum"
+            }
+        }, {
+            "category": "card",
+            "card": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_tjek.png",
+                "header": "Lorem ipsum dolor sit amet",
+                "btnText": "Lorem ipsum",
+                "text": "Lorem ipsum"
+            }
+        }, {
+            "category": "checklist",
+            "checklist": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_tjek.png",
+                "header": "Til en start husker jeg at",
+                "text": "Lorem ipsum - tekst fra samlet liste",
+                "btnText": "Se tjeklisten"
+            },
+            "userMsgBox_data": {
+                "displayMode": "html",
+                "html": "html('#citater', '#UserMsgBox_text')"
+            }
+        }]
+    }, {
+        "day_no": 6,
+        "itemsPrSlide": 3,
+        "NOTE1": "I TLYs design er der ikke behov for itemsPrSlide",
+        "content": [{
+            "category": "dagensMaal",
+            "dagensMaal": {
+                "attr": { "class": "skriveuge_item objLink dagensMaal" },
+                "imgSrc": "img/cards_maal.png",
+                "header": "Dagens mål",
+                "text": "2-2,5 sider"
+            }
+        }, {
+            "category": "card",
+            "card": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_tjek.png",
+                "header": "Lorem ipsum dolor sit amet",
+                "btnText": "Lorem ipsum",
+                "text": "Lorem ipsum"
+            }
+        }, {
+            "category": "card",
+            "card": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_tjek.png",
+                "header": "Lorem ipsum dolor sit amet",
+                "btnText": "Lorem ipsum",
+                "text": "Lorem ipsum"
+            }
+        }, {
+            "category": "card",
+            "card": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_tjek.png",
+                "header": "Lorem ipsum dolor sit amet",
+                "btnText": "Lorem ipsum",
+                "text": "Lorem ipsum"
+            }
+        }, {
+            "category": "card",
+            "card": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_tjek.png",
+                "header": "Lorem ipsum dolor sit amet",
+                "btnText": "Lorem ipsum",
+                "text": "Lorem ipsum"
+            }
+        }, {
+            "category": "card",
+            "card": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_tjek.png",
+                "header": "Lorem ipsum dolor sit amet",
+                "btnText": "Lorem ipsum",
+                "text": "Lorem ipsum"
+            }
+        }, {
+            "category": "card",
+            "card": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_tjek.png",
+                "header": "Lorem ipsum dolor sit amet",
+                "btnText": "Lorem ipsum",
+                "text": "Lorem ipsum"
+            }
+        }, {
+            "category": "checklist",
+            "checklist": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_tjek.png",
+                "header": "Til en start husker jeg at",
+                "text": "Lorem ipsum - tekst fra samlet liste",
+                "btnText": "Se tjeklisten"
+            },
+            "userMsgBox_data": {
+                "displayMode": "html",
+                "html": "html('#citater', '#UserMsgBox_text')"
+            }
+        }]
+    }, {
+        "day_no": 7,
+        "itemsPrSlide": 3,
+        "NOTE1": "I TLYs design er der ikke behov for itemsPrSlide",
+        "content": [{
+            "category": "video",
+            "video": {
+                "attr": { "class": "skriveuge_item objLink videoLink" },
+                "thumbnail": "img/cards_video3.png",
+                "videoSrc": "https://www.youtube.com/embed/WmYhbS401lY",
+                "header": "Er du i panik?"
+            }
+        }, {
+            "category": "dagensMaal",
+            "dagensMaal": {
+                "attr": { "class": "skriveuge_item objLink dagensMaal" },
+                "imgSrc": "img/cards_maal.png",
+                "header": "Dagens mål",
+                "text": "2-2,5 sider og korrektur"
+            }
+        }, {
+            "category": "card",
+            "card": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_tjek.png",
+                "header": "Lorem ipsum dolor sit amet",
+                "btnText": "Lorem ipsum",
+                "text": "Lorem ipsum"
+            }
+        }, {
+            "category": "card",
+            "card": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_tjek.png",
+                "header": "Lorem ipsum dolor sit amet",
+                "btnText": "Lorem ipsum",
+                "text": "Lorem ipsum"
+            }
+        }, {
+            "category": "card",
+            "card": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_tjek.png",
+                "header": "Lorem ipsum dolor sit amet",
+                "btnText": "Lorem ipsum",
+                "text": "Lorem ipsum"
+            }
+        }, {
+            "category": "card",
+            "card": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_tjek.png",
+                "header": "Lorem ipsum dolor sit amet",
+                "btnText": "Lorem ipsum",
+                "text": "Lorem ipsum"
+            }
+        }, {
+            "category": "card",
+            "card": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_tjek.png",
+                "header": "Lorem ipsum dolor sit amet",
+                "btnText": "Lorem ipsum",
+                "text": "Lorem ipsum"
+            }
+        }, {
+            "category": "card",
+            "card": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_tjek.png",
+                "header": "Lorem ipsum dolor sit amet",
+                "btnText": "Lorem ipsum",
+                "text": "Lorem ipsum"
+            }
+        }, {
+            "category": "checklist",
+            "checklist": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_tjek.png",
+                "header": "Til en start husker jeg at",
+                "text": "Lorem ipsum - tekst fra samlet liste",
+                "btnText": "Se tjeklisten"
+            },
+            "userMsgBox_data": {
+                "displayMode": "html",
+                "html": "html('#citater', '#UserMsgBox_text')"
+            }
+        }]
+    }, {
+        "day_no": 8,
+        "itemsPrSlide": 3,
+        "NOTE1": "I TLYs design er der ikke behov for itemsPrSlide",
+        "content": [{
+                "category": "dagensMaal",
+                "dagensMaal": {
+                    "attr": { "class": "skriveuge_item objLink dagensMaal" },
+                    "imgSrc": "img/cards_maal.png",
+                    "header": "Dagens mål",
+                    "text": "At aflevere din SSO"
                 }
-            ]
-        },
-        {
-            "day_no": 2,
-            "itemsPrSlide": 3, "NOTE1": "I TLYs design er der ikke behov for itemsPrSlide",
-            "content": [
-                {
-                    "category": "dagensMaal",
-                    "dagensMaal": {
-                        "attr": {"class": "skriveuge_item objLink dagensMaal"},
-                        "imgSrc": "img/cards_maal.png",
-                        "header": "Dagens mål: 1-2 sider",
-                        "text": "Når dagen er slut, skulle du gerne have skrevet yderligere <b>1-2 sider</b>"
-                    }
-                },{
-                    "category": "dagensOpgaver",
-                    "dagensOpgaver": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_task.png",
-                        "header": "Strukturér din dag",
-                        "text": "Læg en plan og husk at holde pauser. Klik på knappen og se et forslag til hvordan du kan disponere dit arbejde.",
-                        "btnText": "Plan for arbejdsstruktur"
-                    },
-                    "userMsgBox_data": {
-                        "displayMode": "html",
-                        "html": "html('#dagsplan', '#UserMsgBox_text')"
-                    }
-                },
-                {
-                    "category": "dagensOpgaver",
-                    "dagensOpgaver": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_task.png",
-                        "header": "Skriv", 
-                        "text": "Skriv den første del af din besvarelse færdig i store træk."
-                    }
-                },
-                {
-                    "category": "audio",
-                    "audio": {
-                        "attr": {"class": "skriveuge_item objLink audioInline"},
-                        "imgSrc": "img/cards_i_staa_audio.png",
-                        "header": "Gået i stå?",
-                        "text": "Skab overblik og del opgaven op i mindre bidder",
-                        "audioSrc": "mp3/part_1.mp3"
-                    }
-                },
-                {
-                    "category": "dagensOpgaver",
-                    "dagensOpgaver": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_task.png", 
-                        "header": "Aftal korrektur",
-                        "text": "Lav en aftale med en bekendt om at læse opgaven igennem dagen inden aflevering"
-                    }
-                },
-                {
-                    "category": "checklist",
-                    "checklist": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_tjek.png",
-                        "header": "citater og litteratur- henvisninger",
-                        "text": "<ul><li>Jeg har lavet en aftale med en bekendt om at hjælpe mig</li><li>Jeg bruger korte citater </li><li> Jeg benytter litteraturhenvisninger</li></ul>",
-                        "btnText": "Se hvordan"
-                    },
-                    "userMsgBox_data": {
-                        "displayMode": "html",
-                        "html": "html('#citater', '#UserMsgBox_text')"
-                    }
+            }, {
+                "category": "card",
+                "card": {
+                    "attr": { "class": "skriveuge_item objLink" },
+                    "imgSrc": "img/cards_tjek.png",
+                    "header": "Lorem ipsum dolor sit amet",
+                    "btnText": "Lorem ipsum",
+                    "text": "Lorem ipsum"
                 }
-            ]
-        },
-        {
-            "day_no": 3,
-            "itemsPrSlide": 3, "NOTE1": "I TLYs design er der ikke behov for itemsPrSlide",
-            "content": [
-                {
-                    "category": "dagensMaal",
-                    "dagensMaal": {
-                        "attr": {"class": "skriveuge_item objLink dagensMaal"},
-                        "imgSrc": "img/cards_maal.png",
-                        "header": "Dagens mål: 1-2 sider",
-                        "text": "I dag er målet at skrive <b>1-2 sider</b>"
-                    }
-                },
-                {
-                    "category": "dagensOpgaver",
-                    "dagensOpgaver": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_task.png",
-                        "header": "Gennemgang af første del",
-                        "text": "Genlæs og ret første del af min opgave"
-                    }
-                },
-                {
-                    "category": "dagensOpgaver",
-                    "dagensOpgaver": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_task.png",
-                        "header": "Overblik over næste del",
-                        "text": "Dan et overblik over hvilke delafsnit/kapitler næste del af opgaveformuleringen skal besvares med"
-                    }
-                },
-                {
-                    "category": "dagensOpgaver",
-                    "dagensOpgaver": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_task.png",
-                        "header": "Hoveddelen",
-                        "text": "Begynd at skrive på opgavens hoveddel (analyse)"
-                    }
-                },
-                {
-                    "category": "gaaet_i_staa",
-                    "gaaet_i_staa": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_i_staa.png",
-                        "header": "Gået i stå?",
-                        "text": "Gør noget ved dit arbejdsmiljø",
-                        "btnText": "Se hvordan"
-                    },
-                    "userMsgBox_data": {
-                        "displayMode": "html",
-                        "html": "html('#arbejdsMilloe', '#UserMsgBox_text')"
-                    }
-                },
-                {
-                    "category": "checklist",
-                    "checklist": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_tjek.png",
-                        "header": "Tjekliste",
-                        "text": "<ul><li>Benyt 2-3 litteraturhenvisninger pr. side</li><li>Husk at kommentere citater fagligt</li><li>Vær sikker på du besvarer din problemformulering</li></ul>",
-                        "btnText": "Se tjeklisten"
-                    },
-                    "userMsgBox_data": {
-                        "displayMode": "html",
-                        "html": "html('#citater', '#UserMsgBox_text')"
-                    }
+            }, {
+                "category": "card",
+                "card": {
+                    "attr": { "class": "skriveuge_item objLink" },
+                    "imgSrc": "img/cards_tjek.png",
+                    "header": "Lorem ipsum dolor sit amet",
+                    "btnText": "Lorem ipsum",
+                    "text": "Lorem ipsum"
                 }
-            ]
-        },
-        {
-            "day_no": 4,
-            "itemsPrSlide": 3, "NOTE1": "I TLYs design er der ikke behov for itemsPrSlide",
-            "content": [
-                {
-                    "category": "video",
-                    "video": {
-                        "attr": {"class": "skriveuge_item objLink videoLink"},
-                        "thumbnail": "img/cards_video2.png",
-                        "videoSrc": "https://www.youtube.com/embed/WmYhbS401lY",
-                        "header": "Status på halvvejen", 
-                        "text":"Er du hvor du skal være i opgaven? Få konkrete råd til den sidste del af arbejdet."
-                    }
+            }, {
+                "category": "checklist",
+                "checklist": {
+                    "attr": { "class": "skriveuge_item objLink" },
+                    "imgSrc": "img/cards_tjek.png",
+                    "header": "TEST: Den korrekte fodnote/ litteraturhenvisning",
+                    "text": "Lorem ipsum - tekst fra samlet liste",
+                    "btnText": "Se tjeklisten"
                 },
-                {
-                    "category": "dagensMaal",
-                    "dagensMaal": {
-                        "attr": {"class": "skriveuge_item objLink dagensMaal"},
-                        "imgSrc": "img/cards_maal.png",
-                        "header": "Dagens mål: 2-2½ sider",
-                        "text": "2-2,5 sider"
-                    }
-                },
-                {
-                    "category": "card",
-                    "card": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_tjek.png",
-                        "header": "Lorem ipsum dolor sit amet",
-                        "btnText": "Lorem ipsum",
-                        "text": "Lorem ipsum"
-                    }
-                },
-                {
-                    "category": "card",
-                    "card": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_tjek.png",
-                        "header": "Lorem ipsum dolor sit amet",
-                        "btnText": "Lorem ipsum",
-                        "text": "Lorem ipsum"
-                    }
-                },
-                {
-                    "category": "card",
-                    "card": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_tjek.png",
-                        "header": "Lorem ipsum dolor sit amet",
-                        "btnText": "Lorem ipsum",
-                        "text": "Lorem ipsum"
-                    }
-                },
-                {
-                    "category": "card",
-                    "card": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_tjek.png",
-                        "header": "Lorem ipsum dolor sit amet",
-                        "btnText": "Lorem ipsum",
-                        "text": "Lorem ipsum"
-                    }
-                },
-                {
-                    "category": "checklist",
-                    "checklist": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_tjek.png",
-                        "header": "Til en start husker jeg at",
-                        "text": "Lorem ipsum - tekst fra samlet liste",
-                        "btnText": "Se tjeklisten"
-                    },
-                    "userMsgBox_data": {
-                        "displayMode": "html",
-                        "html": "html('#citater', '#UserMsgBox_text')"
-                    }
+                "userMsgBox_data": {
+                    "displayMode": "html",
+                    "html": "html('#den_korrekte_fodnote_litteraturhenvisning', '#UserMsgBox_text')"
                 }
-            ]
-        },
-        {
-            "day_no": 5,
-            "itemsPrSlide": 3, "NOTE1": "I TLYs design er der ikke behov for itemsPrSlide",
-            "content": [
-                {
-                    "category": "dagensMaal",
-                    "dagensMaal": {
-                        "attr": {"class": "skriveuge_item objLink dagensMaal"},
-                        "imgSrc": "img/cards_maal.png",
-                        "header": "Dagens mål",
-                        "text": "2-2,5 sider"
-                    }
-                },
-                {
-                    "category": "card",
-                    "card": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_tjek.png",
-                        "header": "Lorem ipsum dolor sit amet",
-                        "btnText": "Lorem ipsum",
-                        "text": "Lorem ipsum"
-                    }
-                },
-                {
-                    "category": "card",
-                    "card": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_tjek.png",
-                        "header": "Lorem ipsum dolor sit amet",
-                        "btnText": "Lorem ipsum",
-                        "text": "Lorem ipsum"
-                    }
-                },
-                {
-                    "category": "card",
-                    "card": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_tjek.png",
-                        "header": "Lorem ipsum dolor sit amet",
-                        "btnText": "Lorem ipsum",
-                        "text": "Lorem ipsum"
-                    }
-                },
-                {
-                    "category": "card",
-                    "card": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_tjek.png",
-                        "header": "Lorem ipsum dolor sit amet",
-                        "btnText": "Lorem ipsum",
-                        "text": "Lorem ipsum"
-                    }
-                },
-                {
-                    "category": "card",
-                    "card": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_tjek.png",
-                        "header": "Lorem ipsum dolor sit amet",
-                        "btnText": "Lorem ipsum",
-                        "text": "Lorem ipsum"
-                    }
-                },
-                {
-                    "category": "checklist",
-                    "checklist": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_tjek.png",
-                        "header": "Til en start husker jeg at",
-                        "text": "Lorem ipsum - tekst fra samlet liste",
-                        "btnText": "Se tjeklisten"
-                    },
-                    "userMsgBox_data": {
-                        "displayMode": "html",
-                        "html": "html('#citater', '#UserMsgBox_text')"
-                    }
-                }
-            ]
-        },
-        {
-            "day_no": 6,
-            "itemsPrSlide": 3, "NOTE1": "I TLYs design er der ikke behov for itemsPrSlide",
-            "content": [
-                {
-                    "category": "dagensMaal",
-                    "dagensMaal": {
-                        "attr": {"class": "skriveuge_item objLink dagensMaal"},
-                        "imgSrc": "img/cards_maal.png",
-                        "header": "Dagens mål",
-                        "text": "2-2,5 sider"
-                    }
-                },{
-                    "category": "card",
-                    "card": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_tjek.png",
-                        "header": "Lorem ipsum dolor sit amet",
-                        "btnText": "Lorem ipsum",
-                        "text": "Lorem ipsum"
-                    }
-                },
-                {
-                    "category": "card",
-                    "card": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_tjek.png",
-                        "header": "Lorem ipsum dolor sit amet",
-                        "btnText": "Lorem ipsum",
-                        "text": "Lorem ipsum"
-                    }
-                },
-                {
-                    "category": "card",
-                    "card": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_tjek.png",
-                        "header": "Lorem ipsum dolor sit amet",
-                        "btnText": "Lorem ipsum",
-                        "text": "Lorem ipsum"
-                    }
-                },
-                {
-                    "category": "card",
-                    "card": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_tjek.png",
-                        "header": "Lorem ipsum dolor sit amet",
-                        "btnText": "Lorem ipsum",
-                        "text": "Lorem ipsum"
-                    }
-                },
-                {
-                    "category": "card",
-                    "card": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_tjek.png",
-                        "header": "Lorem ipsum dolor sit amet",
-                        "btnText": "Lorem ipsum",
-                        "text": "Lorem ipsum"
-                    }
-                },
-                {
-                    "category": "card",
-                    "card": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_tjek.png",
-                        "header": "Lorem ipsum dolor sit amet",
-                        "btnText": "Lorem ipsum",
-                        "text": "Lorem ipsum"
-                    }
-                },
-                {
-                    "category": "checklist",
-                    "checklist": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_tjek.png",
-                        "header": "Til en start husker jeg at",
-                        "text": "Lorem ipsum - tekst fra samlet liste",
-                        "btnText": "Se tjeklisten"
-                    },
-                    "userMsgBox_data": {
-                        "displayMode": "html",
-                        "html": "html('#citater', '#UserMsgBox_text')"
-                    }
-                }
-            ]
-        },
-        {
-            "day_no": 7,
-            "itemsPrSlide": 3, "NOTE1": "I TLYs design er der ikke behov for itemsPrSlide",
-            "content": [
-                {
-                    "category": "video",
-                    "video": {
-                        "attr": {"class": "skriveuge_item objLink videoLink"},
-                        "thumbnail": "img/cards_video3.png",
-                        "videoSrc": "https://www.youtube.com/embed/WmYhbS401lY",
-                        "header": "Er du i panik?"
-                    }
-                },
-                {
-                    "category": "dagensMaal",
-                    "dagensMaal": {
-                        "attr": {"class": "skriveuge_item objLink dagensMaal"},
-                        "imgSrc": "img/cards_maal.png",
-                        "header": "Dagens mål",
-                        "text": "2-2,5 sider og korrektur"
-                    }
-                },
-                {
-                    "category": "card",
-                    "card": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_tjek.png",
-                        "header": "Lorem ipsum dolor sit amet",
-                        "btnText": "Lorem ipsum",
-                        "text": "Lorem ipsum"
-                    }
-                },
-                {
-                    "category": "card",
-                    "card": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_tjek.png",
-                        "header": "Lorem ipsum dolor sit amet",
-                        "btnText": "Lorem ipsum",
-                        "text": "Lorem ipsum"
-                    }
-                },
-                {
-                    "category": "card",
-                    "card": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_tjek.png",
-                        "header": "Lorem ipsum dolor sit amet",
-                        "btnText": "Lorem ipsum",
-                        "text": "Lorem ipsum"
-                    }
-                },
-                {
-                    "category": "card",
-                    "card": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_tjek.png",
-                        "header": "Lorem ipsum dolor sit amet",
-                        "btnText": "Lorem ipsum",
-                        "text": "Lorem ipsum"
-                    }
-                },
-                {
-                    "category": "card",
-                    "card": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_tjek.png",
-                        "header": "Lorem ipsum dolor sit amet",
-                        "btnText": "Lorem ipsum",
-                        "text": "Lorem ipsum"
-                    }
-                },
-                {
-                    "category": "card",
-                    "card": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_tjek.png",
-                        "header": "Lorem ipsum dolor sit amet",
-                        "btnText": "Lorem ipsum",
-                        "text": "Lorem ipsum"
-                    }
-                },
-                {
-                    "category": "checklist",
-                    "checklist": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_tjek.png",
-                        "header": "Til en start husker jeg at",
-                        "text": "Lorem ipsum - tekst fra samlet liste",
-                        "btnText": "Se tjeklisten"
-                    },
-                    "userMsgBox_data": {
-                        "displayMode": "html",
-                        "html": "html('#citater', '#UserMsgBox_text')"
-                    }
-                }
-            ]
-        },
-        {
-            "day_no": 8,
-            "itemsPrSlide": 3, "NOTE1": "I TLYs design er der ikke behov for itemsPrSlide",
-            "content": [
-                {
-                    "category": "dagensMaal",
-                    "dagensMaal": {
-                        "attr": {"class": "skriveuge_item objLink dagensMaal"},
-                        "imgSrc": "img/cards_maal.png",
-                        "header": "Dagens mål",
-                        "text": "At aflevere din SSO"
-                    }
-                },
-                {
-                    "category": "card",
-                    "card": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_tjek.png",
-                        "header": "Lorem ipsum dolor sit amet",
-                        "btnText": "Lorem ipsum",
-                        "text": "Lorem ipsum"
-                    }
-                },
-                {
-                    "category": "card",
-                    "card": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_tjek.png",
-                        "header": "Lorem ipsum dolor sit amet",
-                        "btnText": "Lorem ipsum",
-                        "text": "Lorem ipsum"
-                    }
-                },
-                {
-                    "category": "checklist",
-                    "checklist": {
-                        "attr": {"class": "skriveuge_item objLink"},
-                        "imgSrc": "img/cards_tjek.png",
-                        "header": "TEST: Den korrekte fodnote/ litteraturhenvisning",
-                        "text": "Lorem ipsum - tekst fra samlet liste",
-                        "btnText": "Se tjeklisten"
-                    },
-                    "userMsgBox_data": {
-                        "displayMode": "html",
-                        "html": "html('#den_korrekte_fodnote_litteraturhenvisning', '#UserMsgBox_text')"
-                    }
-                }
-               
-                
-            ]
-        }
-    ]  
+            }
+
+
+        ]
+    }]
 }
