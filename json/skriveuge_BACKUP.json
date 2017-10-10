@@ -23,8 +23,8 @@
                     "dagensMaal": {
                         "attr": {"class": "skriveuge_item objLink dagensMaal"},
                         "imgSrc": "img/cards_maal.png",
-                        "header": "Dagens mål: 1 side",
-                        "text": "Du skal gerne have skrevet <b>1 side</b>"
+                        "header": "Dagens mål",
+                        "text": "0,5 – 1 side"
                     }
                 },
                 {
@@ -33,7 +33,7 @@
                         "attr": {"class": "skriveuge_item objLink"},
                         "imgSrc": "img/cards_read.png",
                         "header": "Læs og forstå opgaveformuleringen",
-                        "text": " Hvis der er noget du ikke forstår, så kontakt din vejleder."
+                        "text": " - ellers har jeg kontaktet min vejleder"
                     }
                 },
                 {
@@ -42,7 +42,7 @@
                         "attr": {"class": "skriveuge_item objLink"},
                         "imgSrc": "img/cards_task.png",
                         "header": "Organiser dine materialer",
-                        "text": "Så ved du, hvad du skal anvende til f.eks. redegørelse, analyse og diskussion."
+                        "text": "så du ved, hvad du skal anvende hvornår. (Hvilke bøger bruger du til redegørelsen analysen og diskussionen?)"
                     }
                 },
                 {
@@ -64,8 +64,8 @@
                     "dagensOpgaver": {
                         "attr": {"class": "skriveuge_item objLink"},
                         "imgSrc": "img/cards_task.png",
-                        "header": "Skriv et udkast",
-                        "text": "Skrive et udkast til besvarelse af den første del af opgaveformuleringen"
+                        "header": "Skriv",
+                        "text": "Skriv på første del af opgaveformuleringen"
                     }
                 },
                 {
@@ -87,13 +87,13 @@
                     "checklist": {
                         "attr": {"class": "skriveuge_item objLink"},
                         "imgSrc": "img/cards_tjek.png",
-                        "header": "Dagens tjekliste",
-                        "text": "<ul><li>Jeg forstår min problemformulering</li><li>Jeg er igang med at besvare første del af problemformuleringen</li><li>Jeg har organiseret min litteratur og skrevet den ned</li><ul>"
-                        
+                        "header": "Til en start husker jeg at",
+                        "text": "Lorem ipsum - tekst fra samlet liste",
+                        "btnText": "Se tjeklisten"
                     },
                     "userMsgBox_data": {
                         "displayMode": "html",
-                        "html": "<"
+                        "html": "html('#citater', '#UserMsgBox_text')"
                     }
                 }
             ]
@@ -107,8 +107,8 @@
                     "dagensMaal": {
                         "attr": {"class": "skriveuge_item objLink dagensMaal"},
                         "imgSrc": "img/cards_maal.png",
-                        "header": "Dagens mål: 1-2 sider",
-                        "text": "Når dagen er slut, skulle du gerne have skrevet yderligere <b>1-2 sider</b>"
+                        "header": "Dagens mål",
+                        "text": "1-2 sider"
                     }
                 },
                 {
@@ -116,18 +116,8 @@
                     "dagensOpgaver": {
                         "attr": {"class": "skriveuge_item objLink"},
                         "imgSrc": "img/cards_task.png",
-                        "header": "Skriv", 
-                        "text": "Arbejd videre med at skrive den første del af din besvarelse"
-                    }
-                },
-                {
-                    "category": "audio",
-                    "audio": {
-                        "attr": {"class": "skriveuge_item objLink audioInline"},
-                        "imgSrc": "img/cards_i_staa_audio.png",
-                        "header": "Gået i stå?",
-                        "text": "Skab overblik og del opgaven op i mindre bidder",
-                        "audioSrc": "mp3/part_1.mp3"
+                        "header": "Første del", 
+                        "text": "Arbejd videre med at skrive et udkast til første del"
                     }
                 },
                 {
@@ -145,12 +135,22 @@
                         "attr": {"class": "skriveuge_item objLink"},
                         "imgSrc": "img/cards_tjek.png",
                         "header": "citater og litteratur- henvisninger",
-                        "text": "<ul><li>Jeg har lavet en aftale med en bekendt om at hjælpe mig</li><li>Jeg bruger korte citater </li><li> Jeg har litteraturhenvisninger i det jeg skriver</li></ul>",
+                        "text": "Jeg husker ikke at lave for lange citater og lave litteraturhenvisninger ved brug af citatet.",
                         "btnText": "Se hvordan"
                     },
                     "userMsgBox_data": {
                         "displayMode": "html",
                         "html": "html('#citater', '#UserMsgBox_text')"
+                    }
+                },
+                {
+                    "category": "audio",
+                    "audio": {
+                        "attr": {"class": "skriveuge_item objLink audioInline"},
+                        "imgSrc": "img/cards_i_staa_audio.png",
+                        "header": "Gået i stå?",
+                        "text": "Skab overblik og del opgaven op i mindre bidder",
+                        "audioSrc": "mp3/part_1.mp3"
                     }
                 }
             ]

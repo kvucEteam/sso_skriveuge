@@ -1,59 +1,15 @@
-
-// function makeInterface() {
-// 	console.log('\nmakeInterface - CALLED');
-
-// 	var day = jsonData.day;
-// 	var HTML = '';
-// 	HTML += '<div id="skriveuge">';
-// 	for (var d in day) {
-// 		console.log('makeInterface - day['+d+']: ' + day[d]);
-// 		HTML += '<div class="skriveuge_dag row">';
-// 			for (var c in day[d].content) {
-// 				console.log('makeInterface - day['+d+'].content['+c+']: ' + JSON.stringify(day[d].content[c]));
-// 				// HTML += '<div class="skriveuge_item col-xs-12">';
-// 					var cObj = day[d].content[c];
-
-// 					switch(cObj.category) {
-// 						case 'card':
-// 					    	console.log('makeInterface - A1');
-// 					        HTML += makeAudio(cObj.card);
-// 					        break;
-// 					    case 'card':
-// 					    	console.log('makeInterface - A1');
-// 					        HTML += makeCard(cObj.card);
-// 					        break;
-// 					    case 'checklist':
-// 					    	console.log('makeInterface - A2');
-// 					    	HTML += makeChecklist(cObj.checklist);
-// 					        break;
-// 					    case 'dagensOpgaver':
-// 					    	console.log('makeInterface - A2');
-// 					    	HTML += makeChecklist(cObj.dagensOpgaver);
-// 					        break;
-// 					    case 'faq':
-// 					    	console.log('makeInterface - A3');
-// 					        HTML += makeFaq(cObj.faq);
-// 					        break;
-// 					    case 'formalia':
-// 					    	console.log('makeInterface - A4');
-// 					    	HTML += makeFormalia(cObj.formalia);
-// 					        break;
-// 					    case 'video':
-// 					    	console.log('makeInterface - A5');
-// 					        HTML += makeVideo(cObj.video);
-// 					        break;
-// 					    default:
-// 					    	console.log('makeInterface - A6');
-// 					        // alert('ERROR');
-// 					}
-// 				// HTML += '</div>';
-// 			}
-// 		HTML += '</div>';
-// 	}
-// 	HTML += '</div>';
-// 	return HTML;
-// }
-
+// NAVIGATIONSMENUER DER HIDER TOP-MENU'en
+// ================================================================
+//
+// Auto-Hiding Navigation
+// https://codyhouse.co/gem/auto-hiding-navigation/
+// DEMO: https://codyhouse.co/demo/auto-hiding-navigation/nav-subnav.html
+// 
+// Responsive Auto Show/Hide Toggle Menu with jQuery
+// http://www.jqueryscript.net/menu/Responsive-Auto-Show-Hide-Toggle-Menu-with-jQuery.html
+// DEMO: http://www.jqueryscript.net/demo/Responsive-Auto-Show-Hide-Toggle-Menu-with-jQuery/
+//
+//
 
 function makeSkriveugeSlide(dayIndex, cardIndex_start, cardIndex_end) {
 	console.log('\nmakeSkriveugeSlide - CALLED');
@@ -81,53 +37,56 @@ function makeSkriveugeSlide(dayIndex, cardIndex_start, cardIndex_end) {
 		var countMem = 0;
 
 		// for (var c = cardIndex_start; c < cardIndex_end; c++) {	// COMMENTED OUT 25/9-2017
-		for (var c = 0; c < cardIndex_end-cardIndex_start; c++) {		// ADDED 25/9-2017
+		for (var c = 0; c < cardIndex_end-cardIndex_start; c++) {	// ADDED 25/9-2017
 		
 			console.log('makeSkriveugeSlide - day['+dayIndex+'].content['+String(c+cardIndex_start)+']: ' + JSON.stringify(day[dayIndex].content[c+cardIndex_start]));
 			// HTML += '<div class="skriveuge_item col-xs-12">';
 				var cObj = day[dayIndex].content[c+cardIndex_start];
 
-				switch(cObj.category) {
-					case 'audio':
-				    	console.log('makeSkriveugeSlide - A0');
-				        HTML += makeAudio(cObj.audio);
-				        break;
-				    case 'card':
-				    	console.log('makeSkriveugeSlide - A1');
-				        HTML += makeCard(cObj.card);
-				        break;
-				    case 'checklist':
-				    	console.log('makeSkriveugeSlide - A2');
-				    	HTML += makeChecklist(cObj.checklist);
-				        break;
-				    case 'dagensOpgaver':
-				    	console.log('makeSkriveugeSlide - A3');
-				    	HTML += makeDagensOpgaver(cObj.dagensOpgaver);
-				        break;
-				    case 'dagensMaal':
-				    	console.log('makeSkriveugeSlide - A3');
-				    	HTML += makeDagensMaal(cObj.dagensMaal);
-				        break;
-				    case 'faq':
-				    	console.log('makeSkriveugeSlide - A4');
-				        HTML += makeFaq(cObj.faq);
-				        break;
-				    case 'formalia':
-				    	console.log('makeSkriveugeSlide - A5');
-				    	HTML += makeFormalia(cObj.formalia);
-				        break;
-				    case 'gaaet_i_staa':
-				    	console.log('makeSkriveugeSlide - A5');
-				    	HTML += makeNoProgress(cObj.gaaet_i_staa);
-				        break;
-				    case 'video':
-				    	console.log('makeSkriveugeSlide - A6');
-				        HTML += makeVideo(cObj.video);
-				        break;
-				    default:
-				    	console.log('makeSkriveugeSlide - A7');
-				        // alert('ERROR');
-				}
+				// switch(cObj.category) {
+				// 	case 'audio':
+				//     	console.log('makeSkriveugeSlide - A0');
+				//         HTML += makeAudio(cObj.audio);
+				//         break;
+				//     case 'card':
+				//     	console.log('makeSkriveugeSlide - A1');
+				//         HTML += makeCard(cObj.card);
+				//         break;
+				//     case 'checklist':
+				//     	console.log('makeSkriveugeSlide - A2');
+				//     	HTML += makeChecklist(cObj.checklist);
+				//         break;
+				//     case 'dagensOpgaver':
+				//     	console.log('makeSkriveugeSlide - A3');
+				//     	HTML += makeDagensOpgaver(cObj.dagensOpgaver);
+				//         break;
+				//     case 'dagensMaal':
+				//     	console.log('makeSkriveugeSlide - A3');
+				//     	HTML += makeDagensMaal(cObj.dagensMaal);
+				//         break;
+				//     case 'faq':
+				//     	console.log('makeSkriveugeSlide - A4');
+				//         HTML += makeFaq(cObj.faq);
+				//         break;
+				//     case 'formalia':
+				//     	console.log('makeSkriveugeSlide - A5');
+				//     	HTML += makeFormalia(cObj.formalia);
+				//         break;
+				//     case 'gaaet_i_staa':
+				//     	console.log('makeSkriveugeSlide - A5');
+				//     	HTML += makeNoProgress(cObj.gaaet_i_staa);
+				//         break;
+				//     case 'video':
+				//     	console.log('makeSkriveugeSlide - A6');
+				//         HTML += makeVideo(cObj.video);
+				//         break;
+				//     default:
+				//     	console.log('makeSkriveugeSlide - A7');
+				//         // alert('ERROR');
+				// }
+
+				HTML += category(cObj);
+
 			// HTML += '</div>';
 
 			countMem = c;
@@ -142,6 +101,78 @@ function makeSkriveugeSlide(dayIndex, cardIndex_start, cardIndex_end) {
 		}
 	HTML += '</div>';
 	
+	return HTML;
+}
+
+
+function category(cObj) {
+	var HTML = '';
+	switch(cObj.category) {
+		case 'audio':
+	    	console.log('makeSkriveugeSlide - A0');
+	        HTML += makeAudio(cObj.audio);
+	        break;
+	    case 'card':
+	    	console.log('makeSkriveugeSlide - A1');
+	        HTML += makeCard(cObj.card);
+	        break;
+	    case 'checklist':
+	    	console.log('makeSkriveugeSlide - A2');
+	    	HTML += makeChecklist(cObj.checklist);
+	        break;
+	    case 'dagensOpgaver':
+	    	console.log('makeSkriveugeSlide - A3');
+	    	HTML += makeDagensOpgaver(cObj.dagensOpgaver);
+	        break;
+	    case 'dagensMaal':
+	    	console.log('makeSkriveugeSlide - A3');
+	    	HTML += makeDagensMaal(cObj.dagensMaal);
+	        break;
+	    case 'faq':
+	    	console.log('makeSkriveugeSlide - A4');
+	        HTML += makeFaq(cObj.faq);
+	        break;
+	    case 'formalia':
+	    	console.log('makeSkriveugeSlide - A5');
+	    	HTML += makeFormalia(cObj.formalia);
+	        break;
+	    case 'gaaet_i_staa':
+	    	console.log('makeSkriveugeSlide - A5');
+	    	HTML += makeNoProgress(cObj.gaaet_i_staa);
+	        break;
+	    case 'video':
+	    	console.log('makeSkriveugeSlide - A6');
+	        HTML += makeVideo(cObj.video);
+	        break;
+	    default:
+	    	console.log('makeSkriveugeSlide - A7');
+	        // alert('ERROR');
+	}
+
+	return HTML;
+}
+
+
+function makeMobileTemplate() {  // Lavet d. 9/10-2017
+	
+	var weekLookup = ['FRE','LØR','SØN','MAN','TIR','ONS','TOR','FRE'];
+
+	var HTML = '';
+	for (var d in jsonData.day) {
+		HTML += '<div class="mobile_dayHeading">';
+			HTML += '<span class="mobile_weekNameAndNumber">';
+				HTML += '<span class="mobile_weekDay">'+weekLookup[jsonData.day[d].day_no-1]+'</span>';
+				HTML += '<span class="mobile_weekNumber">'+jsonData.day[d].day_no+'</span>';
+			HTML += '</span>';
+		HTML += '</div>';
+		HTML += '<div class="mobile_dayContent">';
+		for (var c in jsonData.day[d].content) {
+			var cObj = jsonData.day[d].content[c];
+			HTML += category(cObj);
+		}
+		HTML += '</div>';
+	}
+
 	return HTML;
 }
 
@@ -311,12 +342,38 @@ function makeVideo(cObj) {
 		HTML += '<div class="objText">';
 			HTML += ((cObj.hasOwnProperty('header'))?'<h4>'+cObj.header+'</h4>':'');
 			HTML += ((cObj.hasOwnProperty('text'))?'<p>'+cObj.text+'</p>':'');
+
+			HTML += ((cObj.hasOwnProperty('btnText'))?'<span class="btn_ghost btn_ghost_noStyle btn btn-default">'+cObj.btnText+'</span>':'');
 			
 			HTML += '<div class="Clear"></div>';
 		HTML += '</div>';
 	HTML += '</div>';
 
 	return HTML;
+}
+
+
+function setSliderRowHeight() {
+	$('.item').removeAttr( 'style' );
+	$('.carouselPage').each(function( index1, element1 ) {
+		var hMem = 0;
+		$('.item', element1).each(function( index2, element2 ) {
+			var h = $(element2).outerHeight(true);
+			// var h = $(element2).height();
+			var mt = $(element2).css('margin-top').replace('px', ''); 
+			var mb = $(element2).css('margin-bottom').replace('px', '');
+			var pt = $(element2).css('padding-top').replace('px', ''); 
+			var pb = $(element2).css('padding-bottom').replace('px', '');
+			console.log('setSliderRowHeight - h: ' + h + ', mt: ' + mt + ', mb: ' + mb + ', pt: ' + pt + ', pb: ' + pb);
+			if (h > hMem) {
+				hMem = h;
+			}
+		});
+		console.log('setSliderRowHeight - index1: ' + index1 + ', hMem: ' + hMem);
+		hMem += 70;
+		console.log('setSliderRowHeight - index1: ' + index1 + ', hMem: ' + hMem);
+		$('.item', element1).height(hMem);
+	});
 }
 
 
@@ -328,7 +385,7 @@ function makeVideoPlayThumbnail(thumbnail, videoSrc){
 
 
 //******************************************************************************
-// Multi-carusel klasse fra "figurlæsningsobjektet" i geografi:
+// Multi-carousel klasse fra "figurlæsningsobjektet" i geografi:
 //******************************************************************************
 //==============================================================================
 //          Datatypes for text, images and video
@@ -582,68 +639,6 @@ function makeSlideData() {
 }
 
 
-// $( document ).on('click', ".carousel-control .glyphicon-chevron-right", function(event){
-// // $( document ).on('click', ".right.carousel-control", function(event){
-// 	var carouselPageIndex = $(this).closest('.carouselPage').index();
-// 	console.log('CLICK glyphicon-chevron-right - carouselPageIndex: ' + carouselPageIndex);
-
-// 	var numOfSlides = TjsonData.slideData[carouselPageIndex].carouselData.slides.length;
-// 	console.log('CLICK glyphicon-chevron-right - numOfSlides: ' + numOfSlides);
-
-// 	var pObj = $(this).closest('.carouselPage');
-// 	var activeIndex = $('.active', pObj).index();
-// 	console.log('CLICK glyphicon-chevron-right - activeIndex 1: ' + activeIndex);
-
-// 	if ((activeIndex == 0) && (numOfSlides > 1)) {
-// 		console.log('CLICK glyphicon-chevron-right - A1');
-// 		++activeIndex;
-// 	} else if (activeIndex < numOfSlides-1) {
-// 		console.log('CLICK glyphicon-chevron-right - A2');
-// 		++activeIndex;
-// 	} else if (activeIndex == numOfSlides-1) {
-// 		console.log('CLICK glyphicon-chevron-right - A3');
-// 		activeIndex = 0;
-// 	}
-// 	console.log('CLICK glyphicon-chevron-right - activeIndex 2: ' + activeIndex);
-
-// 	if (activeIndex == numOfSlides-1) {
-// 		$('.right.carousel-control', pObj).hide();
-// 	} else {
-// 		$('.right.carousel-control', pObj).show();
-// 	}
-// 	$('.left.carousel-control', pObj).show();
-// });
-
-
-// $( document ).on('click', ".carousel-control .glyphicon-chevron-left", function(event){
-// // $( document ).on('click', ".left.carousel-control", function(event){
-// 	var carouselPageIndex = $(this).closest('.carouselPage').index();
-// 	console.log('CLICK glyphicon-chevron-left - carouselPageIndex: ' + carouselPageIndex);
-
-// 	var numOfSlides = TjsonData.slideData[carouselPageIndex].carouselData.slides.length;
-// 	console.log('CLICK glyphicon-chevron-left - numOfSlides: ' + numOfSlides);
-
-// 	var pObj = $(this).closest('.carouselPage');
-// 	var activeIndex = $('.active', pObj).index();
-// 	console.log('CLICK glyphicon-chevron-left - activeIndex 1: ' + activeIndex);
-
-// 	if (activeIndex == 0) {
-// 		console.log('CLICK glyphicon-chevron-left - A1');
-// 		activeIndex = numOfSlides-1;
-// 	} else if (activeIndex < numOfSlides) {
-// 		console.log('CLICK glyphicon-chevron-left - A2');
-// 		--activeIndex;
-// 	} 
-// 	console.log('CLICK glyphicon-chevron-left - activeIndex 2: ' + activeIndex);
-
-// 	if (activeIndex == 0) {
-// 		$('.left.carousel-control', pObj).hide();
-// 	} else {
-// 		$('.left.carousel-control', pObj).show();
-// 	}
-// 	$('.right.carousel-control', pObj).show();
-// });
-
 
 // $( document ).on('click', ".carousel-control .glyphicon-chevron-right", function(event){
 $( document ).on('click', ".right.carousel-control", function(event){
@@ -654,7 +649,8 @@ $( document ).on('click', ".right.carousel-control", function(event){
 	console.log('CLICK glyphicon-chevron-right - numOfSlides: ' + numOfSlides);
 
 	var pObj = $(this).closest('.carouselPage');
-	var activeIndex = $('.active', pObj).index();
+	var activeIndex = $('.active', pObj).index();	// COMMENTED OUT 29/9-2017
+	// var activeIndex = $('.carousel-inner .active', pObj).index();	// ADDED 29/9-2017
 	console.log('CLICK glyphicon-chevron-right - activeIndex 1: ' + activeIndex);
 
 	if (activeIndex == numOfSlides-1) {
@@ -675,7 +671,8 @@ $( document ).on('click', ".left.carousel-control", function(event){
 	console.log('CLICK glyphicon-chevron-left - numOfSlides: ' + numOfSlides);
 
 	var pObj = $(this).closest('.carouselPage');
-	var activeIndex = $('.active', pObj).index();
+	var activeIndex = $('.active', pObj).index();	// COMMENTED OUT 29/9-2017
+	// var activeIndex = $('.carousel-inner .active', pObj).index();	// ADDED 29/9-2017
 	console.log('CLICK glyphicon-chevron-left - activeIndex 1: ' + activeIndex);
 
 	if (activeIndex == 0) {
@@ -708,6 +705,35 @@ function addOrRemoveCarouselControles() {
 }
 
 
+function addOrRemoveCarouselControles_2() {
+	console.log('\naddOrRemoveCarouselControles_2 - CALLED');
+
+	// $('.left.carousel-control').hide();
+
+	$('.carouselPage').each(function( index, element ) {
+		var numOfSlides = $('.item', element).length;
+		// var activeIndex = $('.active', element).index();					// COMMENTED OUT 29/9-2017
+		var activeIndex = $('.carousel-inner .active', element).index();	// ADDED 29/9-2017
+		console.log('addOrRemoveCarouselControles_2 - index: ' + index + ', numOfSlides: ' + numOfSlides + ', activeIndex: ' + activeIndex + ', Antal .carousel-inner .active: ' + $('.carousel-inner .active', element).length);
+
+		if (activeIndex == 0) {
+			console.log('addOrRemoveCarouselControles_2 - A0');
+			$('.left.carousel-control', element).hide();
+		}
+
+		if (numOfSlides == 1) {
+			console.log('addOrRemoveCarouselControles_2 - A1');
+			$('.right.carousel-control', element).hide();
+		}
+
+		if (activeIndex + 1 == numOfSlides) {
+			console.log('addOrRemoveCarouselControles_2 - A2');
+			$('.right.carousel-control', element).hide();
+		}
+	});
+}
+
+
 function insertWeekdayAndWeekNum() {
 
 	var weekLookup = ['FRE','LØR','SØN','MAN','TIR','ONS','TOR','FRE'];
@@ -721,6 +747,131 @@ function insertWeekdayAndWeekNum() {
 
 		$(element).prepend(HTML); 
 	});
+}
+
+
+// ========================================================================================================================
+// 													Set num of cards per slide 
+// ======================================================================================================================== 
+
+
+function ajustNumOfCardsPrSlide(){
+	var sObj = {'700px': 2, '900px': 3, '1100px': 4};
+	var w = $('.container-fluid').width();
+
+	console.log('ajustNumOfCardsPrSlide - w: ' + w + ', findNumOfCards: ' + findNumOfCards(sObj, w));
+	window.TitemsPrSlide = findNumOfCards(sObj, w);
+
+	if (TitemsPrSlide != jsonData.itemsPrSlide_global) {
+		console.log('ajustNumOfCardsPrSlide - A0');
+
+		var dObj = getActiveSlides();  	// Get the active sildes from the DOM.
+		// deleteActiveProperty();			// Set all previous active-properties in the JSON data to false. If the active-property does not exist, then define it as false.
+		console.log('ajustNumOfCardsPrSlide - jsonData 1: ' + JSON.stringify(jsonData));
+		// setActiveProperty(dObj);		// Set the corrosponding active sildes from the DOM as active in the JSON data.
+		console.log('ajustNumOfCardsPrSlide - jsonData 2: ' + JSON.stringify(jsonData));
+		jsonData.itemsPrSlide_global = TitemsPrSlide;  // Overwrite the value itemsPrSlide_global property with the new value.
+
+		//================================================================
+		// 					From document.ready
+		//================================================================
+		window.TjsonData = makeSlideData();
+		console.log('ajustNumOfCardsPrSlide - TjsonData: ' + JSON.stringify(TjsonData));
+		$('#interface').html(initCarouselObjs(TjsonData));
+		insertWeekdayAndWeekNum();
+
+		// setActiveSlides(dObj);   // <-----------------  IMPORTANT: setActiveSlides() has to come before addOrRemoveCarouselControles_2()
+		// setActiveSlides_2(dObj);   // <-----------------  IMPORTANT: setActiveSlides() has to come before addOrRemoveCarouselControles_2()
+
+		addOrRemoveCarouselControles_2();
+
+		scale_skriveuge_item();
+		setJsAudioEventLitsner2();
+
+		scaleAndPosition_sliderContainer();
+		//================================================================
+
+	}
+
+
+	//###############  INTERNAL FUNCTIONS  ##############
+
+
+	function findNumOfCards(sObj, w) {
+		var nMax;
+		for (var n in sObj) {
+			if (w <= parseInt(n.replace('px',''))) {
+				return sObj[n];
+			}
+			nMax = n;
+		}
+		return sObj[nMax];
+	}
+
+	function getActiveSlides() {
+
+		var dObj = {};
+		$('.carouselPage').each(function( index, element ) {
+			// var activeIndex = $('.active', element).index();					// COMMENTED OUT 29/9-2017
+			var activeIndex = $('.carousel-inner .active', element).index();	// ADDED 29/9-2017
+			console.log('ajustNumOfCardsPrSlide - getActiveSlides - index: ' + index + ', activeIndex: ' + activeIndex);
+
+			dObj[index] = TitemsPrSlide*activeIndex;
+		});
+		console.log('ajustNumOfCardsPrSlide - getActiveSlides - dObj: ' + JSON.stringify(dObj));
+
+		return dObj;
+	}
+
+	function setActiveSlides(dObj) {
+		
+		console.log('ajustNumOfCardsPrSlide - setActiveSlides - activeSlide: ' + JSON.stringify(dObj));
+		$('.item').removeClass('active');  // Remove all previous ".active" classes set by default in the creation of the carousel
+		console.log('setActiveSlides -  Antal total .carousel-inner .active 1: ' + $('.carousel-inner .active').length);
+		$('.carouselPage').each(function( index, element ) {
+			var activeSlide = Math.floor(dObj[String(index)]/TitemsPrSlide);
+			console.log('setActiveSlides - index: ' + index + ', activeSlide: ' + activeSlide + ', Antal .active: ' + $('.active', element).length);
+			$('.item', element).eq(activeSlide).addClass('active');
+		});
+		console.log('setActiveSlides -  Antal total .carousel-inner .active 2: ' + $('.carousel-inner .active').length);
+	}
+
+
+	function setActiveSlides_2(dObj) {
+		
+		console.log('setActiveSlides_2 - setActiveSlides - activeSlide: ' + JSON.stringify(dObj));
+		// $('.item').removeClass('active');  // Remove all previous ".active" classes set by default in the creation of the carousel
+		console.log('setActiveSlides_2 -  Antal total .carousel-inner .active 1: ' + $('.carousel-inner .active').length);
+		$('.carouselPage').each(function( index, element ) {
+			var activeSlide = Math.floor(dObj[String(index)]/TitemsPrSlide);
+			console.log('setActiveSlides_2 - index: ' + index + ', activeSlide: ' + activeSlide + ', Antal .carousel-inner .active: ' + $('.carousel-inner .active', element).length);
+			// $('.item', element).eq(activeSlide).addClass('active');
+
+			$( '#carouselId_'+String(index)+' .item' ).removeClass('active');    // Remove all previous ".active" classes set by default in the creation of the carousel
+            $( '#carouselId_'+String(index)+' .item' ).eq(activeSlide).addClass('active');
+            $( '#carouselId_'+String(index)+' .carousel-indicators li' ).removeClass('active'); 
+            $( '#carouselId_'+String(index)+' .carousel-indicators li' ).eq(activeSlide).addClass('active');
+		});
+		console.log('setActiveSlides_2 -  Antal total .carousel-inner .active 2: ' + $('.carousel-inner .active').length);
+	}
+
+
+	function deleteActiveProperty() {
+		var cObj;
+		for (var d in jsonData.day) {
+			for (var c in jsonData.day[d].content) {
+				jsonData.day[d].content[c].active = false;
+			}
+		}
+	}
+
+	function setActiveProperty(dObj) {
+		console.log('setActiveProperty - dObj: ' + JSON.stringify(dObj));
+		for (var d in dObj) {
+			console.log('setActiveProperty - jsonData.day['+d+'].content['+dObj[d]+']: ' + JSON.stringify(jsonData.day[parseInt(d)].content[dObj[d]]));
+			jsonData.day[parseInt(d)].content[dObj[d]].active = true;
+		}
+	}
 }
 
 // ========================================================================================================================
@@ -769,7 +920,8 @@ function returnAudioMarkup_sso(audioSrc){
 	var HTML = '';
 	HTML += '<div>';
 	// HTML += 	'<audio src="'+audioSrc+'" id="audioPlayer" controls="controls" autoplay="autoplay">';
-	HTML += 	'<audio src="'+audioSrc+'" id="audioPlayer_'+index_day+'_'+index_slide+'_'+index_card+'" controls="controls" autoplay="autoplay" style="width: 100%">';
+	// HTML += 	'<audio src="'+audioSrc+'" id="audioPlayer_'+index_day+'_'+index_slide+'_'+index_card+'" controls="controls" autoplay="autoplay" style="width: 100%">';
+	HTML += 	'<audio src="'+audioSrc+'" controls="controls" autoplay="autoplay" controlsList="nodownload">';
     // HTML += 	'<source src="" type=""/>';
     HTML += 		'Your browser does not support the audio element';
     HTML += 	'</audio>';
@@ -905,7 +1057,28 @@ $( document ).on('click', '.skriveuge_item', function(){
 	}
 });
 
+function scaleVideo(ratio) {
+	console.log('\nscaleVideo - CALLED');
 
+	if ($( ".MsgBox_bgr_video" ).length > 0) {
+		var w = $( ".MsgBox_bgr_video" ).width();
+		var h = $( ".MsgBox_bgr_video" ).height();
+		// var ratio = 16/9;
+		var ratioArr = ratio.split(':');
+		ratio = parseInt(ratioArr[0])/parseInt(ratioArr[1]);
+		console.log('scaleVideo 1 - w: ' + w + ', h: ' + h + ', ratio: ' + ratio + ' ratio*h: ' + String(ratio*h));
+
+		if (w >= ratio*h) {
+			w = ratio*h;
+		} else {
+			h = w/ratio;
+		}
+		console.log('scaleVideo 2 - w: ' + w + ', h: ' + h + ', ratio: ' + ratio + ' ratio*h: ' + String(ratio*h));
+
+		$('#UserMsgBox_video').width(w);
+		$('#UserMsgBox_video').height(h);
+	}
+}
 
 function UserMsgBox_video(src) {
 
@@ -982,6 +1155,167 @@ function html(json){
 }
 
 
+function linearScaling(scaleObj) {
+	var w = $('.container-fluid').width();
+	scaleObj = {
+		'scalables': [
+			{'700px': {
+				'.weekNameAndNumber': {'font-size': '3em', 'xxx': '12px'}
+			}},
+			{'900px': {
+				'.weekNameAndNumber': {'font-size': '4em', 'xxx': '14px'}
+			}},
+			{'1100px': {
+				'.weekNameAndNumber': {'font-size': '5em', 'xxx': '16px'}
+			}}
+		],
+		'setables': [
+			{'700px': {
+				'.weekNameAndNumber': {'color': '#F00'}
+			}},
+			{'900px': {
+				'.weekNameAndNumber': {'color': '#0F0'}
+			}},
+			{'1100px': {
+				'.weekNameAndNumber': {'color': '#00F'}
+			}}
+		]
+	};
+
+	window.lowerWitdth = findWidths(scaleObj.scalables);
+	console.log('linearScaling - lowerWitdth: ' + lowerWitdth);
+
+	linearScaleIterate();
+
+	//###############  INTERNAL FUNCTIONS  ##############
+
+	function linearScaleIterate() {
+		console.log('\nlinearScaling - CALLED');
+		var sObj = scaleObj.scalables;
+		var wn;
+		var wMax = String(Object.keys(sObj[sObj.length-1])).replace('px','');
+		var nMax = sObj.length-1;
+		console.log('linearScaling - linearScaleIterate - wMax: ' + wMax);
+		for (var n in sObj) {
+			wn = String(Object.keys(sObj[n])).replace('px','');
+			console.log('linearScaling - linearScaleIterate - wn: ' + wn + ', lowerWitdth: ' + lowerWitdth);
+			if (wn == lowerWitdth) {
+				console.log('linearScaling - linearScaleIterate - A0');
+				for (var k in sObj[n][wn+'px']) {  // k = selector name
+					var cssObj = {};
+					console.log('linearScaling - linearScaleIterate - k: ' + k + ', sObj['+n+']['+wn+'px'+']: ' + JSON.stringify( sObj[n][wn+'px']));
+					for (var p in sObj[n][wn+'px'][k]) { // p = property
+						var vStr1 = sObj[n][wn+'px'][k][p];  // vStr1 = value string
+						var unit1 = vStr1.replace(/\d+/g, '');
+						var v1 = parseInt(vStr1.replace(unit1, '')); // v = value
+						console.log('linearScaling - linearScaleIterate - p: ' + p + ', vStr1: ' + vStr1 + ', unit1: ' + unit1 + ', v1: ' + v1);
+
+						console.log('linearScaling - linearScaleIterate - n: ' + n + ', nMax: ' + nMax); 
+						// if (parseInt(wn) < parseInt(wMax)) {
+						if (parseInt(n) < parseInt(nMax)) {
+							console.log('linearScaling - linearScaleIterate - A1');
+
+							var wn2 = String(Object.keys(sObj[parseInt(n)+1])).replace('px','');
+
+							console.log('linearScaling - linearScaleIterate - n+1: ' + String(parseInt(n)+1) + ', wn2+px: ' + wn2+'px' + ', k: ' + k + ', p: ' + p + ', sObj['+String(parseInt(n)+1)+']['+wn2+'px'+']: ' + JSON.stringify( sObj[parseInt(n)+1][wn2+'px'] ) );
+							if (sObj[parseInt(n)+1][wn2+'px'][k].hasOwnProperty(p)) { // If sObj[n+1] also has property "p", then...
+								console.log('linearScaling - linearScaleIterate - A2');
+								var vStr2 = sObj[parseInt(n)+1][wn2+'px'][k][p];  // vStr = value string
+								var unit2 = vStr2.replace(/\d+/g, '');
+								var v2 = parseInt(vStr2.replace(unit2, '')); // v = value
+								console.log('linearScaling - linearScaleIterate - p: ' + p + ', vStr2: ' + vStr2 + ', unit2: ' + unit2 + ', v2: ' + v2);
+
+								if (unit1 == unit2) {
+									console.log('linearScaling - linearScaleIterate - A3');
+									var w1 = parseInt(lowerWitdth);  	// lowerWitdth always has the lowest width
+									var w2 = parseInt(wn2);			// w is the present width 
+									var s1 = v1;			// v1 is the value of p associated with w1 (or lowerWitdth)
+									var s2 = v2;			// v2 is the value of p associated with n+1
+									var s = linearScale(w1, w2, s1, s2);
+									console.log('linearScaling - linearScaleIterate - XX1 - w1: ' + w1 + ', w2: ' + w2 + ', w: ' + w  + ', s1: ' + s1 + ', s2: ' + s2 + ', s: ' + JSON.stringify( s ) + ', unit1: ' + unit1);
+
+									cssObj[p] = String(s.s)+unit1;
+								}
+							}
+						} else {
+							console.log('linearScaling - linearScaleIterate - A4');
+
+							var wn2 = String(Object.keys(sObj[parseInt(n)-1])).replace('px','');
+
+							if (sObj[parseInt(n)-1][wn2+'px'][k].hasOwnProperty(p)) { // If sObj[n+1] also has property "p", then...
+								console.log('linearScaling - linearScaleIterate - A5');
+								var vStr2 = sObj[parseInt(n)-1][wn2+'px'][k][p];  // vStr = value string
+								var unit2 = vStr2.replace(/\d+/g, '');
+								var v2 = parseInt(vStr2.replace(unit2, '')); // v = value
+								console.log('linearScaling - linearScaleIterate - p: ' + p + ', vStr2: ' + vStr2 + ', unit2: ' + unit2 + ', v2: ' + v2);
+
+								if (unit1 == unit2) {
+									console.log('linearScaling - linearScaleIterate - A6');
+									var w1 = parseInt(lowerWitdth);  	// lowerWitdth always has the lowest width
+									var w2 = parseInt(wn2);			// w is the present width 
+									var s1 = v1;			// v1 is the value of p associated with w1 (or lowerWitdth)
+									var s2 = v2;			// v2 is the value of p associated with n+1
+									var s = linearScale(w2, w1, s2, s1);
+									console.log('linearScaling - linearScaleIterate - XX2 - w1: ' + w1 + ', w2: ' + w2 + ', w: ' + w  + ', s1: ' + s1 + ', s2: ' + s2 + ', s: ' + JSON.stringify( s ) + ', unit1: ' + unit1);
+								
+									cssObj[p] = String(s.s)+unit1;
+								}
+							}
+						}
+
+						// linearScale(w1, w2, s1, s2);
+					}
+					console.log('linearScaling - linearScaleIterate - k: ' + k + ', cssObj: ' + JSON.stringify( cssObj ));
+					// $(k).css(cssObj);
+				}
+				break;
+			}
+		}
+	}
+
+
+	function linearScale(w1, w2, s1, s2){
+
+		var s, a, b;
+
+		a = (s2-s1)/(w2-w1);
+		b = s1 - a*w1;
+
+		// s = Math.round(a*w + b);  // <------ w is width of ".container-fluid" 
+		s = a*w + b;
+
+		console.log('linearFontScale - a: ' + a + ', b: ' + b + ', s: ' + s);
+
+		return {a: a, b: b, s: s};
+	}
+
+	// var sObj = {'700px': 2, '900px': 3, '1100px': 4};
+	function findNumOfCards(sObj, w) {
+		var nMax;
+		for (var n in sObj) {
+			if (w <= parseInt(n.replace('px',''))) {
+				return sObj[n];
+			}
+			nMax = n;
+		}
+		return sObj[nMax];
+	}
+
+	// Same base functionality as findNumOfCards:
+	function findWidths(sObj) {  // <---- scaleObj.scalables OR scaleObj.setables
+		var nMax, wn;
+		for (var n in sObj) {
+			wn = String(Object.keys(sObj[n]));
+			console.log('linearScaling - findWidths - n: ' + n + ', wn: ' + wn);
+			wn = parseInt(wn.replace('px',''));
+			if (w <= wn) {
+				return wn;
+			}
+			nMax = wn;
+		}
+		return nMax;
+	}
+}
 
 
 
@@ -1009,17 +1343,24 @@ function scaleAndPosition_sliderContainer() {
 }
 
 
+
 //==========================================================================================
 //										SLIDER
 //==========================================================================================
 
 
+
 scrollCallback = function() {
 	console.log('scrollCallback - CALLED');
 
+	window.scrollHeight = $('body').height();
+	window.windowHeight = $(window).height();
+	window.sliderContainerWidth = $('#sliderContainer').width();
+
 	window.bodyPos = $(window).scrollTop();
 
-	var posPercent = (bodyPos + 0)/scrollHeight;
+	// var posPercent = (bodyPos + 0)/scrollHeight;		// COMMENTED OUT 3/10-2017
+	var posPercent = (bodyPos + 0)/(scrollHeight + 0);	// ADDED 3/10-2017
 	console.log('onScroll - bodyPos: ' + bodyPos + ', scrollHeight: ' + scrollHeight + ', posPercent: ' + posPercent);
 
 	$('.slider').css({left: posPercent*sliderContainerWidth});
@@ -1060,7 +1401,8 @@ $( "#slider" ).draggable({
         var widthPercent = pos.left/($(this).parent().width() - $(this).width());
         console.log('slider - widthPercent: ' + widthPercent);
 
-        widthPercent = widthPercent*(scrollHeight - windowHeight);
+        // widthPercent = widthPercent*(scrollHeight - windowHeight);	// COMMENTED OUT 3/10-2017
+        widthPercent = widthPercent*(scrollHeight - 0);					// ADDED 3/10-2017
         // $( "body" ).scrollTop( widthPercent);
         $( window ).scrollTop( widthPercent);
 
@@ -1098,11 +1440,69 @@ $( document ).on('click', ".weekNum_number", function(event){
 });
 
 
+$(window).on('scroll', function(){  // SEE: https://codyhouse.co/gem/auto-hiding-navigation/
+	
+	if (typeof(bodyPos_OLD)==='undefined') {
+			window.bodyPos_OLD = 0;
+	}
+	var bodyPos_diff = bodyPos - bodyPos_OLD;
+	bodyPos_OLD = bodyPos;
+	console.log('\nscrollMenu - CALLED - bodyPos_diff:' + bodyPos_diff); 
+	
+
+	if (typeof(sliderContainer_visible)==='undefined') {
+		window.sliderContainer_visible = true;
+	}
+
+	var h = $('#sliderContainer').height();
+	
+	if ((!$('#slider').hasClass('slider_off')) && (sliderContainer_visible) && (bodyPos_diff > 0)) {
+		console.log('scrollMenu - A1');
+
+		// METODE: 1 - slidetoggle
+		$('#sliderContainer').slideUp('fast', function() {
+			// sliderContainer_visible = false;
+		});
+
+		// METODE: 2 - animate  <-------  Dette fungere på desktop + mobil-sim i Chrome på desktop, men ikke på Android One plus 2!!!
+		// $( "#sliderContainer" ).animate({
+		// 	top: "-="+h
+		// }, 400);
+
+		sliderContainer_visible = false;
+	} 
+	
+	if ((!$('#slider').hasClass('slider_off')) && (!sliderContainer_visible) && (bodyPos_diff < 0)){
+		console.log('scrollMenu - A2');
+
+		// METODE: 1 - slidetoggle
+		$('#sliderContainer').slideDown('fast', function() {
+			// sliderContainer_visible = true;
+		});
+
+		// METODE: 2 - animate  <-------  Dette fungere på desktop + mobil-sim i Chrome på desktop, men ikke på Android One plus 2!!!
+		// $( "#sliderContainer" ).animate({
+		// 	top: "+="+h
+		// }, 400);
+
+		sliderContainer_visible = true;
+	}
+	
+});
+
+
 //==========================================================================================
 //							OBJECT EVENT-LITSNERS
 //==========================================================================================
 
 
+$( ".MsgBox_bgr_video" ).on( "keydown", function( event ) {
+	if ((event.which == 165) && ($( ".MsgBox_bgr_video" ).length > 0)) {
+		$( ".MsgBox_bgr_video" ).fadeOut(400, function(){
+			$(this).remove();
+		});
+	}
+});
 
 
 $( document ).on('click', '.videoPlayBtn', function(){
@@ -1111,6 +1511,8 @@ $( document ).on('click', '.videoPlayBtn', function(){
 
 	// UserMsgBox_video('https://www.youtube.com/embed/-Go7min716I');
 	UserMsgBox_video( videoSrc );
+
+	scaleVideo('16:9');
 });
 
 
@@ -1120,30 +1522,68 @@ $( document ).on('click', '.videoPlayThumbnail', function(){
 
 	// UserMsgBox_video('https://www.youtube.com/embed/-Go7min716I');
 	UserMsgBox_video( videoSrc );
+
+	scaleVideo('16:9');
 });
 
 
+//==========================================================================================
+//							RUN PROGRAM
+//==========================================================================================
+
 
 $(window).resize(function() {
-	scale_skriveuge_item();
-	scaleAndPosition_sliderContainer();
+
+	if (detectmob()) {
+
+		scaleAndPosition_sliderContainer();
+
+	} else {
+		scale_skriveuge_item();
+		scaleAndPosition_sliderContainer();
+		scaleVideo('16:9');
+
+		ajustNumOfCardsPrSlide();  
+		linearScaling(null);		// <--------  TEST d. 2/10-2017
+
+		// setSliderRowHeight();
+	}	
 });
 
 
 $(document).ready(function() {
-	console.log('document.ready - jsonData: ' + JSON.stringify(jsonData));
 
-	window.TjsonData = makeSlideData();
-	console.log('document.ready - TjsonData: ' + JSON.stringify(TjsonData));
+	if (detectmob()) {
 
-	// $('#interface').append(makeInterface());
+		$('#interface').append(makeMobileTemplate());
 
-	$('#interface').append(initCarouselObjs(TjsonData));
-	insertWeekdayAndWeekNum();
-	addOrRemoveCarouselControles();
+		setJsAudioEventLitsner2();
+		scaleAndPosition_sliderContainer();
+		$('#sliderContainer').css({'top': '0px'});  // This ajusts the height on the "sliderContainer, set by scaleAndPosition_sliderContainer().
 
-	scale_skriveuge_item();
-	setJsAudioEventLitsner2();
+	} else {
 
-	scaleAndPosition_sliderContainer();
+		console.log('document.ready - jsonData: ' + JSON.stringify(jsonData));
+
+		window.TjsonData = makeSlideData();
+		console.log('document.ready - TjsonData: ' + JSON.stringify(TjsonData));
+
+		// $('#interface').append(makeInterface());
+
+		$('#interface').append(initCarouselObjs(TjsonData));
+		insertWeekdayAndWeekNum();
+		addOrRemoveCarouselControles_2();
+
+		scale_skriveuge_item();
+		setJsAudioEventLitsner2();
+
+		scaleAndPosition_sliderContainer();
+
+		ajustNumOfCardsPrSlide(); 	
+		linearScaling(null);       	// <--------  TEST d. 2/10-2017
+
+		// setSliderRowHeight();
+
+	}
+
 });
