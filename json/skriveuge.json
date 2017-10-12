@@ -81,7 +81,7 @@
                 "attr": { "class": "skriveuge_item objLink" },
                 "imgSrc": "img/cards_tjek.png",
                 "header": "Dagens tjekliste",
-                "text": "<ul><li>Jeg forstår min problemformulering</li><li>Jeg er igang med at besvare første del af problemformuleringen</li><li>Jeg har organiseret min litteratur og skrevet den ned</li><ul>"
+                "text": "<ul><li>Jeg forstår min opgaveformulering</li><li>Jeg har organiseret og nedskrevet min litteratur</li><li>Jeg besvarer første del af opgaveformuleringen</li><ul>"
 
             },
             "userMsgBox_data": {
@@ -144,9 +144,9 @@
             "checklist": {
                 "attr": { "class": "skriveuge_item objLink" },
                 "imgSrc": "img/cards_tjek.png",
-                "header": "citater og litteratur- henvisninger",
-                "text": "<ul><li>Jeg har lavet en aftale med en bekendt om at hjælpe mig</li><li>Jeg bruger korte citater </li><li> Jeg benytter litteraturhenvisninger</li></ul>",
-                "btnText": "Se hvordan"
+                "header": "Tjekliste",
+                "text": "<ul><li>Jeg har aftalt at en bekendte kan hjælpe</li><li> Jeg benytter litteraturhenvisninger</li><li>Jeg bruger korte citater </li></ul>",
+                "btnText": "Læs om citater"
             },
             "userMsgBox_data": {
                 "displayMode": "html",
@@ -171,7 +171,7 @@
                 "attr": { "class": "skriveuge_item objLink" },
                 "imgSrc": "img/cards_task.png",
                 "header": "Gennemgang af første del",
-                "text": "Genlæs og ret første del af min opgave"
+                "text": "Genlæs og ret første del af opgaven."
             }
         }, {
             "category": "dagensOpgaver",
@@ -208,8 +208,7 @@
                 "attr": { "class": "skriveuge_item objLink" },
                 "imgSrc": "img/cards_tjek.png",
                 "header": "Tjekliste",
-                "text": "<ul><li>Jeg benytter 2-3 litteraturhenvisninger pr. side</li><li>Jeg husker at kommentere citater fagligt</li><li>Jeg er sikker på, at jeg besvarer min opgaveformulering</li></ul>",
-                "btnText": "Se tjeklisten"
+                "text": "<ul><li>Jeg benytter 2 til 3 henvisninger pr. side</li><li>Jeg husker at kommentere citater fagligt</li><li>Jeg er sikker på, at jeg besvarer min opgaveformulering</li></ul>"
             },
             "userMsgBox_data": {
                 "displayMode": "html",
@@ -261,37 +260,6 @@
                 "imgSrc": "img/cards_tjek.png",
                 "header": "Tjekliste",
                 "text": "<ul><li>Jeg anvender fagets begreber, metoder og teori</li><li>Jeg genlæser løbende det jeg skriver</li></ul>"
-            }
-        }, {
-            "category": "card",
-            "card": {
-                "attr": { "class": "skriveuge_item objLink" },
-                "imgSrc": "img/cards_tjek.png",
-                "header": "Lorem ipsum dolor sit amet",
-                "btnText": "Lorem ipsum",
-                "text": "Lorem ipsum"
-            }
-        }, {
-            "category": "card",
-            "card": {
-                "attr": { "class": "skriveuge_item objLink" },
-                "imgSrc": "img/cards_tjek.png",
-                "header": "Lorem ipsum dolor sit amet",
-                "btnText": "Lorem ipsum",
-                "text": "Lorem ipsum"
-            }
-        }, {
-            "category": "checklist",
-            "checklist": {
-                "attr": { "class": "skriveuge_item objLink" },
-                "imgSrc": "img/cards_tjek.png",
-                "header": "Til en start husker jeg at",
-                "text": "Lorem ipsum - tekst fra samlet liste",
-                "btnText": "Se tjeklisten"
-            },
-            "userMsgBox_data": {
-                "displayMode": "html",
-                "html": "html('#citater', '#UserMsgBox_text')"
             }
         }]
     }, {
@@ -404,8 +372,7 @@
                 "attr": { "class": "skriveuge_item objLink" },
                 "imgSrc": "img/cards_tjek.png",
                 "header": "Tjekliste",
-                "text": " <ul><li>Jeg er sikker på at jeg har svaret på opgaveformuleringen.</li><li>Jeg er sikker på at min opgave er besvaret <b>fagligt</b> og rummer fagets begreber, metoder og eventuelle teorier.</li></ul>",
-                "btnText": "Se tjeklisten"
+                "text": " <ul><li>Jeg er sikker på at jeg har svaret på opgaveformuleringen.</li><li>Jeg er sikker på at min opgave er besvaret <b>fagligt</b> og rummer fagets begreber, metoder og eventuelle teorier.</li></ul>"
             },
             "userMsgBox_data": {
                 "displayMode": "html",
@@ -430,8 +397,8 @@
             "dagensMaal": {
                 "attr": { "class": "skriveuge_item objLink dagensMaal" },
                 "imgSrc": "img/cards_maal.png",
-                "header": "Dagens mål",
-                "text": "2-2,5 sider og korrektur"
+                "header": "Dagens mål: 2-2,5 sider",
+                "text": "<b>2-2,5 sider</b> og korrektur"
             }
         }, {
             "category": "dagensOpgaver",
@@ -451,8 +418,8 @@
             "dagensOpgaver": {
                 "attr": { "class": "skriveuge_item objLink" },
                 "imgSrc": "img/cards_task.png",
-                "header": "Noter din litteratur",
-                "text": "Skriv dit resumé",
+                "header": "Skriv dit resumé",
+                "text": "Et resume er en ultra kort genfortælling af det du har fundet ud af i din opgave. Husk at fokusere på de vigtigste ting i resuméet",
                 "btnText": "Læs om resumeet"
             },
             "userMsgBox_data": {
@@ -465,7 +432,7 @@
                 "attr": { "class": "skriveuge_item objLink" },
                 "imgSrc": "img/cards_i_staa.png",
                 "header": "Gået i stå?",
-                "text": "Skriv på et andet afsnit i stedet for der, hvor du er gået i stå. <br/>Brug din energi på at skrive på de afsnit eller delopgaver, hvor du rent faktisk kan forbedre din opgave. Og ikke dem hvor du er gået i stå lige nu. Skriveugen er snart overstået og du skal nok klare den"
+                "text": "Skriv på et andet afsnit i stedet for der, hvor du er gået i stå. <br/>Brug din energi på at skrive på de afsnit eller delopgaver, hvor du rent faktisk kan forbedre din opgave. Og ikke dem hvor du er gået i stå lige nu. Skriveugen er snart overstået og du skal nok klare den!"
             },
             "userMsgBox_data": {
                 "displayMode": "html",
@@ -491,7 +458,7 @@
                 "imgSrc": "img/cards_task.png",
                 "header": "Udarbejd en indholdsfortegnelse",
                 "text": "Indholdsfortegnelse med sidetal og kapiteloverskrifter.",
-                "btnText": "Læs om indholdsfortegnelsen"
+                "btnText": "Indholdsfortegnelse"
             },
             "userMsgBox_data": {
                 "displayMode": "html",
@@ -503,8 +470,7 @@
                 "attr": { "class": "skriveuge_item objLink" },
                 "imgSrc": "img/cards_tjek.png",
                 "header": "Tjekliste",
-                "text": "<ul><li>Jeg er sikker på hvordan og hvornår, jeg skal aflevere</li><li>Jeg har fået feedback på min opgave tilbage og rettet tegnsætning, sprog og indhold.</li><li>Jeg har tjekket, at de enkelte dele i min opgave hænger sammen og der er en rød tråd gennem opgaven.</li></ul>",
-                "btnText": "Se tjeklisten"
+                "text": "<ul><li>Jeg er sikker på hvordan og hvornår, jeg skal aflevere</li><li>Jeg har fået feedback på min opgave og retter tegnsætning, sprog og indhold.</li><li>Jeg har tjekket, at de enkelte dele i min opgave hænger sammen og den har en rød tråd.</li></ul>"
             },
             "userMsgBox_data": {
                 "displayMode": "html",
@@ -528,26 +494,26 @@
             "dagensOpgaver": {
                 "attr": { "class": "skriveuge_item objLink" },
                 "imgSrc": "img/cards_task.png",
-                "header": "Udarbejd en indholdsfortegnelse",
-                "text": "Lav en forside",
+                "header": "Udarbejd en forside",
+                "text": "",
                 "btnText": "Læs om forsiden"
             },
             "userMsgBox_data": {
                 "displayMode": "html",
-                "html": "html('#indholdsfortegnelse', '#UserMsgBox_text')"
+                "html": "html('#forside', '#UserMsgBox_text')"
             }
         },{
             "category": "dagensOpgaver",
             "dagensOpgaver": {
                 "attr": { "class": "skriveuge_item objLink" },
                 "imgSrc": "img/cards_task.png",
-                "header": "Udarbejd en indholdsfortegnelse",
-                "text": " Konverteret det hele til PDF.",
-                "btnText": "Læs om at konvertere til PDF"
+                "header": " Konvertér opgaven hele til PDF.",
+                "text": "",
+                "btnText": "Læs om PDF"
             },
             "userMsgBox_data": {
                 "displayMode": "html",
-                "html": "html('#indholdsfortegnelse', '#UserMsgBox_text')"
+                "html": "html('#pdf', '#UserMsgBox_text')"
             }
         },{
                 "category": "gaaet_i_staa",
