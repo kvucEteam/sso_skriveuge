@@ -174,6 +174,8 @@ function makeMobileTemplate() {  // Lavet d. 9/10-2017
 	}
 
 	return HTML;
+
+
 }
 
 
@@ -872,6 +874,8 @@ function ajustNumOfCardsPrSlide(){
 			jsonData.day[parseInt(d)].content[dObj[d]].active = true;
 		}
 	}
+
+
 }
 
 // ========================================================================================================================
@@ -1343,6 +1347,31 @@ function scaleAndPosition_sliderContainer() {
 }
 
 
+function resizeCards(){
+
+	//$(".carousel-inner").eq(0).css("opacity", ".2");
+
+	$(".carousel-inner").each(function(){
+		$(this).find(".item").addClass("active");
+		var top_height = 0; 
+		$(this).find(".skriveuge_item").each(function(){
+			var height = parseInt($(this).height());
+			var indeks = $(this).index(".skriveuge_item")
+			if (height > top_height){
+				top_height = height;
+			}
+			console.log("this: "+ indeks + " :" + height + " top: " + top_height);
+		});
+		$(this).find(".skriveuge_item").each(function(){
+			$(this).css("height", top_height + 66 + "px");
+			//console.log("hej: " + $(this).height() + " top: " + top_height);
+		}); 
+		$(this).find(".item").eq(1).removeClass("active");
+	});
+	
+
+}
+
 
 //==========================================================================================
 //										SLIDER
@@ -1585,5 +1614,7 @@ $(document).ready(function() {
 		// setSliderRowHeight();
 
 	}
+
+	resizeCards();
 
 });
