@@ -12,7 +12,7 @@
             "video": {
                 "attr": { "class": "skriveuge_item objLink videoLink" },
                 "thumbnail": "img/cards_video1.png",
-                "videoSrc": "https://www.youtube.com/embed/WmYhbS401lY",
+                "videoSrc": "https://www.youtube.com/embed/tLFbQK38bsg",
                 "header": "Kom godt i gang med din SSO",
                 "text": "Filmen giver en introduktion til hvad det er godt at have fokus på i de første dages arbejde.",
                 "note til BTN": "Se introduktionen"
@@ -225,7 +225,7 @@
             "video": {
                 "attr": { "class": "skriveuge_item objLink videoLink" },
                 "thumbnail": "img/cards_video2.png",
-                "videoSrc": "https://www.youtube.com/embed/WmYhbS401lY",
+                "videoSrc": "https://www.youtube.com/embed/tLFbQK38bsg",
                 "header": "Status på halvvejen",
                 "text": "Er du hvor du skal være i opgaven? Få konkrete råd til den sidste del af arbejdet."
             }
@@ -421,7 +421,7 @@
             "video": {
                 "attr": { "class": "skriveuge_item objLink videoLink" },
                 "thumbnail": "img/cards_video3.png",
-                "videoSrc": "https://www.youtube.com/embed/WmYhbS401lY",
+                "videoSrc": "https://www.youtube.com/embed/tLFbQK38bsg",
                 "header": "Er du i panik?",
                 "text": "Du kan få hjælp til at strukturere den sidste del af sso - ugen ved at se filmen her."
             }
