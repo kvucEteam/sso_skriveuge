@@ -1516,13 +1516,10 @@ $( document ).on('click', '.videoPlayBtn', function(){
 });
 
 
-// $( document ).on('click', '.videoPlayThumbnail', function(){
-$( document ).on('click', '.videoLink', function(){
+$( document ).on('click', '.videoPlayThumbnail', function(){
 	console.log('videoPlayThumbnail - CLICK - CALLED');
-	// var videoSrc = $(this).attr('data-videoSrc');
-	var videoSrc = $(this).find('.videoPlayThumbnail').attr('data-videoSrc');
+	var videoSrc = $(this).attr('data-videoSrc');
 
-	console.log('videoPlayThumbnail - CLICK - videoSrc: ' + videoSrc);
 	// UserMsgBox_video('https://www.youtube.com/embed/-Go7min716I');
 	UserMsgBox_video( videoSrc );
 
