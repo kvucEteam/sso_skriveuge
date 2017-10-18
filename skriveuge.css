@@ -50,7 +50,7 @@
 .objText {
 	padding-left: 10px;
 	padding-right: 10px;
-	padding-top: 10px;
+	padding-top: 0px;
 }
 
 
@@ -110,6 +110,7 @@
 	width: 15%;
 	position: absolute;
 	left: 0;
+	top: -28px;
 }
 
 .weekNumber{
@@ -125,9 +126,9 @@
 	font-size: 4em;
 	position: absolute;
 	z-index: 2;
-	top: 95px;
+	top: 116px;
 	color: #444;
-	top: 0px;
+	/* top: 0px; */
 }
 
 .carousel-inner{
@@ -145,20 +146,21 @@
 
 .carousel-control.left {
 	/*left: 10%;*/
-	left: 8.9%;
+	left: 9.9%;
 	top: -12.5%;
 }
 
 .carousel .carousel-control.right {
 	/*right: -15px;*/
-	right: -31px;
+	right: -19px;
 	top: -12.5%;
 }
 
 .audioInline{
 	/*position: relative;
 	top: 45px;*/
-	height: 85%;  /* <----- Dette virker ikke - spørg ATO! */
+	/*height: 80%;  /* <----- Dette virker ikke - spørg ATO! */	
+	width: 70%;
 }
 
 /**********************************************************************
@@ -300,7 +302,9 @@
 
 audio {
 	width: 100%;
-	background-color: #FFF;
+    background-color: #FFF;
+    margin-left: -4px;
+    margin-top: 20px;
 }
 
 /**********************************************************************
@@ -450,3 +454,5 @@ audio {
 		margin-left: 0%; 	/* <---------- VIGTIGT: Denne centrereing er ikke nødvendig i chrome mobil simulering! */
 	}
 }
+
+.audioPlayerContainer{width: 90%;}

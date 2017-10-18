@@ -208,7 +208,7 @@ function makeCard(cObj) {
 		HTML += '<div class="objText">';
 			HTML += ((cObj.hasOwnProperty('header'))?'<h4>'+cObj.header+'</h4>':'');
 			HTML += ((cObj.hasOwnProperty('text'))?'<p>'+cObj.text+'</p>':'');
-			HTML += ((cObj.hasOwnProperty('btnText'))?'<span class="btn_ghost btn_ghost_noStyle btn btn-default">'+cObj.btnText+'</span>':'');
+			HTML += ((cObj.hasOwnProperty('btnText'))?'<span class="btn_ghost btn_ghost_noStyle btn btn-primary">'+cObj.btnText+'</span>':'');
 			HTML += '<div class="Clear"></div>';
 		HTML += '</div>';
 	HTML += '</div>';
@@ -248,7 +248,7 @@ function makeChecklist(cObj) {
 		HTML += '<div class="objText">';
 			HTML += ((cObj.hasOwnProperty('header'))?'<h4>'+cObj.header+'</h4>':'');
 			HTML += ((cObj.hasOwnProperty('text'))?'<p>'+cObj.text+'</p>':'');
-			HTML += ((cObj.hasOwnProperty('btnText'))?'<span class="btn_ghost btn_ghost_noStyle btn btn-default">'+cObj.btnText+'</span>':'');
+			HTML += ((cObj.hasOwnProperty('btnText'))?'<span class="btn_ghost btn_ghost_noStyle btn btn-primary">'+cObj.btnText+'</span>':'');
 			HTML += '<div class="Clear"></div>'; 
 		HTML += '</div>';
 	HTML += '</div>';
@@ -269,9 +269,9 @@ function makeDagensOpgaver(cObj) {
 			HTML += ((cObj.hasOwnProperty('header'))?'<h4>'+cObj.header+'</h4>':'');
 			HTML += ((cObj.hasOwnProperty('text'))?'<p>'+cObj.text+'</p>':'');
 			
-			HTML += ((cObj.hasOwnProperty('btnText'))?'<span class="btn_ghost btn_ghost_noStyle btn btn-default">'+cObj.btnText+'</span>':'');
+			HTML += ((cObj.hasOwnProperty('btnText'))?'<span class="btn_ghost btn_ghost_noStyle btn btn-primary">'+cObj.btnText+'</span>':'');
 			
-			// HTML += ((cObj.hasOwnProperty('btn'))?'<span class="btn_ghost btn_ghost_noStyle btn btn-default"'+((cObj.btn.hasOwnProperty('jsonRef'))?' data-btnRef="'+cObj.btn.jsonRef+'"':'')+'>'+((cObj.btn.hasOwnProperty('btnText'))?cObj.btn.btnText:'')+'</span>':'');
+			// HTML += ((cObj.hasOwnProperty('btn'))?'<span class="btn_ghost btn_ghost_noStyle btn btn-primary"'+((cObj.btn.hasOwnProperty('jsonRef'))?' data-btnRef="'+cObj.btn.jsonRef+'"':'')+'>'+((cObj.btn.hasOwnProperty('btnText'))?cObj.btn.btnText:'')+'</span>':'');
 			
 			// if (cObj.hasOwnProperty('list')) {
 			// 	HTML += '<ul class="dagensOpgaver_list">';
@@ -300,7 +300,7 @@ function makeDagensMaal(cObj) {
 			HTML += ((cObj.hasOwnProperty('header'))?'<h4>'+cObj.header+'</h4>':'');
 			HTML += ((cObj.hasOwnProperty('text'))?'<p>'+cObj.text+'</p>':'');
 			
-			HTML += ((cObj.hasOwnProperty('btnText'))?'<span class="btn_ghost btn_ghost_noStyle btn btn-default">'+cObj.btnText+'</span>':'');
+			HTML += ((cObj.hasOwnProperty('btnText'))?'<span class="btn_ghost btn_ghost_noStyle btn btn-primary">'+cObj.btnText+'</span>':'');
 			
 			HTML += '<div class="Clear"></div>';
 		HTML += '</div>';
@@ -322,7 +322,7 @@ function makeNoProgress(cObj) {
 			HTML += ((cObj.hasOwnProperty('header'))?'<h4>'+cObj.header+'</h4>':'');
 			HTML += ((cObj.hasOwnProperty('text'))?'<p>'+cObj.text+'</p>':'');
 			
-			HTML += ((cObj.hasOwnProperty('btnText'))?'<span class="btn_ghost btn_ghost_noStyle btn btn-default">'+cObj.btnText+'</span>':'');
+			HTML += ((cObj.hasOwnProperty('btnText'))?'<span class="btn_ghost btn_ghost_noStyle btn btn-primary">'+cObj.btnText+'</span>':'');
 			
 			HTML += '<div class="Clear"></div>';
 		HTML += '</div>';
@@ -345,7 +345,7 @@ function makeVideo(cObj) {
 			HTML += ((cObj.hasOwnProperty('header'))?'<h4>'+cObj.header+'</h4>':'');
 			HTML += ((cObj.hasOwnProperty('text'))?'<p>'+cObj.text+'</p>':'');
 
-			HTML += ((cObj.hasOwnProperty('btnText'))?'<span class="btn_ghost btn_ghost_noStyle btn btn-default">'+cObj.btnText+'</span>':'');
+			HTML += ((cObj.hasOwnProperty('btnText'))?'<span class="btn_ghost btn_ghost_noStyle btn btn-primary">'+cObj.btnText+'</span>':'');
 			
 			HTML += '<div class="Clear"></div>';
 		HTML += '</div>';
@@ -738,7 +738,7 @@ function addOrRemoveCarouselControles_2() {
 
 function insertWeekdayAndWeekNum() {
 
-	var weekLookup = ['FRE','LØR','SØN','MAN','TIR','ONS','TOR','FRE'];
+	var weekLookup = ['FRE','LØR','SØN','MAN','TIRS','ONS','TORS','FRE'];
 
 	$('.carousel').each(function( index, element ) {
 		var HTML = '';
@@ -895,7 +895,7 @@ function returnAudioMarkup(stepNo){
 	} 
 	console.log("returnAudioMarkup - audioSrc: " + audioSrc);
 	var HTML = '';
-	HTML += '<div>';
+	HTML += '<div class="audioPlayerContainer">';
 	HTML += 	'<audio src="'+audioSrc+'" id="audioPlayer" controls="controls" autoplay="autoplay">';
     // HTML += 	'<source src="" type=""/>';
     HTML += 		'Your browser does not support the audio element';
@@ -922,7 +922,7 @@ function returnAudioMarkup_sso(audioSrc){
 	
 	console.log("returnAudioMarkup - audioSrc: " + audioSrc);
 	var HTML = '';
-	HTML += '<div>';
+	HTML += '<div class="audioPlayerContainer">';
 	// HTML += 	'<audio src="'+audioSrc+'" id="audioPlayer" controls="controls" autoplay="autoplay">';
 	// HTML += 	'<audio src="'+audioSrc+'" id="audioPlayer_'+index_day+'_'+index_slide+'_'+index_card+'" controls="controls" autoplay="autoplay" style="width: 100%">';
 	HTML += 	'<audio src="'+audioSrc+'" controls="controls" autoplay="autoplay" controlsList="nodownload">';

@@ -22,8 +22,8 @@
             "dagensMaal": {
                 "attr": { "class": "skriveuge_item objLink dagensMaal" },
                 "imgSrc": "img/cards_maal.png",
-                "header": "Dagens mål: 1 side",
-                "text": "Du skal gerne have skrevet <b>1 side</b>"
+                "header": "Dagens mål",
+                "text": "Du skal have skrevet en side til første del af din besvarelse af opgaveformulering.<br/>Dagens mål: 1 side"
             }
         }, {
             "category": "dagensOpgaver",
@@ -31,7 +31,7 @@
                 "attr": { "class": "skriveuge_item objLink" },
                 "imgSrc": "img/cards_read.png",
                 "header": "Læs og forstå opgaveformuleringen",
-                "text": " Hvis der er noget du ikke forstår, så kontakt din vejleder."
+                "text": " Hvis der er noget, du ikke forstår, så kontakt din vejleder."
             }
         }, {
             "category": "dagensOpgaver",
@@ -39,14 +39,20 @@
                 "attr": { "class": "skriveuge_item objLink" },
                 "imgSrc": "img/cards_task.png",
                 "header": "Organisér dine materialer",
-                "text": "Opdel materialerne så du ved, hvilke du vil anvende til opgavens forskellige dele."
+                "text": "Opdel materialerne så du ved, hvilke du vil anvende til opgavens forskellige dele.",
+                "btnText": "Læs om organisering"
+            },
+            "userMsgBox_data": {
+                "displayMode": "html",
+                "html": "html('#organisering', '#UserMsgBox_text')"
+            
             }
         }, {
             "category": "dagensOpgaver",
             "dagensOpgaver": {
                 "attr": { "class": "skriveuge_item objLink" },
                 "imgSrc": "img/cards_task.png",
-                "header": "Noter din litteratur",
+                "header": "Start din litteraturliste",
                 "text": "Noter din litteratur ned alfabetisk i en litteraturliste",
                 "btnText": "Læs om litteraturlisten"
             },
@@ -54,21 +60,13 @@
                 "displayMode": "html",
                 "html": "html('#litteraturliste', '#UserMsgBox_text')"
             }
-        }, {
-            "category": "dagensOpgaver",
-            "dagensOpgaver": {
-                "attr": { "class": "skriveuge_item objLink" },
-                "imgSrc": "img/cards_task.png",
-                "header": "Skriv et udkast",
-                "text": "Skriv et udkast til besvarelse af den første del af opgaveformuleringen"
-            }
-        }, {
+        },{
             "category": "gaaet_i_staa",
             "gaaet_i_staa": {
                 "attr": { "class": "skriveuge_item objLink" },
                 "imgSrc": "img/cards_i_staa.png",
                 "header": "Gået i stå?",
-                "text": "Kom godt igang med hurtigskrivning!",
+                "text": "Kom godt igang med hurtigskrivning",
                 "btnText": "Se hvordan"
             },
             "userMsgBox_data": {
@@ -98,8 +96,8 @@
             "dagensMaal": {
                 "attr": { "class": "skriveuge_item objLink dagensMaal" },
                 "imgSrc": "img/cards_maal.png",
-                "header": "Dagens mål: 1-2 sider",
-                "text": "Når dagen er slut, skulle du gerne have skrevet yderligere <b>1-2 sider</b>"
+                "header": "Dagens mål",
+                "text": "Når dagen er slut, har du skrevet den første del af din besvarelse færdig i store træk.<br/>Dagens mål: 1-2 sider"
             }
         }, {
             "category": "dagensOpgaver",
@@ -113,14 +111,6 @@
             "userMsgBox_data": {
                 "displayMode": "html",
                 "html": "html('#dagsplan', '#UserMsgBox_text')"
-            }
-        }, {
-            "category": "dagensOpgaver",
-            "dagensOpgaver": {
-                "attr": { "class": "skriveuge_item objLink" },
-                "imgSrc": "img/cards_task.png",
-                "header": "Skriv",
-                "text": "Skriv den første del af din besvarelse færdig i store træk."
             }
         }, {
             "category": "audio",
@@ -140,17 +130,26 @@
                 "text": "Lav en aftale med en bekendt om at læse opgaven igennem dagen inden aflevering"
             }
         }, {
-            "category": "checklist",
-            "checklist": {
+            "category": "dagensOpgaver",
+            "dagensOpgaver": {
                 "attr": { "class": "skriveuge_item objLink" },
-                "imgSrc": "img/cards_tjek.png",
-                "header": "Tjekliste",
-                "text": "<ul><li>Jeg har aftalt at en bekendte kan hjælpe</li><li> Jeg benytter litteraturhenvisninger</li><li>Jeg bruger korte citater </li></ul>",
+                "imgSrc": "img/cards_task.png",
+                "header": "Citater",
+                "text": "Husk at anvende citater ofte og korrekt.",
                 "btnText": "Læs om citater"
             },
             "userMsgBox_data": {
                 "displayMode": "html",
                 "html": "html('#citater', '#UserMsgBox_text')"
+            }
+        }, {
+            "category": "checklist",
+            "checklist": {
+                "attr": { "class": "skriveuge_item objLink" },
+                "imgSrc": "img/cards_tjek.png",
+                "header": "Tjekliste",
+                "text": "<ul><li>Jeg har aftalt at en bekendte kan hjælpe</li><li> Jeg benytter litteraturhenvisninger</li></ul>"
+                
             }
         }]
     }, {
@@ -162,15 +161,15 @@
             "dagensMaal": {
                 "attr": { "class": "skriveuge_item objLink dagensMaal" },
                 "imgSrc": "img/cards_maal.png",
-                "header": "Dagens mål: 1-2 sider",
-                "text": "I dag er målet at skrive <b>1-2 sider</b>"
+                "header": "Dagens mål",
+                "text": "Du får skrevet 1-2 sider på opgavens hoveddel."
             }
         }, {
             "category": "dagensOpgaver",
             "dagensOpgaver": {
                 "attr": { "class": "skriveuge_item objLink" },
-                "imgSrc": "img/cards_task.png",
-                "header": "Gennemgang af første del",
+                "imgSrc": "img/cards_read.png",
+                "header": "Gennemse dit arbejde",
                 "text": "Genlæs og ret første del af opgaven."
             }
         }, {
@@ -179,15 +178,7 @@
                 "attr": { "class": "skriveuge_item objLink" },
                 "imgSrc": "img/cards_task.png",
                 "header": "Overblik over næste del",
-                "text": "Dan et overblik over hvilke delafsnit/kapitler næste del af opgaveformuleringen skal besvares med"
-            }
-        }, {
-            "category": "dagensOpgaver",
-            "dagensOpgaver": {
-                "attr": { "class": "skriveuge_item objLink" },
-                "imgSrc": "img/cards_task.png",
-                "header": "Hoveddelen",
-                "text": "Begynd at skrive på opgavens hoveddel (analyse)"
+                "text": "Skab et overblik over hvilke delafsnit næste del af opgaveformuleringen skal bestå af. <br/>Skriv overskrifter på kapitlerne."
             }
         }, {
             "category": "gaaet_i_staa",
@@ -208,7 +199,7 @@
                 "attr": { "class": "skriveuge_item objLink" },
                 "imgSrc": "img/cards_tjek.png",
                 "header": "Tjekliste",
-                "text": "<ul><li>Jeg benytter 2 til 3 henvisninger pr. side</li><li>Jeg husker at kommentere citater fagligt</li><li>Jeg er sikker på, at jeg besvarer min opgaveformulering</li></ul>"
+                "text": "<ul><li>Jeg benytter mindst 3 henvisninger pr. side</li><li>Jeg husker at kommentere citater fagligt</li><li>Jeg er sikker på, at jeg besvarer opgaveformuleringen</li></ul>"
             },
             "userMsgBox_data": {
                 "displayMode": "html",
@@ -233,16 +224,8 @@
             "dagensMaal": {
                 "attr": { "class": "skriveuge_item objLink dagensMaal" },
                 "imgSrc": "img/cards_maal.png",
-                "header": "Dagens mål: 2-2½ side",
-                "text": "I løbet af i dag har du tilføjet <b>2-2½ side</b>"
-            }
-        }, {
-            "category": "dagensOpgaver",
-            "dagensOpgaver": {
-                "attr": { "class": "skriveuge_item objLink" },
-                "imgSrc": "img/cards_task.png",
-                "header": "Hoveddelen",
-                "text": "Arbejd videre på opgavens hoveddel hvor du anvender fagets <b>begreber, metoder og teorier</b>."
+                "header": "Dagens mål",
+                "text": "Arbejd videre på opgavens hoveddel hvor du anvender fagets <b>begreber, metoder og teorier</b>. I løbet af i dag har du tilføjet <b>2-2½ sider</b> "
             }
         }, {
             "category": "audio",
@@ -271,8 +254,8 @@
             "dagensMaal": {
                 "attr": { "class": "skriveuge_item objLink dagensMaal" },
                 "imgSrc": "img/cards_maal.png",
-                "header": "Dagens mål: 2-2 1/2 sider",
-                "text": "I dag skal du skrive <b>2-2,5 sider</b>"
+                "header": "Dagens mål",
+                "text": "I dag skal du skrive de sidste <b>2-2,5 sider</b> på besvarelsens hoveddel."
             }
         }, {
             "category": "gaaet_i_staa",
@@ -286,31 +269,6 @@
             "userMsgBox_data": {
                 "displayMode": "html",
                 "html": "html('#indholdsfortegnelse', '#UserMsgBox_text')"
-            }
-        }, {
-            "category": "dagensOpgaver",
-            "dagensOpgaver": {
-                "attr": { "class": "skriveuge_item objLink" },
-                "imgSrc": "img/cards_task.png",
-                "header": "Afslut besvarelsens hoveddel",
-                "text": ""
-            },
-            "userMsgBox_data": {
-                "displayMode": "html",
-                "html": "html('#indholdsfortegnelse', '#UserMsgBox_text')"
-            }
-        }, {
-            "category": "dagensOpgaver",
-            "dagensOpgaver": {
-                "attr": { "class": "skriveuge_item objLink" },
-                "imgSrc": "img/cards_task.png",
-                "header": "Påbegynd opgavens sidste del",
-                "text": "I den sidste del skal du typisk diskutere dine resultater og samle dem i en konklusion",
-                "btnText": "Læs om konklusion"
-            },
-            "userMsgBox_data": {
-                "displayMode": "html",
-                "html": "html('#konklusion', '#UserMsgBox_text')"
             }
         }, {
             "category": "card",
@@ -330,22 +288,14 @@
             "dagensMaal": {
                 "attr": { "class": "skriveuge_item objLink dagensMaal" },
                 "imgSrc": "img/cards_maal.png",
-                "header": "Dagens mål: 2-2,5 sider",
-                "text": "Når dagen er omme, har du skrevet <b>2-2,5 sider</b> mere"
-            }
-        }, {
-            "category": "dagensOpgaver",
-            "dagensOpgaver": {
-                "attr": { "class": "skriveuge_item objLink" },
-                "imgSrc": "img/cards_task.png",
-                "header": "Skriv den sidste del af opgavebesvarelsen færdig",
-                "text": ""
+                "header": "Dagens mål",
+                "text": "Skriv 2 - 2,5 sider på den sidste den af opgaveformuleringen."
             },
             "userMsgBox_data": {
                 "displayMode": "html",
-                "html": "html('#indholdsfortegnelse', '#UserMsgBox_text')"
+                "html": "html('#konklusion', '#UserMsgBox_text')"
             }
-        }, {
+        },  {
             "category": "audio",
             "audio": {
                 "attr": { "class": "skriveuge_item objLink audioInline" },
@@ -360,7 +310,7 @@
                 "attr": { "class": "skriveuge_item objLink" },
                 "imgSrc": "img/cards_task.png",
                 "header": "Send opgavebesvarelsen til gennemlæsning til en bekendt",
-                "text": "Bed vedkommende om at læse den i gennem i forhold til sprog, tegnsætning og forståelighed"
+                "text": "Bed en bekendt om at læse opgaven igennem ift. sprog, tegnsætning og forståelse. Personen behøver ikke have faglige forudsætninger"
             },
             "userMsgBox_data": {
                 "displayMode": "html",
@@ -397,8 +347,8 @@
             "dagensMaal": {
                 "attr": { "class": "skriveuge_item objLink dagensMaal" },
                 "imgSrc": "img/cards_maal.png",
-                "header": "Dagens mål: 2-2,5 sider",
-                "text": "<b>2-2,5 sider</b> og korrektur"
+                "header": "Dagens mål",
+                "text": "Skriv indledning, konklusion, resume og indholdsfortegenlse, i alt cirka <b>2 sider</b>."
             }
         }, {
             "category": "dagensOpgaver",
@@ -432,7 +382,7 @@
                 "attr": { "class": "skriveuge_item objLink" },
                 "imgSrc": "img/cards_i_staa.png",
                 "header": "Gået i stå?",
-                "text": "Skriv på et andet afsnit i stedet for der, hvor du er gået i stå. <br/>Brug din energi på at skrive på de afsnit eller delopgaver, hvor du rent faktisk kan forbedre din opgave. Og ikke dem hvor du er gået i stå lige nu. Skriveugen er snart overstået og du skal nok klare den!"
+                "text": "Skriv på et andet afsnit i stedet for der, hvor du er gået i stå. <br/>Brug din energi på at skrive på de afsnit eller delopgaver, hvor du rent faktisk kan forbedre din opgave. Og ikke dem hvor du er gået i stå lige nu."
             },
             "userMsgBox_data": {
                 "displayMode": "html",
@@ -507,7 +457,7 @@
             "dagensOpgaver": {
                 "attr": { "class": "skriveuge_item objLink" },
                 "imgSrc": "img/cards_task.png",
-                "header": " Konvertér opgaven hele til PDF.",
+                "header": " Konvertér opgaven til PDF.",
                 "text": "",
                 "btnText": "Læs om PDF"
             },
@@ -523,19 +473,6 @@
                     "header": "Gået i stå?",
                     "text": "Drop selvkritikken og aflever - selv du ikke er tilfreds<br/>Mange bliver meget selvkritiske i slutningen af skriveugen. Brug den sidste energi på at færdiggøre opgaven. Du kan snart nyde, at du har afleveret din SSO-opgave"
                  
-                }
-            }, {
-                "category": "checklist",
-                "checklist": {
-                    "attr": { "class": "skriveuge_item objLink" },
-                    "imgSrc": "img/cards_tjek.png",
-                    "header": "TEST: Den korrekte fodnote/ litteraturhenvisning",
-                    "text": "Jeg er sikker på, at jeg har afleveret opgaven korrekt.",
-                    "btnText": "Se tjeklisten"
-                },
-                "userMsgBox_data": {
-                    "displayMode": "html",
-                    "html": "html('#den_korrekte_fodnote_litteraturhenvisning', '#UserMsgBox_text')"
                 }
             }
 
