@@ -15,7 +15,8 @@
                 "videoSrc": "https://www.youtube.com/embed/WmYhbS401lY",
                 "header": "Kom godt i gang med din SSO",
                 "text": "Filmen giver en introduktion til hvad det er godt at have fokus på i de første dages arbejde.",
-                "note til BTN": "Se introduktionen"
+                "note til BTN": "Se introduktionen",
+                "btnText": "Se video"
             }
         }, {
             "category": "dagensMaal",
@@ -45,7 +46,7 @@
             "userMsgBox_data": {
                 "displayMode": "html",
                 "html": "html('#organisering', '#UserMsgBox_text')"
-            
+
             }
         }, {
             "category": "dagensOpgaver",
@@ -60,7 +61,7 @@
                 "displayMode": "html",
                 "html": "html('#litteraturliste', '#UserMsgBox_text')"
             }
-        },{
+        }, {
             "category": "gaaet_i_staa",
             "gaaet_i_staa": {
                 "attr": { "class": "skriveuge_item objLink" },
@@ -149,7 +150,7 @@
                 "imgSrc": "img/cards_tjek.png",
                 "header": "Tjekliste",
                 "text": "<ul><li>Jeg har aftalt at en bekendte kan hjælpe</li><li> Jeg benytter litteraturhenvisninger</li></ul>"
-                
+
             }
         }]
     }, {
@@ -217,7 +218,8 @@
                 "thumbnail": "img/cards_video2.png",
                 "videoSrc": "https://www.youtube.com/embed/WmYhbS401lY",
                 "header": "Status på halvvejen",
-                "text": "Er du hvor du skal være i opgaven? Få konkrete råd til den sidste del af arbejdet."
+                "text": "Er du hvor du skal være i opgaven? Få konkrete råd til den sidste del af arbejdet.",
+                "btnText": "Se video"
             }
         }, {
             "category": "dagensMaal",
@@ -295,7 +297,7 @@
                 "displayMode": "html",
                 "html": "html('#konklusion', '#UserMsgBox_text')"
             }
-        },  {
+        }, {
             "category": "audio",
             "audio": {
                 "attr": { "class": "skriveuge_item objLink audioInline" },
@@ -304,7 +306,7 @@
                 "text": "Saml energi til resten af opgaven",
                 "audioSrc": "mp3/part_3.mp3"
             }
-        },{
+        }, {
             "category": "dagensOpgaver",
             "dagensOpgaver": {
                 "attr": { "class": "skriveuge_item objLink" },
@@ -340,7 +342,8 @@
                 "thumbnail": "img/cards_video3.png",
                 "videoSrc": "https://www.youtube.com/embed/WmYhbS401lY",
                 "header": "Er du i panik?",
-                "text": "Du kan få hjælp til at strukturere den sidste del af sso - ugen ved at se filmen her."
+                "text": "Du kan få hjælp til at strukturere den sidste del af sso - ugen ved at se filmen her.",
+                "btnText": "Se video"
             }
         }, {
             "category": "dagensMaal",
@@ -376,7 +379,7 @@
                 "displayMode": "html",
                 "html": "html('#resume', '#UserMsgBox_text')"
             }
-        },  {
+        }, {
             "category": "gaaet_i_staa",
             "gaaet_i_staa": {
                 "attr": { "class": "skriveuge_item objLink" },
@@ -388,7 +391,7 @@
                 "displayMode": "html",
                 "html": "html('#indholdsfortegnelse', '#UserMsgBox_text')"
             }
-        },{
+        }, {
             "category": "dagensOpgaver",
             "dagensOpgaver": {
                 "attr": { "class": "skriveuge_item objLink" },
@@ -414,7 +417,7 @@
                 "displayMode": "html",
                 "html": "html('#indholdsfortegnelse', '#UserMsgBox_text')"
             }
-        },  {
+        }, {
             "category": "checklist",
             "checklist": {
                 "attr": { "class": "skriveuge_item objLink" },
@@ -440,39 +443,39 @@
                     "text": "At aflevere din SSO"
                 }
             }, {
-            "category": "dagensOpgaver",
-            "dagensOpgaver": {
-                "attr": { "class": "skriveuge_item objLink" },
-                "imgSrc": "img/cards_task.png",
-                "header": "Udarbejd en forside",
-                "text": "",
-                "btnText": "Læs om forsiden"
-            },
-            "userMsgBox_data": {
-                "displayMode": "html",
-                "html": "html('#forside', '#UserMsgBox_text')"
-            }
-        },{
-            "category": "dagensOpgaver",
-            "dagensOpgaver": {
-                "attr": { "class": "skriveuge_item objLink" },
-                "imgSrc": "img/cards_task.png",
-                "header": " Konvertér opgaven til PDF.",
-                "text": "",
-                "btnText": "Læs om PDF"
-            },
-            "userMsgBox_data": {
-                "displayMode": "html",
-                "html": "html('#pdf', '#UserMsgBox_text')"
-            }
-        },{
+                "category": "dagensOpgaver",
+                "dagensOpgaver": {
+                    "attr": { "class": "skriveuge_item objLink" },
+                    "imgSrc": "img/cards_task.png",
+                    "header": "Udarbejd en forside",
+                    "text": "",
+                    "btnText": "Læs om forsiden"
+                },
+                "userMsgBox_data": {
+                    "displayMode": "html",
+                    "html": "html('#forside', '#UserMsgBox_text')"
+                }
+            }, {
+                "category": "dagensOpgaver",
+                "dagensOpgaver": {
+                    "attr": { "class": "skriveuge_item objLink" },
+                    "imgSrc": "img/cards_task.png",
+                    "header": " Konvertér opgaven til PDF.",
+                    "text": "",
+                    "btnText": "Læs om PDF"
+                },
+                "userMsgBox_data": {
+                    "displayMode": "html",
+                    "html": "html('#pdf', '#UserMsgBox_text')"
+                }
+            }, {
                 "category": "gaaet_i_staa",
                 "gaaet_i_staa": {
                     "attr": { "class": "skriveuge_item objLink" },
                     "imgSrc": "img/cards_i_staa.png",
                     "header": "Gået i stå?",
                     "text": "Drop selvkritikken og aflever - selv du ikke er tilfreds<br/>Mange bliver meget selvkritiske i slutningen af skriveugen. Brug den sidste energi på at færdiggøre opgaven. Du kan snart nyde, at du har afleveret din SSO-opgave"
-                 
+
                 }
             }
 
