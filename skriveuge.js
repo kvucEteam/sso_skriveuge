@@ -345,7 +345,7 @@ function makeVideo(cObj) {
 			HTML += ((cObj.hasOwnProperty('header'))?'<h4>'+cObj.header+'</h4>':'');
 			HTML += ((cObj.hasOwnProperty('text'))?'<p>'+cObj.text+'</p>':'');
 
-			HTML += ((cObj.hasOwnProperty('btnText'))?'<span class="btn_ghost btn_ghost_noStyle btn btn-primary">'+cObj.btnText+'</span>':'');
+			HTML += ((cObj.hasOwnProperty('btnText'))?'<span class="btn_ghost btn_ghost_noStyle btn btn-primary videoPlayThumbnail"><span class="glyphicon glyphicon-play"> </span> '+cObj.btnText+'</span>':'');
 			
 			HTML += '<div class="Clear"></div>';
 		HTML += '</div>';
