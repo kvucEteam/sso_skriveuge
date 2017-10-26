@@ -345,7 +345,8 @@ function makeVideo(cObj) {
 			HTML += ((cObj.hasOwnProperty('header'))?'<h4>'+cObj.header+'</h4>':'');
 			HTML += ((cObj.hasOwnProperty('text'))?'<p>'+cObj.text+'</p>':'');
 
-			HTML += ((cObj.hasOwnProperty('btnText'))?'<span class="btn_ghost btn_ghost_noStyle btn btn-primary videoPlayThumbnail"><span class="glyphicon glyphicon-play"> </span> '+cObj.btnText+'</span>':'');
+			// HTML += ((cObj.hasOwnProperty('btnText'))?'<span class="btn_ghost btn_ghost_noStyle btn btn-primary videoPlayThumbnail"><span class="glyphicon glyphicon-play"> </span> '+cObj.btnText+'</span>':'');  // COMMENTED OUT 26/10-2017
+			HTML += ((cObj.hasOwnProperty('btnText'))?'<span class="btn_ghost btn_ghost_noStyle btn btn-primary"><span class="glyphicon glyphicon-play"> </span> '+cObj.btnText+'</span>':''); // ADDED 26/10-2017
 			
 			HTML += '<div class="Clear"></div>';
 		HTML += '</div>';
@@ -1469,55 +1470,55 @@ $( document ).on('click', ".weekNum_number", function(event){
 });
 
 
-$(window).on('scroll', function(){  // SEE: https://codyhouse.co/gem/auto-hiding-navigation/
+// $(window).on('scroll', function(){  // SEE: https://codyhouse.co/gem/auto-hiding-navigation/
 	
-	if (typeof(bodyPos_OLD)==='undefined') {
-			window.bodyPos_OLD = 0;
-	}
-	var bodyPos_diff = bodyPos - bodyPos_OLD;
-	bodyPos_OLD = bodyPos;
-	console.log('\nscrollMenu - CALLED - bodyPos_diff:' + bodyPos_diff); 
+// 	if (typeof(bodyPos_OLD)==='undefined') {
+// 			window.bodyPos_OLD = 0;
+// 	}
+// 	var bodyPos_diff = bodyPos - bodyPos_OLD;
+// 	bodyPos_OLD = bodyPos;
+// 	console.log('\nscrollMenu - CALLED - bodyPos_diff:' + bodyPos_diff); 
 	
 
-	if (typeof(sliderContainer_visible)==='undefined') {
-		window.sliderContainer_visible = true;
-	}
+// 	if (typeof(sliderContainer_visible)==='undefined') {
+// 		window.sliderContainer_visible = true;
+// 	}
 
-	var h = $('#sliderContainer').height();
+// 	var h = $('#sliderContainer').height();
 	
-	if ((!$('#slider').hasClass('slider_off')) && (sliderContainer_visible) && (bodyPos_diff > 0)) {
-		console.log('scrollMenu - A1');
+// 	if ((!$('#slider').hasClass('slider_off')) && (sliderContainer_visible) && (bodyPos_diff > 0)) {
+// 		console.log('scrollMenu - A1');
 
-		// METODE: 1 - slidetoggle
-		$('#sliderContainer').slideUp('fast', function() {
-			// sliderContainer_visible = false;
-		});
+// 		// METODE: 1 - slidetoggle
+// 		$('#sliderContainer').slideUp('fast', function() {
+// 			// sliderContainer_visible = false;
+// 		});
 
-		// METODE: 2 - animate  <-------  Dette fungere på desktop + mobil-sim i Chrome på desktop, men ikke på Android One plus 2!!!
-		// $( "#sliderContainer" ).animate({
-		// 	top: "-="+h
-		// }, 400);
+// 		// METODE: 2 - animate  <-------  Dette fungere på desktop + mobil-sim i Chrome på desktop, men ikke på Android One plus 2!!!
+// 		// $( "#sliderContainer" ).animate({
+// 		// 	top: "-="+h
+// 		// }, 400);
 
-		sliderContainer_visible = false;
-	} 
+// 		sliderContainer_visible = false;
+// 	} 
 	
-	if ((!$('#slider').hasClass('slider_off')) && (!sliderContainer_visible) && (bodyPos_diff < 0)){
-		console.log('scrollMenu - A2');
+// 	if ((!$('#slider').hasClass('slider_off')) && (!sliderContainer_visible) && (bodyPos_diff < 0)){
+// 		console.log('scrollMenu - A2');
 
-		// METODE: 1 - slidetoggle
-		$('#sliderContainer').slideDown('fast', function() {
-			// sliderContainer_visible = true;
-		});
+// 		// METODE: 1 - slidetoggle
+// 		$('#sliderContainer').slideDown('fast', function() {
+// 			// sliderContainer_visible = true;
+// 		});
 
-		// METODE: 2 - animate  <-------  Dette fungere på desktop + mobil-sim i Chrome på desktop, men ikke på Android One plus 2!!!
-		// $( "#sliderContainer" ).animate({
-		// 	top: "+="+h
-		// }, 400);
+// 		// METODE: 2 - animate  <-------  Dette fungere på desktop + mobil-sim i Chrome på desktop, men ikke på Android One plus 2!!!
+// 		// $( "#sliderContainer" ).animate({
+// 		// 	top: "+="+h
+// 		// }, 400);
 
-		sliderContainer_visible = true;
-	}
+// 		sliderContainer_visible = true;
+// 	}
 	
-});
+// });
 
 
 //==========================================================================================
@@ -1545,9 +1546,12 @@ $( document ).on('click', '.videoPlayBtn', function(){
 });
 
 
-$( document ).on('click', '.videoPlayThumbnail', function(){
+// $( document ).on('click', '.videoPlayThumbnail', function(){ // COMMENTED OUT 26/10-2017
+$( document ).on('click', '.videoLink', function(){				// ADDED 26/10-2017
 	console.log('videoPlayThumbnail - CLICK - CALLED');
-	var videoSrc = $(this).attr('data-videoSrc');
+
+	// var videoSrc = $(this).attr('data-videoSrc');							// COMMENTED OUT 26/10-2017
+	var videoSrc = $(this).find('.videoPlayThumbnail').attr('data-videoSrc');	// ADDED 26/10-2017
 
 	// UserMsgBox_video('https://www.youtube.com/embed/-Go7min716I');
 	UserMsgBox_video( videoSrc );

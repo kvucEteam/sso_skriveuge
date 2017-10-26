@@ -291,6 +291,7 @@
     float: right;
     clear: both;
     cursor: pointer;
+    color: rgba(255, 255, 255, .5);
     /* -webkit-background-clip: padding-box; */
     /* background-clip: padding-box; */
     /* border-radius: 50%; */
