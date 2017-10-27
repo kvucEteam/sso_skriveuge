@@ -14,7 +14,7 @@
                 "thumbnail": "img/cards_video1.png",
                 "videoSrc": "https://www.youtube.com/embed/tLFbQK38bsg",
                 "header": "Kom godt i gang med din SSO",
-                "text": "Filmen giver en introduktion til hvad det er godt at have fokus på i de første dages arbejde.",
+                "text": "Hvad kan du forvente dig af skriveugen? Videoen giver dig et overblik.",
                 "note til BTN": "Se introduktionen",
                 "btnText": "Se video"
             }
@@ -342,7 +342,7 @@
                 "thumbnail": "img/cards_video3.png",
                 "videoSrc": "https://www.youtube.com/embed/tLFbQK38bsg",
                 "header": "Er du i panik?",
-                "text": "Du kan få hjælp til at strukturere den sidste del af sso - ugen ved at se filmen her.",
+                "text": "Få hjælp til at strukturere de sidste timer af skriveugen.",
                 "btnText": "Se video"
             }
         }, {
