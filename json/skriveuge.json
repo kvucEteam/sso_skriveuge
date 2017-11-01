@@ -80,7 +80,7 @@
                 "attr": { "class": "skriveuge_item objLink" },
                 "imgSrc": "img/cards_tjek.png",
                 "header": "Dagens tjekliste",
-                "text": "<ul><li>Jeg forstår min opgaveformulering</li><li>Jeg har organiseret og nedskrevet min litteratur</li><li>Jeg besvarer første del af opgaveformuleringen</li><ul>"
+                "text": "<ul><li>Jeg har forstået min opgaveformulering</li><li>Jeg har organiseret og nedskrevet min litteratur</li><li>Jeg har besvaret første del af opgaveformuleringen</li><ul>"
 
             },
             "userMsgBox_data": {
@@ -149,7 +149,7 @@
                 "attr": { "class": "skriveuge_item objLink" },
                 "imgSrc": "img/cards_tjek.png",
                 "header": "Tjekliste",
-                "text": "<ul><li>Jeg har aftalt at en bekendte kan hjælpe</li><li> Jeg benytter litteraturhenvisninger</li></ul>"
+                "text": "<ul><li>Jeg har aftalt at en bekendt kan hjælpe</li><li> Jeg har benyttet litteraturhenvisninger</li></ul>"
 
             }
         }]
@@ -200,7 +200,7 @@
                 "attr": { "class": "skriveuge_item objLink" },
                 "imgSrc": "img/cards_tjek.png",
                 "header": "Tjekliste",
-                "text": "<ul><li>Jeg benytter mindst 3 henvisninger pr. side</li><li>Jeg husker at kommentere citater fagligt</li><li>Jeg er sikker på, at jeg besvarer opgaveformuleringen</li></ul>"
+                "text": "<ul><li>Jeg har benyttet mindst 3 henvisninger pr. side</li><li>Jeg har husket at kommentere citater fagligt</li><li>Jeg er sikker på, at jeg har besvaret opgaveformuleringen</li></ul>"
             },
             "userMsgBox_data": {
                 "displayMode": "html",
@@ -244,7 +244,7 @@
                 "attr": { "class": "skriveuge_item objLink" },
                 "imgSrc": "img/cards_tjek.png",
                 "header": "Tjekliste",
-                "text": "<ul><li>Jeg anvender fagets begreber, metoder og teori</li><li>Jeg genlæser løbende det jeg skriver</li></ul>"
+                "text": "<ul><li>Jeg har anvendt fagets begreber, metoder og teori</li><li>Jeg har løbende genlæst det jeg skriver</li></ul>"
             }
         }]
     }, {
@@ -278,7 +278,7 @@
                 "attr": { "class": "skriveuge_item objLink" },
                 "imgSrc": "img/cards_tjek.png",
                 "header": "Tjekliste",
-                "text": "<ul><li>Jeg er sikker på, at min litteraturliste er opdateret.</li><li>Jeg har gennemlæst alt, hvad jeg indtil nu har skrevet</li><li>Jeg er sikker på, at jeg svarer på min opgaveformulering.</li></ul>"
+                "text": "<ul><li>Jeg er sikker på, at min litteraturliste er opdateret.</li><li>Jeg har gennemlæst alt, hvad jeg indtil nu har skrevet</li><li>Jeg er sikker på, at jeg har svaret på min opgaveformulering.</li></ul>"
             }
         }]
     }, {
