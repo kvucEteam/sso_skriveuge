@@ -11,6 +11,16 @@
 //
 //
 
+
+// ================================================================
+// 				Manglende opgaver pr 01-11-2017
+// ================================================================
+// 
+// Ret højde problem opstået efter implementering af ens ens højde på alle kort.
+// Ret at cheveron right/left iconer kan nu kan ses ved siden af slider-containeren ved scroll.
+// Indsæt kommende videoer fra TLY - videoer er på vej.
+// 
+
 function makeSkriveugeSlide(dayIndex, cardIndex_start, cardIndex_end) {
 	console.log('\nmakeSkriveugeSlide - CALLED');
 
@@ -1330,8 +1340,7 @@ function scaleAndPosition_sliderContainer() {
 	window.windowHeight = $(window).height();
 	console.log('document.ready - scrollHeight: ' + scrollHeight + ', windowHeight: ' + windowHeight + ', windowHeight/scrollHeight: ' + windowHeight/scrollHeight);
 
-
-	$('#sliderContainer').width($('#outerContainer').width());
+	$('#sliderContainer').width(parseInt($('#outerContainer').width() + 10));
 
 	window.sliderContainerWidth = $('#sliderContainer').width();
 
@@ -1339,7 +1348,8 @@ function scaleAndPosition_sliderContainer() {
 	var off = $('#outerContainer').offset();
 	console.log('scaleAndPosition_sliderContainer - height: ' + height + ', off: ' + JSON.stringify(off));
 
-	$('#sliderContainer').css({top: off.top - height});
+	// $('#sliderContainer').css({top: off.top - height});
+	$('#sliderContainer').css({'top': '0px'});
 
 	$('#slider').height(height);
 
@@ -1391,9 +1401,13 @@ scrollCallback = function() {
 
 	// var posPercent = (bodyPos + 0)/scrollHeight;		// COMMENTED OUT 3/10-2017
 	var posPercent = (bodyPos + 0)/(scrollHeight + 0);	// ADDED 3/10-2017
+
+	window.windowHeight = $(window).height();
+	var posPercent = (bodyPos + 0)/(scrollHeight - windowHeight)*0.98;   // QUICK FIX ADDED 01-11-2017
+
 	console.log('onScroll - bodyPos: ' + bodyPos + ', scrollHeight: ' + scrollHeight + ', posPercent: ' + posPercent);
 
-	$('.slider').css({left: posPercent*sliderContainerWidth});
+	$('#slider').css({left: posPercent*sliderContainerWidth});
 }
 
 
