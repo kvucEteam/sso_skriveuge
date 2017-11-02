@@ -42,9 +42,13 @@
 	color: initial;
 	font-weight: initial;
 	text-decoration: none;
-	cursor: pointer;
+	/*cursor: pointer;*/
 	background-color: #f8f8f6;
 	z-index: 1;
+}
+
+.pointer {
+	cursor: pointer;
 }
 
 .objText {

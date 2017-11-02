@@ -10,7 +10,7 @@
         "content": [{
             "category": "video",
             "video": {
-                "attr": { "class": "skriveuge_item objLink videoLink" },
+                "attr": { "class": "skriveuge_item objLink videoLink pointer" },
                 "thumbnail": "img/cards_video1.png",
                 "videoSrc": "https://www.youtube.com/embed/tLFbQK38bsg",
                 "header": "Kom godt i gang med din SSO",
@@ -37,7 +37,7 @@
         }, {
             "category": "dagensOpgaver",
             "dagensOpgaver": {
-                "attr": { "class": "skriveuge_item objLink" },
+                "attr": { "class": "skriveuge_item objLink pointer" },
                 "imgSrc": "img/cards_task.png",
                 "header": "Organisér dine materialer",
                 "text": "Opdel materialerne så du ved, hvilke du vil anvende til opgavens forskellige dele.",
@@ -51,7 +51,7 @@
         }, {
             "category": "dagensOpgaver",
             "dagensOpgaver": {
-                "attr": { "class": "skriveuge_item objLink" },
+                "attr": { "class": "skriveuge_item objLink pointer" },
                 "imgSrc": "img/cards_task.png",
                 "header": "Start din litteraturliste",
                 "text": "Noter din litteratur ned alfabetisk i en litteraturliste",
@@ -64,7 +64,7 @@
         }, {
             "category": "gaaet_i_staa",
             "gaaet_i_staa": {
-                "attr": { "class": "skriveuge_item objLink" },
+                "attr": { "class": "skriveuge_item objLink pointer" },
                 "imgSrc": "img/cards_i_staa.png",
                 "header": "Gået i stå?",
                 "text": "Kom godt igang med hurtigskrivning",
@@ -82,10 +82,6 @@
                 "header": "Dagens tjekliste",
                 "text": "<ul><li>Jeg har forstået min opgaveformulering</li><li>Jeg har organiseret og nedskrevet min litteratur</li><li>Jeg har besvaret første del af opgaveformuleringen</li><ul>"
 
-            },
-            "userMsgBox_data": {
-                "displayMode": "html",
-                "html": "<"
             }
         }]
     }, {
