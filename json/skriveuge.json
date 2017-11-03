@@ -296,7 +296,7 @@
             "category": "dagensOpgaver",
             "dagensOpgaver": {
                 "attr": { "class": "skriveuge_item objLink" },
-                "imgSrc": "img/cards_task.png",
+                "imgSrc": "img/cards_read.png",
                 "header": "Send opgavebesvarelsen til gennemlæsning",
                 "text": "Bed en bekendt om at læse opgaven igennem ift. sprog, tegnsætning og forståelse. Personen behøver ikke have faglige forudsætninger."
             }
