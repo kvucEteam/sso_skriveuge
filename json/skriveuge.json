@@ -52,7 +52,7 @@
                 "attr": { "class": "skriveuge_item objLink pointer" },
                 "imgSrc": "img/cards_task.png",
                 "header": "Start din litteraturliste",
-                "text": "Noter din litteratur alfabetisk i en litteraturliste",
+                "text": "Noter din litteratur alfabetisk i en litteraturliste.",
                 "btnText": "Læs om litteraturlisten"
             },
             "userMsgBox_data": {
@@ -410,7 +410,7 @@
                     "attr": { "class": "skriveuge_item objLink dagensMaal" },
                     "imgSrc": "img/cards_maal.png",
                     "header": "Dagens mål",
-                    "text": "At aflevere din SSO! <p>Du er tæt på nu! Lad være med at give op.</p>"
+                    "text": "At aflevere din SSO! <p>Du er tæt på nu. Lad være med at give op.</p>"
                 }
             }, {
                 "category": "dagensOpgaver",
