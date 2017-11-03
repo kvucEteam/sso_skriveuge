@@ -169,7 +169,7 @@ function makeMobileTemplate() {  // Lavet d. 9/10-2017
 
 	var HTML = '';
 	for (var d in jsonData.day) {
-		HTML += '<div class="mobile_dayHeading">';
+		HTML += '<div id="carouselId_'+d+'" class="mobile_dayHeading">';
 			HTML += '<span class="mobile_weekNameAndNumber">';
 				HTML += '<span class="mobile_weekDay">'+weekLookup[jsonData.day[d].day_no-1]+'</span>';
 				HTML += '<span class="mobile_weekNumber">'+jsonData.day[d].day_no+'</span>';
@@ -799,7 +799,7 @@ function ajustNumOfCardsPrSlide(){
 		addOrRemoveCarouselControles_2();
 
 		scale_skriveuge_item();
-		setJsAudioEventLitsner2();
+		setJsAudioEventLitsner3();
 
 		scaleAndPosition_sliderContainer();
 		//================================================================
@@ -944,7 +944,8 @@ function returnAudioMarkup_sso(audioSrc){
     return HTML;
 }
 
-function setJsAudioEventLitsner2(){
+
+function setJsAudioEventLitsner3(){
 	if (typeof(autoPlayNew) === 'undefined'){
 		window.autoPlayNew = true;
 		console.log("setJsAudioEventLitsner2 - autoPlay - SET");
@@ -971,23 +972,34 @@ function setJsAudioEventLitsner2(){
 		}
 	});
 
-	$( document ).on('click', 'audio', function(){
-		window.audioObj = $(this)[0];
-	});
+	// $( document ).on('click', 'audio', function(){
+	// 	console.log("setJsAudioEventLitsner2 - click");
+	// 	window.audioObj = $(this)[0];
+	// });
 	
+    // audioObj.onpause = function() {
+    // 	console.log("setJsAudioEventLitsner2 - PAUSE");
+    // 	if (!audioObj.ended){
+    // 		autoPlayNew = false; 
+    // 	}
+    	
+    // }
+    // audioObj.onplay = function() {
+    // 	console.log("setJsAudioEventLitsner2 - PLAY");
+    // 	autoPlayNew = true;
+    	
+    // }
 
-    audioObj.onpause = function() {
-    	console.log("setJsAudioEventLitsner2 - PAUSE");
-    	if (!audioObj.ended){
-    		autoPlayNew = false; 
-    	}
-    	
-    }
-    audioObj.onplay = function() {
-    	console.log("setJsAudioEventLitsner2 - PLAY");
-    	autoPlayNew = true;
-    	
-    }
+    $( document ).on('click', '.audioInline', function(){  	// ADDED 2/11-2017
+		aObj = $('audio', this);
+		if ($(this).hasClass('playing')) {
+			aObj[0].pause();
+			$(this).removeClass('playing');
+		} else {
+			aObj[0].play();
+			$(this).addClass('playing');
+		}
+	});
 }
 
 // ========================================================================================================================
@@ -1462,6 +1474,7 @@ $( "#slider" ).draggable({
 $( document ).on('click', ".weekNum_number", function(event){
 	console.log('click - CALLED - SCROLL');
 	var scrollTo = $(this).attr('data-scrollTo');
+	console.log('click - SCROLL - scrollTo: ' + scrollTo);
 	console.log('click - SCROLL - scrollTo: ' + scrollTo + ', offset().top: ' + $("#"+scrollTo).offset().top + ', height()/2: ' + $("#"+scrollTo).height()/2);
 	// var pos = Math.round($("#"+scrollTo).offset().top - $("#"+scrollTo).height()/2);
 	// var pos = Math.round($("#"+scrollTo).offset().top + $("#"+scrollTo).outerWidth( true )/2);
@@ -1604,7 +1617,7 @@ $(document).ready(function() {
 
 		$('#interface').append(makeMobileTemplate());
 
-		setJsAudioEventLitsner2();
+		setJsAudioEventLitsner3();
 		scaleAndPosition_sliderContainer();
 		$('#sliderContainer').css({'top': '0px'});  // This ajusts the height on the "sliderContainer, set by scaleAndPosition_sliderContainer().
 
@@ -1622,7 +1635,7 @@ $(document).ready(function() {
 		addOrRemoveCarouselControles_2();
 
 		scale_skriveuge_item();
-		setJsAudioEventLitsner2();
+		setJsAudioEventLitsner3();
 
 		scaleAndPosition_sliderContainer();
 
