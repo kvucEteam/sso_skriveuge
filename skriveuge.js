@@ -768,12 +768,22 @@ function insertWeekdayAndWeekNum() {
 // ======================================================================================================================== 
 
 
+// isiniFrame()
+
 function ajustNumOfCardsPrSlide(){
 	var sObj = {'700px': 2, '900px': 3, '1100px': 4};
+
 	var w = $('.container-fluid').width();
 
 	console.log('ajustNumOfCardsPrSlide - w: ' + w + ', findNumOfCards: ' + findNumOfCards(sObj, w));
 	window.TitemsPrSlide = findNumOfCards(sObj, w);
+
+	console.log('ajustNumOfCardsPrSlide - TitemsPrSlide: ' + TitemsPrSlide + ', jsonData.itemsPrSlide_global: ' + jsonData.itemsPrSlide_global);
+
+	// if (isiniFrame()) {
+	// 	TitemsPrSlide = 3;
+	// 	jsonData.itemsPrSlide_global = 3;
+	// }
 
 	if (TitemsPrSlide != jsonData.itemsPrSlide_global) {
 		console.log('ajustNumOfCardsPrSlide - A0');
@@ -1396,6 +1406,11 @@ function resizeCards(){
 }
 
 
+function reInitOnIframed() {
+
+}
+
+
 //==========================================================================================
 //										SLIDER
 //==========================================================================================
@@ -1647,5 +1662,7 @@ $(document).ready(function() {
 	}
 
 	resizeCards();
+
+
 
 });
