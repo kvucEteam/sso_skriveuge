@@ -10,7 +10,7 @@
             "video": {
                 "attr": { "class": "skriveuge_item objLink videoLink pointer" },
                 "thumbnail": "img/cards_video1.png",
-                "videoSrc": "https://www.youtube.com/embed/JHA9FMmj5PI", 
+                "videoSrc": "https://www.youtube.com/embed/P5HCeUrjoqU", 
                 "header": "Kom godt i gang med din SSO",
                 "text": "Hvad kan du forvente dig af skriveugen? Videoen giver dig et overblik.",
                 "note til BTN": "Se introduktionen",
