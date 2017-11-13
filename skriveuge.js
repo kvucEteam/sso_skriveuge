@@ -184,8 +184,6 @@ function makeMobileTemplate() {  // Lavet d. 9/10-2017
 	}
 
 	return HTML;
-
-
 }
 
 
@@ -754,7 +752,7 @@ function insertWeekdayAndWeekNum() {
 	$('.carousel').each(function( index, element ) {
 		var HTML = '';
 		HTML += '<span class="weekNameAndNumber">';
-			HTML += '<span class="weekDay">'+weekLookup[index]+'</span>';
+			HTML += '<span class="weekDay">'+weekLookup[index]+'</span>'; 
 			HTML += '<span class="weekNumber">'+String(parseInt(index)+1)+'</span>';
 		HTML += '</span>';
 
@@ -775,15 +773,10 @@ function ajustNumOfCardsPrSlide(){
 
 	var w = $('.container-fluid').width();
 
-	console.log('ajustNumOfCardsPrSlide - w: ' + w + ', findNumOfCards: ' + findNumOfCards(sObj, w));
+	console.log('ajustNumOfCardsPrSlide - w: ' + w + ', findNumOfCards: ' + findNumOfCards(sObj, w)); 
 	window.TitemsPrSlide = findNumOfCards(sObj, w);
 
 	console.log('ajustNumOfCardsPrSlide - TitemsPrSlide: ' + TitemsPrSlide + ', jsonData.itemsPrSlide_global: ' + jsonData.itemsPrSlide_global);
-
-	// if (isiniFrame()) {
-	// 	TitemsPrSlide = 3;
-	// 	jsonData.itemsPrSlide_global = 3;
-	// }
 
 	if (TitemsPrSlide != jsonData.itemsPrSlide_global) {
 		console.log('ajustNumOfCardsPrSlide - A0');
@@ -1059,14 +1052,30 @@ $( document ).on('click', '.skriveuge_item', function(){
 	if ($('.btn', this).length) {
 		console.log('click - A0');
 		var numOfSlides = jsonData.itemsPrSlide_global;
-		var index_day = $(this).closest('.carouselPage').index();
-		var index_slide = $(this).closest('.item').index();
-		var index_card = $(this).closest('.skriveuge_item').index();
-		var json_index = numOfSlides*index_slide + index_card; 
-		console.log('click - index_day: ' + index_day + ', index_slide: ' + index_slide + ', index_card: ' + index_card + ', json_index: ' + json_index);
 
-		var cardObj = jsonData.day[index_day].content[json_index];
-		console.log('click - cardObj: ' + JSON.stringify(cardObj));
+		if (!detectmob()) {  // If NOT mobile...
+			console.log('click - NOT MOBILE');
+
+			var index_day = $(this).closest('.carouselPage').index();
+			var index_slide = $(this).closest('.item').index();
+			var index_card = $(this).closest('.skriveuge_item').index();
+
+			var json_index = numOfSlides*index_slide + index_card; 
+			console.log('click - index_day: ' + index_day + ', index_slide: ' + index_slide + ', index_card: ' + index_card + ', json_index: ' + json_index);
+
+			var cardObj = jsonData.day[index_day].content[json_index];
+			console.log('click - cardObj: ' + JSON.stringify(cardObj));
+
+		} else {  // If mobile...
+			console.log('click - MOBILE');
+
+			var index_day = parseInt(($(this).closest('.mobile_dayContent').index()+1)/2)-1;
+			var index_card = $(this).closest('.skriveuge_item').index();
+			console.log('click - index_day: ' + index_day + ', index_card: ' + index_card );
+
+			var cardObj = jsonData.day[index_day].content[index_card];
+			console.log('click - cardObj: ' + JSON.stringify(cardObj));
+		}
 
 		if (cardObj.hasOwnProperty('userMsgBox_data')) {
 			console.log('click - A1');
@@ -1399,7 +1408,9 @@ function resizeCards(){
 			$(this).css("height", top_height + 66 + "px");
 			//console.log("hej: " + $(this).height() + " top: " + top_height);
 		}); 
-		$(this).find(".item").eq(1).removeClass("active");
+		
+		// $(this).find(".item").eq(1).removeClass("active");  // Udkommenteret d. 10/11-2017, idet dette ikke tager højde for situationen hvor antallet af cards går fra 4 til 3 ved initialisering - f.eks ved iframing eller smalle skærme. 
+		$(this).find(".item:gt(0)").removeClass("active");	   // Tilføjet d. 10/11-2017 - alle sliders på nær den første skal have "active" fjernet.
 	});
 	
 
@@ -1628,6 +1639,7 @@ $(window).resize(function() {
 
 $(document).ready(function() {
 
+
 	if (detectmob()) {
 
 		$('#interface').append(makeMobileTemplate());
@@ -1662,7 +1674,6 @@ $(document).ready(function() {
 	}
 
 	resizeCards();
-
 
 
 });
