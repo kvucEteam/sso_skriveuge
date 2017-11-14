@@ -255,7 +255,7 @@
                 "attr": { "class": "skriveuge_item objLink pointer" },
                 "imgSrc": "img/cards_i_staa.png",
                 "header": "Gået i stå?",
-                "text": "Lav noget andet. Hvis du er gået i stå med det kapitel, som du arbejder i lige nu, kan det være en god idé at lave noget andet fornuftigt. Du kan f.eks. lave din",
+                "text": "Lav noget andet. Hvis du er gået i stå med det kapitel, som du arbejder med, kan det være en god idé at lave noget andet fornuftigt. Du kan f.eks. lave din",
                 "btnText": "Indholdsfortegnelse"
             },
             "userMsgBox_data": {
@@ -281,7 +281,7 @@
                 "attr": { "class": "skriveuge_item objLink dagensMaal" },
                 "imgSrc": "img/cards_maal.png",
                 "header": "Dagens mål",
-                "text": "Skriv 2 - 2,5 sider på den sidste den af opgaveformuleringen."
+                "text": "Skriv 2 - 2,5 sider på den sidste del af opgaveformuleringen."
             }
         }, {
             "category": "audio",
@@ -350,7 +350,7 @@
                 "attr": { "class": "skriveuge_item objLink pointer" },
                 "imgSrc": "img/cards_task.png",
                 "header": "Skriv dit resumé",
-                "text": "Et resume er en ultra kort genfortælling af det, du har fundet ud af i din opgave. Husk at fokusere på de vigtigste ting i resuméet",
+                "text": "Et resumé er en ultra kort genfortælling af det, du har fundet ud af i din opgave. Husk at fokusere på de vigtigste ting i resuméet",
                 "btnText": "Læs om resuméet"
             },
             "userMsgBox_data": {
