@@ -1,5 +1,5 @@
 // NAVIGATIONSMENUER DER HIDER TOP-MENU'en
-// ================================================================
+// ================================================================ 
 //
 // Auto-Hiding Navigation
 // https://codyhouse.co/gem/auto-hiding-navigation/
@@ -1497,7 +1497,7 @@ $( "#slider" ).draggable({
 });
 
 
-$( document ).on('click', ".weekNum_number", function(event){
+$( document ).on('click touchend', ".weekNum_number", function(event){
 	console.log('click - CALLED - SCROLL');
 	var scrollTo = $(this).attr('data-scrollTo');
 	console.log('click - SCROLL - scrollTo: ' + scrollTo);

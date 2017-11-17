@@ -357,11 +357,16 @@ audio {
 
 .skriveuge_item, .skriveuge_item_dummy{   
 	width: initial; 	/* <----- This makes the width of the cards to 800 px as the width of the pictures of the cards - works OK in non-mobilemode */
+	/*max-width: 800px;*/
 }
 
 .mobile_dayContent {
 	display: inline-block;
 	/*margin-left: 15%;*/ 	/* <---------- VIGTIGT: Denne centrereing er ikke nødvendig i chrome mobil simulering! */
+}
+
+.mobile_dayContent .skriveuge_item {  /* Tilføjet d. 16/11-2017 Quick-fix på Ipad-bug (TLY's ipad + chrome simulation af ipad pro) - billederne er 800px derfor må tekxt ikke overflow ".skriveuge_item" containeren */ 
+	max-width: 800px;			
 }
 
 .mobile_weekNameAndNumber {
