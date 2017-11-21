@@ -129,7 +129,7 @@
             "dagensOpgaver": {
                 "attr": { "class": "skriveuge_item objLink pointer" },
                 "imgSrc": "img/cards_task.png",
-                "header": "litteraturhenvisninger",
+                "header": "Litteraturhenvisninger",
                 "text": "Husk at bruge litteraturhenvisninger ofte og korrekt.",
                 "btnText": "Om litteraturhenvisninger"
             },
