@@ -129,6 +129,19 @@
             "dagensOpgaver": {
                 "attr": { "class": "skriveuge_item objLink pointer" },
                 "imgSrc": "img/cards_task.png",
+                "header": "litteraturhenvisninger",
+                "text": "Husk at bruge litteraturhenvisninger ofte og korrekt.",
+                "btnText": "Om litteraturhenvisninger"
+            },
+            "userMsgBox_data": {
+                "displayMode": "html",
+                "html": "html('#litteraturhenvisninger', '#UserMsgBox_text')"
+            }
+        },{
+            "category": "dagensOpgaver",
+            "dagensOpgaver": {
+                "attr": { "class": "skriveuge_item objLink pointer" },
+                "imgSrc": "img/cards_task.png",
                 "header": "Citater",
                 "text": "Husk at anvende citater ofte og korrekt.",
                 "btnText": "Læs om citater"
@@ -143,7 +156,7 @@
                 "attr": { "class": "skriveuge_item objLink" },
                 "imgSrc": "img/cards_tjek.png",
                 "header": "Tjekliste",
-                "text": "<ul><li>Jeg har lavet en aftale om korrekturlæsning.</li><li> Jeg har benyttet litteraturhenvisninger.</li></ul>"
+                "text": "<ul><li>Jeg har lavet en aftale om korrekturlæsning.</li><li> Jeg har benyttet litteraturhenvisninger ofte og korrekt.</li></ul>"
 
             }
         }]
@@ -268,7 +281,7 @@
                 "attr": { "class": "skriveuge_item objLink" },
                 "imgSrc": "img/cards_tjek.png",
                 "header": "Tjekliste",
-                "text": "<ul><li>Jeg er sikker på, at min litteraturliste er opdateret.</li><li>Jeg har gennemlæst alt, hvad jeg indtil nu har skrevet.</li><li>Jeg er sikker på, at jeg har svaret på min opgaveformulering.</li></ul>"
+                "text": "<ul><li>Jeg er sikker på, at min litteraturliste er opdateret.</li><li>Jeg har gennemlæst alt, hvad jeg indtil nu har skrevet.</li><li>Jeg er sikker på, at jeg har svaret på min opgaveformulering.</li><li> Jeg har benyttet litteraturhenvisninger ofte og korrekt.</li></ul>"
             }
         }]
     }, {
@@ -397,7 +410,7 @@
                 "attr": { "class": "skriveuge_item objLink" },
                 "imgSrc": "img/cards_tjek.png",
                 "header": "Tjekliste",
-                "text": "<ul><li>Jeg er sikker på hvordan og hvornår, jeg skal aflevere.</li><li>Jeg har fået feedback på min opgave og retter tegnsætning, sprog og indhold.</li><li>De enkelte dele i min opgave hænger sammen, og den har en rød tråd.</li></ul>"
+                "text": "<ul><li>Jeg er sikker på hvordan og hvornår, jeg skal aflevere.</li><li>Jeg har fået feedback på min opgave og retter tegnsætning, sprog og indhold.</li><li>De enkelte dele i min opgave hænger sammen, og den har en rød tråd.</li><li> Jeg har benyttet litteraturhenvisninger ofte og korrekt.</li></ul>"
             }
         }]
     }, {
