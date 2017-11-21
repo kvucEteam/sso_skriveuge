@@ -243,6 +243,8 @@
 
 #weekNum_container {
 	/*top: -30px;*/
+
+	position: relative; /* Tilføjet d. 20/11-2017 ift justering af uge tal i sliderContainer så der er større overensstemmelse med scroll via tryk på anchor-tags */
 }
 
 .weekNum_number {
@@ -277,6 +279,13 @@
 
 #bracketImg {
     height: 100%;
+
+    /* BESLUTNING IFT BUGFIX d. 17/11-2017: Vi disabler mulighed for drag i dette objekt. Der er mulighed for at dragge et "ghost img" af slideren - dette disables her. */
+	-webkit-user-drag: none;
+	-khtml-user-drag: none;
+	-moz-user-drag: none;
+	-o-user-drag: none;
+	user-drag: none;
 }
 
 .weekNum_number_action {
@@ -353,6 +362,14 @@ audio {
                                   not supported by any browser */
 }
 
+
+/********************************************************************************************************
+		Juseringer på ugetal i sliderContainer, så de bliver bedre alignet ift scroll på siden: - quick-fix: vi centrere tallene i menuen mere;
+********************************************************************************************************/
+
+.weekNum_number {
+	padding-left: 4%;
+}
 
 /**********************************************************************
 						MOBILE VIEW

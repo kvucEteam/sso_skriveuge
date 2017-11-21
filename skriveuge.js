@@ -1456,49 +1456,50 @@ scrollCallback = function() {
 // Denne event-litsner virker men "document" og "window" som samme referance kan der måske opstå problemer med i nogle browsere...
 $(document).on('scroll', window, scrollCallback);
 
+// BESLUTNING IFT BUGFIX d. 17/11-2017: Vi disabler mulighed for drag i dette objekt.
+// $(document).on('mousedown', '#slider', function() {
+//     console.log('mousedown - CALLED');
+//     // $( document ).off('scroll', window, scrollCallback);
+//     $(this).addClass('slider_off').removeClass('slider');
+// });
 
-$(document).on('mousedown', '#slider', function() {
-    console.log('mousedown - CALLED');
-    // $( document ).off('scroll', window, scrollCallback);
-    $(this).addClass('slider_off').removeClass('slider');
-});
+// BESLUTNING IFT BUGFIX d. 17/11-2017: Vi disabler mulighed for drag i dette objekt.
+// $(document).on('mouseup', 'body', function() { // <---  IMPORTANT: "body" is nessary because the user may click on "#slider" and loose the cursor position ontop of the "#slider" as they drag - when mouseup performed, the cursor will no longer be ontop of the "#slider", and therefore the event "mouseup" will not work
+//     console.log('mouseup - CALLED');
+//     // $( document ).on('scroll', window, scrollCallback);
+//     $('#slider').addClass('slider').removeClass('slider_off');
+// });
 
-$(document).on('mouseup', 'body', function() { // <---  IMPORTANT: "body" is nessary because the user may click on "#slider" and loose the cursor position ontop of the "#slider" as they drag - when mouseup performed, the cursor will no longer be ontop of the "#slider", and therefore the event "mouseup" will not work
-    console.log('mouseup - CALLED');
-    // $( document ).on('scroll', window, scrollCallback);
-    $('#slider').addClass('slider').removeClass('slider_off');
-});
+// BESLUTNING IFT BUGFIX d. 17/11-2017: Vi disabler mulighed for drag i dette objekt.
+// $("#slider").draggable({
+//     containment: "#sliderContainer",
+//     // scroll: false,
+//     start: function(event, ui) {
+//         console.log('slider - START - CALLED');
+//     },
+//     drag: function(event, ui) {
+//         console.log('slider - DRAG - CALLED');
 
+//         var pos = $(this).position();
+//         var off = $(this).offset();
 
-$("#slider").draggable({
-    containment: "#sliderContainer",
-    // scroll: false,
-    start: function(event, ui) {
-        console.log('slider - START - CALLED');
-    },
-    drag: function(event, ui) {
-        console.log('slider - DRAG - CALLED');
+//         console.log('slider - DRAG - pos: ' + JSON.stringify(pos) + ', offset: ' + JSON.stringify(off));
 
-        var pos = $(this).position();
-        var off = $(this).offset();
+//         var widthPercent = pos.left / ($(this).parent().width() - $(this).width());
+//         console.log('slider - widthPercent: ' + widthPercent);
 
-        console.log('slider - DRAG - pos: ' + JSON.stringify(pos) + ', offset: ' + JSON.stringify(off));
+//         // widthPercent = widthPercent*(scrollHeight - windowHeight);	// COMMENTED OUT 3/10-2017
+//         widthPercent = widthPercent * (scrollHeight - 0); // ADDED 3/10-2017
+//         // $( "body" ).scrollTop( widthPercent);
+//         $(window).scrollTop(widthPercent);
 
-        var widthPercent = pos.left / ($(this).parent().width() - $(this).width());
-        console.log('slider - widthPercent: ' + widthPercent);
+//         // $('#sliderContainer').css({top: widthPercent});
 
-        // widthPercent = widthPercent*(scrollHeight - windowHeight);	// COMMENTED OUT 3/10-2017
-        widthPercent = widthPercent * (scrollHeight - 0); // ADDED 3/10-2017
-        // $( "body" ).scrollTop( widthPercent);
-        $(window).scrollTop(widthPercent);
-
-        // $('#sliderContainer').css({top: widthPercent});
-
-    },
-    stop: function(event, ui) {
-        console.log('slider - STOP - CALLED');
-    }
-});
+//     },
+//     stop: function(event, ui) {
+//         console.log('slider - STOP - CALLED');
+//     }
+// });
 
 
 $(document).on('click touchend', ".weekNum_number", function(event) {
