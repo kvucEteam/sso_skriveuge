@@ -165,6 +165,10 @@
 	top: -12.5%;
 }
 
+.carousel .carousel-control { /* Bugfix for MS Edge glyphicon falder i baggrunden d. 22/11-2017 */
+	z-index: 1; 
+}
+
 .audioInline{
 	/*position: relative;
 	top: 45px;*/
