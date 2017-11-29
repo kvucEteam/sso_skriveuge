@@ -1613,6 +1613,14 @@ $(document).on('click touchend', '.CloseClass', function() {
         $(this).remove();
     });
 });
+// Tilføjet d. 29/11-2017: Ditte Maria Burmeister ønsker at klik på baggrund skal deaktiveres, så kursisterne kan kopiere indholdet fra userMsgBox (f.eks. "Litteraturlisten")
+$(document).on("keydown", function(event) {
+    if ((event.which == 27) && ($(".MsgBox_bgr_deactivateClickOnBgr").length > 0)) {
+        $(".MsgBox_bgr_deactivateClickOnBgr").fadeOut(200, function() {
+            $(this).remove();
+        });
+    }
+});
 
 
 // $( document ).on('click', '.videoPlayThumbnail', function(){ // COMMENTED OUT 26/10-2017
