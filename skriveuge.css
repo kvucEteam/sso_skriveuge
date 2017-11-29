@@ -418,6 +418,14 @@ audio {
 	color: #444;
 }
 
+.MsgBox_bgr_deactivateClickOnBgr {  /* <------ Tilføjet d. 29/11-2017: Ditte Maria Burmeister ønsker at klik på baggrund skal deaktiveres, så kursisterne kan kopiere indholdet fra userMsgBox (f.eks. "Litteraturlisten"). */
+	background-color: rgba(0,0,0,.5);
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 102; /* Dette z-index skal være så højt */
+}
+
 /**********************************************************************
 					MEDIA QUERIES - DESKTOP
 /*********************************************************************/

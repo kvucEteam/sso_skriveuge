@@ -1098,6 +1098,8 @@ $(document).on('click', '.skriveuge_item', function() {
 
             UserMsgBox('body', HTML);
 
+            $('.MsgBox_bgr').addClass('MsgBox_bgr_deactivateClickOnBgr').removeClass('MsgBox_bgr');  // Tilføjet d. 29/11-2017: Ditte Maria Burmeister ønsker at klik på baggrund skal deaktiveres, så kursisterne kan kopiere indholdet fra userMsgBox (f.eks. "Litteraturlisten").
+
             html(cardObj.userMsgBox_data);
         }
     }
@@ -1601,6 +1603,15 @@ $(document).on('click', '.videoPlayBtn', function() {
     UserMsgBox_video(videoSrc);
 
     scaleVideo('16:9');
+});
+
+
+// Tilføjet d. 29/11-2017: Ditte Maria Burmeister ønsker at klik på baggrund skal deaktiveres, så kursisterne kan kopiere indholdet fra userMsgBox (f.eks. "Litteraturlisten")
+$(document).on('click touchend', '.CloseClass', function() {
+    console.log('MsgBox_bgr_deactivateClickOnBgr - CLICK - CALLED');
+    $(".MsgBox_bgr_deactivateClickOnBgr").fadeOut(200, function() {
+        $(this).remove();
+    });
 });
 
 
