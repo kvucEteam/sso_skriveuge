@@ -171,7 +171,10 @@ function makeMobileTemplate() { // Lavet d. 9/10-2017
     for (var d in jsonData.day) {
         HTML += '<div id="carouselId_' + d + '" class="mobile_dayHeading">';
         HTML += '<span class="mobile_weekNameAndNumber">';
-        HTML += '<span class="mobile_weekDay">' + weekLookup[jsonData.day[d].day_no - 1] + '</span>';
+        HTML += '<span class="mobile_weekDay">DAG</span>';
+        
+        // ÆNDRING FRA Dagnavn --> "DAG" // 
+        //HTML += '<span class="mobile_weekDay">' + weekLookup[jsonData.day[d].day_no - 1] + '</span>';
         HTML += '<span class="mobile_weekNumber">' + jsonData.day[d].day_no + '</span>';
         HTML += '</span>';
         HTML += '</div>';
@@ -752,7 +755,9 @@ function insertWeekdayAndWeekNum() {
     $('.carousel').each(function(index, element) {
         var HTML = '';
         HTML += '<span class="weekNameAndNumber">';
-        HTML += '<span class="weekDay">' + weekLookup[index] + '</span>';
+        HTML += '<span class="weekDay">DAG</span>';
+        // ÆNDRING FRA Dagnavn --> "DAG" // 
+        //HTML += '<span class="weekDay">' + weekLookup[index] + '</span>';
         HTML += '<span class="weekNumber">' + String(parseInt(index) + 1) + '</span>';
         HTML += '</span>';
 
